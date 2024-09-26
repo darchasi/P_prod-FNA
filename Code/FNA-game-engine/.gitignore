@@ -1,5 +1,5 @@
-obj/
-obj_core/
+obj/*
+obj_core/*
 *.pidb
 *.user
 *.userprefs

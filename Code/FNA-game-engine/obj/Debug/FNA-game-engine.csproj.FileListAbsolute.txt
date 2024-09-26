@@ -35,3 +35,4 @@ C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-
 C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game.79B5E29A.Up2Date
 C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.exe
 C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.pdb
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\sprite.png

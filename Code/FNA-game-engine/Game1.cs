@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Game1;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,16 @@ namespace FNA_game_engine
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Texture2D image;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.IsFullScreen = true;
+            graphics.ApplyChanges();
         }
 
         protected override void Initialize()
@@ -27,6 +34,7 @@ namespace FNA_game_engine
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            image = TextureLoader.Load("sprite",Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -37,6 +45,13 @@ namespace FNA_game_engine
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.LightPink);
+
+            spriteBatch.Begin();
+
+            spriteBatch.Draw(image,new Vector2(0,0), Color.White);
+
+            spriteBatch.End();
+
             base.Draw(gameTime);
         }
     }
