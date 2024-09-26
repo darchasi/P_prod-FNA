@@ -48,7 +48,7 @@ namespace FNA_game_engine
 
             spriteBatch.Begin();
 
-            spriteBatch.Draw(image,new Vector2(0,0), Color.White);
+            spriteBatch.Draw(image,new Vector2(0,0), Color.White, wi);
 
             spriteBatch.End();
 
