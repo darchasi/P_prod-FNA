@@ -26,3 +26,12 @@ C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engi
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game.79B5E29A.Up2Date
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.exe
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.pdb
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\bin\Debug\FNA-game-engine.exe.config
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\bin\Debug\FNA-game-engine.exe
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\bin\Debug\FNA-game-engine.pdb
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\bin\Debug\FNA.dll.config
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.AssemblyReference.cache
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.CoreCompileInputs.cache
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game.79B5E29A.Up2Date
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.exe
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.pdb
