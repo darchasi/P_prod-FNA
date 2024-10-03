@@ -17,9 +17,7 @@ namespace FNA_game_engine
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Texture2D image;
-        Vector2 position;
-
+        public List<GameObject> objects = new List<GameObject>();
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -38,7 +36,6 @@ namespace FNA_game_engine
 
         protected override void Initialize()
         {
-            position = new Vector2 (640, 360);
             base.Initialize();
 
         }
@@ -47,30 +44,13 @@ namespace FNA_game_engine
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // Load in sprite image
-            image = TextureLoader.Load("sprite2", Content);
+            LoadLevel();
         }
 
         protected override void Update(GameTime gameTime)
         {
             Input.Update();
-
-            if (Input.IsKeyDown(Keys.D) == true || Input.IsKeyDown(Keys.Right))
-            {
-                position.X += 5;
-            }
-            else if (Input.IsKeyDown(Keys.A) == true || Input.IsKeyDown(Keys.Left))
-            {
-                position.X -= 5;
-            }
-            else if (Input.IsKeyDown(Keys.S) == true || Input.IsKeyDown(Keys.Down))
-            {
-                position.Y += 5;
-            }
-            else if (Input.IsKeyDown(Keys.W) == true || Input.IsKeyDown(Keys.Up))
-            {
-                position.Y -= 5;
-            }
+            UpdateObjects();
             base.Update(gameTime);
         }
 
@@ -80,11 +60,40 @@ namespace FNA_game_engine
             GraphicsDevice.Clear(Color.LightPink);
 
             // Draw sprite(s)
-            spriteBatch.Begin();
-            spriteBatch.Draw(image, position, Color.White);
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            DrawObjects();
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+        public void LoadLevel()
+        {
+            objects.Add(new Player(new Vector2(640, 360)));
+            LoadObjects();
+        }
+        public void LoadObjects()
+        {
+            for (int i = 0; i < objects.Count; i++)
+            {
+                objects[i].Initilize();
+                objects[i].Load(Content);
+            }
+        }
+
+        public void UpdateObjects()
+        {
+            for (int i = 0; i < objects.Count; i++)
+            {
+                objects[i].Update(objects);
+            }
+        }
+
+        public void DrawObjects()
+        {
+            for (int i = 0; i < objects.Count; i++)
+            {
+                objects[i].Draw(spriteBatch);
+            }
         }
     }
 }
