@@ -55,19 +55,19 @@ namespace FNA_game_engine
         {
             Input.Update();
 
-            if (Input.IsKeyDown(Keys.D) == true)
+            if (Input.IsKeyDown(Keys.D) == true || Input.IsKeyDown(Keys.Right))
             {
                 position.X += 5;
             }
-            else if (Input.IsKeyDown(Keys.A) == true)
+            else if (Input.IsKeyDown(Keys.A) == true || Input.IsKeyDown(Keys.Left))
             {
                 position.X -= 5;
             }
-            else if (Input.IsKeyDown(Keys.S) == true)
+            else if (Input.IsKeyDown(Keys.S) == true || Input.IsKeyDown(Keys.Down))
             {
                 position.Y += 5;
             }
-            else if (Input.IsKeyDown(Keys.W) == true)
+            else if (Input.IsKeyDown(Keys.W) == true || Input.IsKeyDown(Keys.Up))
             {
                 position.Y -= 5;
             }
