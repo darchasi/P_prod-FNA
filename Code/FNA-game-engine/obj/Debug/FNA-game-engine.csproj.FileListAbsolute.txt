@@ -39,3 +39,5 @@ C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game.
 C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.exe
 C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.pdb
 >>>>>>> main
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\sprite2.png
+C:\Users\pv20qck\Desktop\FNA\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\sprite.png

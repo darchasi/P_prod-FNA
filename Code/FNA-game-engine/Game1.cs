@@ -48,7 +48,7 @@ namespace FNA_game_engine
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // Load in sprite image
-            image = TextureLoader.Load("sprite", Content);
+            image = TextureLoader.Load("sprite2", Content);
         }
 
         protected override void Update(GameTime gameTime)
