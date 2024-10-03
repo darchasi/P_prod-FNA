@@ -13,7 +13,7 @@ namespace FNA_game_engine
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        Vector2 pos;
         Texture2D image;
         public Game1()
         {
@@ -29,6 +29,7 @@ namespace FNA_game_engine
         protected override void Initialize()
         {
             base.Initialize();
+            pos = new Vector2(0,0);
         }
 
         protected override void LoadContent()
@@ -48,7 +49,7 @@ namespace FNA_game_engine
 
             spriteBatch.Begin();
 
-            spriteBatch.Draw(image,new Vector2(0,0), Color.White, wi);
+            spriteBatch.Draw(image,new Vector2(0,0), Color.White);
 
             spriteBatch.End();
 
