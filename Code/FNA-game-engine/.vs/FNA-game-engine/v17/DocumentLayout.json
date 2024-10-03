@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|c:\\users\\pv20qck\\desktop\\fna\\p_prod-fna\\code\\fna-game-engine\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pv20qck\\Desktop\\FNA\\P_prod-FNA\\Code\\FNA-game-engine\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:utilities\\textureloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|c:\\users\\pv20qck\\desktop\\fna\\p_prod-fna\\code\\fna-game-engine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pv20qck\\Desktop\\FNA\\P_prod-FNA\\Code\\FNA-game-engine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,9 +46,9 @@
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\pv20qck\\Desktop\\FNA\\P_prod-FNA\\Code\\FNA-game-engine\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
-              "ToolTip": "C:\\Users\\pv20qck\\Desktop\\FNA\\P_prod-FNA\\Code\\FNA-game-engine\\Player.cs*",
-              "RelativeToolTip": "Player.cs*",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAAAAAA",
+              "ToolTip": "C:\\Users\\pv20qck\\Desktop\\FNA\\P_prod-FNA\\Code\\FNA-game-engine\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T08:27:59.398Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "GameObject.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T08:03:16.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T08:03:16.56Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Utilities\\Input.cs",
               "ViewState": "AQIAAEUAAAAAAAAAAAAmwGAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:10:15.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T07:10:15.299Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "Utilities\\TextureLoader.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:10:15.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T07:10:15.324Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "Utilities\\XmlHelper.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:10:15.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T07:10:15.325Z"
             },
             {
               "$type": "Document",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "Game1.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAADEAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:10:15.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T07:10:15.403Z"
             },
             {
               "$type": "Document",
@@ -128,8 +123,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:10:15.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T07:10:15.447Z"
             }
           ]
         }
