@@ -4,7 +4,6 @@
 *.dll
 .vs/
 obj/
-Debug/
 Release/
 *.csproj.user
 *.vcxproj.user
