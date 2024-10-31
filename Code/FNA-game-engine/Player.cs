@@ -16,7 +16,10 @@ namespace FNA_game_engine
         {
 
         } 
-
+        /// <summary>
+        /// Update position
+        /// </summary>
+        /// <param name="inputPosition"></param>
         public Player(Vector2 inputPosition)
         {
             position = inputPosition;
@@ -26,19 +29,27 @@ namespace FNA_game_engine
         {
             base.Initilize();
         }
-
+        /// <summary>
+        /// Load player sprite
+        /// </summary>
+        /// <param name="content"></param>
         public override void Load(ContentManager content)
         {
             image = TextureLoader.Load("sprite", content);
             base.Load(content);
         }
-
+        /// <summary>
+        /// Update object position
+        /// </summary>
+        /// <param name="objects"></param>
         public override void Update(List<GameObject> objects)
         {
             CheckInput();
             base.Update(objects);
         }
-
+        /// <summary>
+        /// Player movement
+        /// </summary>
         private void CheckInput()
         {
             if (Input.IsKeyDown(Keys.D) == true || Input.IsKeyDown(Keys.Right))
