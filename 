@@ -1,0 +1,158 @@
+[33mcommit 37a4cf2fd47b5a03a754c3eddb9963aee2d3d149[m[33m ([m[1;36mHEAD -> [m[1;32mcollision-detection[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/collision-detection[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Oct 10 09:07:28 2024 +0200
+
+    gitignore modifier, ajout /Debug
+
+[33mcommit 044149c6bec02071b301f0a75a0f92b4e6eb3a0c[m[33m ([m[1;31morigin/test[m[33m)[m
+Merge: 1384ae4 0d15382
+Author: Nima <130034303+NimaETML@users.noreply.github.com>
+Date:   Thu Oct 3 11:03:18 2024 +0200
+
+    Merge pull request #5 from darchasi/doc-nima
+    
+    extra doc files deleted, base of readme added
+
+[33mcommit 1384ae403811f24bd79f45ca36121431e54831cb[m
+Author: Dario Jhesuanj Chasi Sanchez <pv20qck@eduvaud.ch>
+Date:   Thu Oct 3 11:02:00 2024 +0200
+
+    suppression ./doc
+    
+    suppression docs
+
+[33mcommit 376948ed41b2599857004c3f7f8722753ba62d58[m
+Author: Dario Jhesuanj Chasi Sanchez <pv20qck@eduvaud.ch>
+Date:   Thu Oct 3 11:00:21 2024 +0200
+
+    suppression ./doc
+
+[33mcommit 0d153824512949cfc721a0823d5dd8135a95c1db[m
+Author: Nima Amir Aram Zarrabi <pu78ifh@eduvaud.ch>
+Date:   Thu Oct 3 10:58:37 2024 +0200
+
+    extra doc files deleted, base of readme added
+
+[33mcommit b287fb4852f786acc9d13d67c727f09f59562960[m
+Author: Dario Jhesuanj Chasi Sanchez <pv20qck@eduvaud.ch>
+Date:   Thu Oct 3 10:53:43 2024 +0200
+
+    Création de la logique hierarchique du le jeu
+
+[33mcommit 507e8eed447f52857335ebc0b8ac87c3d5cd2a17[m
+Author: Dario Jhesuanj Chasi Sanchez <pv20qck@eduvaud.ch>
+Date:   Thu Oct 3 09:33:07 2024 +0200
+
+    arrows fonctional
+
+[33mcommit 65948a1efadbdcefc4196fe3106b52e5447f2fbe[m
+Author: Dario Jhesuanj Chasi Sanchez <pv20qck@eduvaud.ch>
+Date:   Thu Oct 3 09:25:56 2024 +0200
+
+    Sprite 2 fonctionnel
+
+[33mcommit 4745b2d3b25ef1063714098925a45279d939a25b[m
+Merge: bd76313 0f7e1a2
+Author: Dario Jhesuanj Chasi Sanchez <pv20qck@eduvaud.ch>
+Date:   Thu Oct 3 09:09:12 2024 +0200
+
+    Merge branch 'main' of https://github.com/darchasi/P_prod-FNA
+    Merge
+
+[33mcommit 0f7e1a290bfd69c5f868a1b06b19b9305dba6bf3[m
+Merge: 2d71b06 c972e14
+Author: Nima <130034303+NimaETML@users.noreply.github.com>
+Date:   Thu Sep 26 10:48:44 2024 +0200
+
+    Merge pull request #2 from darchasi/spritework
+    
+    basic spritework done
+
+[33mcommit c972e14031b0beec00e7b8fa4de0c717de273c4b[m
+Merge: 639bcf0 2d71b06
+Author: Nima Zarrabi <pu78ifh@eduvaud.ch>
+Date:   Thu Sep 26 10:45:49 2024 +0200
+
+    fixed gitignore
+
+[33mcommit 639bcf0deb659f366e5215e6f6e35c530b25bd1b[m
+Author: Nima Zarrabi <pu78ifh@eduvaud.ch>
+Date:   Thu Sep 26 10:38:16 2024 +0200
+
+    basic spritework done
+
+[33mcommit bd763139f10b1876b6864d5ca7dc809fe1b2d8f9[m
+Merge: c4bfb3a 2d71b06
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Sep 26 09:32:31 2024 +0200
+
+    Merge branch 'main' of https://github.com/darchasi/P_prod-FNA
+
+[33mcommit 2d71b06e84901f577aeb021d3253ef88ef2b5085[m
+Author: Nima Zarrabi <pu78ifh@eduvaud.ch>
+Date:   Thu Sep 26 09:31:54 2024 +0200
+
+    added gitignore
+
+[33mcommit c4bfb3ad2791e8c8859623903a22103c48f5afcb[m
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Sep 26 09:20:40 2024 +0200
+
+    cahier de charges updated
+
+[33mcommit 7c335004b35e6d2f5b9cdb4f48276ddead044537[m
+Merge: ebdc826 e0ed531
+Author: Nima <130034303+NimaETML@users.noreply.github.com>
+Date:   Thu Sep 26 08:59:47 2024 +0200
+
+    Merge pull request #1 from darchasi/doc-nima
+    
+    jdt jour 1 nima
+
+[33mcommit ebdc826b7e6605bf0c62889868186178f8e01771[m
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Sep 26 08:55:05 2024 +0200
+
+    code
+
+[33mcommit e0ed531e2904af64aeee9224a994315eaed40bf0[m
+Author: Nima Zarrabi <pu78ifh@eduvaud.ch>
+Date:   Thu Sep 19 11:24:11 2024 +0200
+
+    jdt jour 1 nima
+
+[33mcommit 1116a46d2a2abd8611be50218f15aed917ca6755[m
+Author: Nima Zarrabi <pu78ifh@eduvaud.ch>
+Date:   Thu Sep 19 10:57:15 2024 +0200
+
+    FNA base code fonctional
+
+[33mcommit 6d19e8187324c4d88cfb17bad9b8dd95c91310fa[m
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Sep 12 11:24:52 2024 +0200
+
+    Création du nouveau projet, modifications apportés au dockerfile
+
+[33mcommit 587058dd3d3475ccabf43c138e680426440bbbea[m
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Sep 5 11:23:38 2024 +0200
+
+    Début de la planification, ajout des liens important pour les conteneurs docker
+
+[33mcommit 124578b6d32848c011c238544978f930c192ba2d[m
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Aug 29 11:06:57 2024 +0200
+
+    Base docker mono
+
+[33mcommit 036d41fd57b42a04db8434afcfa635e013da5b31[m
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Aug 29 10:49:53 2024 +0200
+
+    Début de la documentation, reste à remplir
+
+[33mcommit 2d86d594da36cf6ed8020fd8ccee2dc05ff6b3f0[m
+Author: darchasi <pv20qck@eduvaud.ch>
+Date:   Thu Aug 29 10:08:34 2024 +0200
+
+    first commit

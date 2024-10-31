@@ -20,6 +20,23 @@ namespace FNA_game_engine
         public float layerDepth = .5f;
         public bool active = true;
         protected Vector2 center;
+        // will need to change for object walkthough-able
+        public bool collidable = true;
+        protected int boundingBoxWidth, boundingBoxHeight;
+        protected Vector2 boundingBoxOffSet;
+        Texture2D boundingBoxImage;
+        // for dev
+        const bool drawBoundingBoxes = true;
+        // property use so that boundingBox calculates its position every time it is called, this way it is always up to date even if it changes position each frame.
+        public Rectangle boundingBox
+        {
+            get
+            {
+                // returns new rectangle with position calculated with current position + offset, converted to int
+                return new Rectangle((int)(position.X + boundingBoxOffSet.X), (int)(position.Y + boundingBoxOffSet.Y), boundingBoxWidth, boundingBoxHeight);
+            }
+        }
+
 
         public GameObject() 
         { 
@@ -33,17 +50,30 @@ namespace FNA_game_engine
 
         public virtual void Load(ContentManager content)
         {
+            boundingBoxImage = TextureLoader.Load("pixel", content);
+
             CalculateCenter();
+
+            // sets boundingbox dimentions to image dimentions by default
+            if (image != null)
+            {
+                boundingBoxWidth = image.Width;
+                boundingBoxHeight = image.Height;
+            }
         }
 
-        public virtual void Update(List<GameObject> objects)
+        public virtual void Update(List<GameObject> objects, Map map)
         {
 
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            if(image != null && active == true)
+            if (boundingBoxImage != null && drawBoundingBoxes == true && active == true)
+            {
+                spriteBatch.Draw(boundingBoxImage, new Vector2(boundingBox.X, boundingBox.Y), boundingBox, new Color(120,120,120,120), 0f, Vector2.Zero, 1f, SpriteEffects.None, .1f);
+            }
+            if (image != null && active == true)
             {
             spriteBatch.Draw(image, position,null, drawColor, rotation, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
             }

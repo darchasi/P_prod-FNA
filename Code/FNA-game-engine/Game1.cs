@@ -18,6 +18,7 @@ namespace FNA_game_engine
         SpriteBatch spriteBatch;
 
         public List<GameObject> objects = new List<GameObject>();
+        public Map map = new Map();
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -44,6 +45,7 @@ namespace FNA_game_engine
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            map.Load(Content);
             LoadLevel();
         }
 
@@ -62,6 +64,7 @@ namespace FNA_game_engine
             // Draw sprite(s)
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
             DrawObjects();
+            map.DrawWalls(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);
@@ -69,6 +72,12 @@ namespace FNA_game_engine
         public void LoadLevel()
         {
             objects.Add(new Player(new Vector2(640, 360)));
+
+            //Add walls
+            map.walls.Add(new Wall(new Rectangle(256, 256, 256, 256), true));
+
+            map.walls.Add(new Wall(new Rectangle(0, 650, 1280, 128), true));
+
             LoadObjects();
         }
         public void LoadObjects()
@@ -84,7 +93,7 @@ namespace FNA_game_engine
         {
             for (int i = 0; i < objects.Count; i++)
             {
-                objects[i].Update(objects);
+                objects[i].Update(objects, map);
             }
         }
 

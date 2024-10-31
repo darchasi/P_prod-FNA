@@ -33,10 +33,10 @@ namespace FNA_game_engine
             base.Load(content);
         }
 
-        public override void Update(List<GameObject> objects)
+        public override void Update(List<GameObject> objects, Map map)
         {
             CheckInput();
-            base.Update(objects);
+            base.Update(objects, map);
         }
 
         private void CheckInput()
