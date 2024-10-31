@@ -15,7 +15,9 @@ namespace FNA_game_engine
 
         private static MouseState mouseState;
         private static MouseState lastMouseState;
-
+        /// <summary>
+        /// Update keyboard state
+        /// </summary>
         public static void Update()
         {
             lastKeyboardState = keyboardState;

@@ -18,6 +18,9 @@ namespace FNA_game_engine
         SpriteBatch spriteBatch;
 
         public List<GameObject> objects = new List<GameObject>();
+        /// <summary>
+        /// Screen creation
+        /// </summary>
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -39,21 +42,29 @@ namespace FNA_game_engine
             base.Initialize();
 
         }
-
+        /// <summary>
+        /// Load Content
+        /// </summary>
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             LoadLevel();
         }
-
+        /// <summary>
+        /// Game time
+        /// </summary>
+        /// <param name="gameTime"></param>
         protected override void Update(GameTime gameTime)
         {
             Input.Update();
             UpdateObjects();
             base.Update(gameTime);
         }
-
+        /// <summary>
+        /// Set Color background
+        /// </summary>
+        /// <param name="gameTime"></param>
         protected override void Draw(GameTime gameTime)
         {
             // set color to LightPink
@@ -66,11 +77,17 @@ namespace FNA_game_engine
 
             base.Draw(gameTime);
         }
+        /// <summary>
+        /// Load level
+        /// </summary>
         public void LoadLevel()
         {
             objects.Add(new Player(new Vector2(640, 360)));
             LoadObjects();
         }
+        /// <summary>
+        /// Load of players
+        /// </summary>
         public void LoadObjects()
         {
             for (int i = 0; i < objects.Count; i++)
@@ -79,7 +96,9 @@ namespace FNA_game_engine
                 objects[i].Load(Content);
             }
         }
-
+        /// <summary>
+        /// Update objects
+        /// </summary>
         public void UpdateObjects()
         {
             for (int i = 0; i < objects.Count; i++)
@@ -87,7 +106,9 @@ namespace FNA_game_engine
                 objects[i].Update(objects);
             }
         }
-
+        /// <summary>
+        /// Draw objects
+        /// </summary>
         public void DrawObjects()
         {
             for (int i = 0; i < objects.Count; i++)

@@ -13,6 +13,7 @@ namespace FNA_game_engine
 {
     public class GameObject
     {
+        //Varibles positions
         protected Texture2D image;
         public Vector2 position;
         public Color drawColor = Color.White;
@@ -30,7 +31,10 @@ namespace FNA_game_engine
         {
 
         }
-
+        /// <summary>
+        /// Load sprite on the center
+        /// </summary>
+        /// <param name="content"></param>
         public virtual void Load(ContentManager content)
         {
             CalculateCenter();
@@ -40,7 +44,10 @@ namespace FNA_game_engine
         {
 
         }
-
+        /// <summary>
+        /// Draw all sprites of the game
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             if(image != null && active == true)
@@ -49,7 +56,9 @@ namespace FNA_game_engine
             }
 
         }
-
+        /// <summary>
+        /// Calcul center for sprites
+        /// </summary>
         private void CalculateCenter()
         {
             if (image == null)

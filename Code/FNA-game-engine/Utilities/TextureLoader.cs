@@ -13,7 +13,12 @@ namespace FNA_game_engine
     public static class TextureLoader
     {
         const bool usingPipeline = false; 
-
+        /// <summary>
+        /// Read file froms path
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="content"></param>
+        /// <returns></returns>
         public static Texture2D Load(string filePath, ContentManager content)
         {
             Texture2D image = content.Load<Texture2D>(filePath);
@@ -23,10 +28,12 @@ namespace FNA_game_engine
 
             return image;
         }
-
+        /// <summary>
+        /// This function pre multiplies the alpha of a texture, just like the XNA Content Pipeline does:
+        /// </summary>
+        /// <param name="texture"></param>
         private static void PremultiplyTexture(Texture2D texture)
         {
-            //This function pre multiplies the alpha of a texture, just like the XNA Content Pipeline does:
             Color[] buffer = new Color[texture.Width * texture.Height];
             texture.GetData(buffer);
             for (int i = 0; i < buffer.Length; i++)
