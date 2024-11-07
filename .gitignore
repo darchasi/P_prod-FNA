@@ -2,12 +2,12 @@
 *.so
 *.dylib
 *.dll
-.vs/
-obj/
-Release/
+./Code/FNA-game-engine/vs/
+./Code/FNA-game-engine/obj/
+./Code/FNA-game-engine/Release/
 *.csproj.user
 *.vcxproj.user
 .DS_Store
-xcuserdata/
+./Code/FNA-game-engine/xcuserdata/
 *.xcworkspace/
 *.xcscheme
