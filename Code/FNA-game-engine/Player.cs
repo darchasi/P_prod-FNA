@@ -10,16 +10,13 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 namespace FNA_game_engine
 {
-    public class Player : GameObject
+    public class Player : Character
     {
         public Player() 
         {
 
         } 
-        /// <summary>
-        /// Update position
-        /// </summary>
-        /// <param name="inputPosition"></param>
+
         public Player(Vector2 inputPosition)
         {
             position = inputPosition;
@@ -29,44 +26,54 @@ namespace FNA_game_engine
         {
             base.Initilize();
         }
-        /// <summary>
-        /// Load player sprite
-        /// </summary>
-        /// <param name="content"></param>
+
         public override void Load(ContentManager content)
         {
             image = TextureLoader.Load("sprite", content);
             base.Load(content);
         }
-        /// <summary>
-        /// Update object position
-        /// </summary>
-        /// <param name="objects"></param>
-        public override void Update(List<GameObject> objects)
+
+        public override void Update(List<GameObject> objects, Map map)
         {
-            CheckInput();
-            base.Update(objects);
+            CheckInput(objects, map);
+            base.Update(objects, map);
         }
-        /// <summary>
-        /// Player movement
-        /// </summary>
-        private void CheckInput()
+
+        private void CheckInput(List<GameObject> objects, Map map)
         {
-            if (Input.IsKeyDown(Keys.D) == true || Input.IsKeyDown(Keys.Right))
+            if (applyGravity)
             {
-                position.X += 5;
+                if (Input.IsKeyDown(Keys.D) || Input.IsKeyDown(Keys.Right))
+                {
+                    MoveRight();
+                }
+                else if (Input.IsKeyDown(Keys.A) || Input.IsKeyDown(Keys.Left))
+                {
+                    MoveLeft();
+                }
+                if (Input.KeyPressed(Keys.W) || Input.KeyPressed(Keys.Up))
+                {
+                    Jump(map);
+                }
             }
-            else if (Input.IsKeyDown(Keys.A) == true || Input.IsKeyDown(Keys.Left))
+            else
             {
-                position.X -= 5;
-            }
-            else if (Input.IsKeyDown(Keys.S) == true || Input.IsKeyDown(Keys.Down))
-            {
-                position.Y += 5;
-            }
-            else if (Input.IsKeyDown(Keys.W) == true || Input.IsKeyDown(Keys.Up))
-            {
-                position.Y -= 5;
+                if (Input.IsKeyDown(Keys.D) || Input.IsKeyDown(Keys.Right))
+                {
+                    MoveRight();
+                }
+                else if (Input.IsKeyDown(Keys.A) || Input.IsKeyDown(Keys.Left))
+                {
+                    MoveLeft();
+                }
+                if (Input.IsKeyDown(Keys.S) || Input.IsKeyDown(Keys.Down))
+                {
+                    MoveDown();
+                }
+                else if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up))
+                {
+                    MoveUp();
+                }
             }
         }
     }
