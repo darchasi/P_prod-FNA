@@ -68,25 +68,36 @@ namespace FNA_game_engine
 
         }
 
-        // does not work because Intersects wants a Ray and not Rectangle - Need to fix
-        /*
         public virtual bool CheckCollision(Rectangle input)
         {
-            return BoundingBox.Intersects(input);
+            return boundingBox.Intersects(input);
         }
-        */
+        
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            if (boundingBoxImage != null && drawBoundingBoxes == true && active == true)
+            if (boundingBoxImage != null && drawBoundingBoxes && active)
             {
                 spriteBatch.Draw(boundingBoxImage, new Vector2(boundingBox.X, boundingBox.Y), boundingBox, new Color(120,120,120,120), 0f, Vector2.Zero, 1f, SpriteEffects.None, .1f);
             }
-            if (image != null && active == true)
+            if (image != null && active)
             {
-            spriteBatch.Draw(image, position,null, drawColor, rotation, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+            spriteBatch.Draw(image, position,null, drawColor, MathHelper.ToRadians(rotation), Vector2.Zero, scale, SpriteEffects.None, layerDepth);
             }
+        }
+
+        public virtual void ArrowResponse()
+        {
 
         }
+
+        /*
+        public virtual void GiveSpriteEffect(Texture2D image, int effect)
+        {
+            if (image != null && active)
+            {
+                Graphics.DrawI(image, position, null, drawColor, MathHelper.ToRadians(rotation), Vector2.Zero, scale, SpriteEffects[effect], layerDepth);
+            }
+        }*/
 
         private void CalculateCenter()
         {

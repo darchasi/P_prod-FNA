@@ -10,12 +10,12 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 namespace FNA_game_engine
 {
-    public class Player : Character
+    public class Player : FireCharacter
     {
         public Player() 
         {
 
-        } 
+        }
 
         public Player(Vector2 inputPosition)
         {
@@ -29,7 +29,7 @@ namespace FNA_game_engine
 
         public override void Load(ContentManager content)
         {
-            image = TextureLoader.Load("sprite", content);
+            image = TextureLoader.Load("player1", content);
             base.Load(content);
         }
 
@@ -74,6 +74,11 @@ namespace FNA_game_engine
                 {
                     MoveUp();
                 }
+            }
+
+            if (Input.KeyPressed(Keys.Space))
+            {
+                Fire();
             }
         }
     }
