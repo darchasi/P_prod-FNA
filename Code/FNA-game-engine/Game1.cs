@@ -14,6 +14,9 @@ namespace FNA_game_engine
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        public static float camrot = 0;
+        public const int PIXELWIDTH = 640;
+        public const int PIXELHEIGHT = 360;
         public const int SCREENWIDTH = 1280;
         public const int SCREENHEIGHT = 720;
         
@@ -30,20 +33,17 @@ namespace FNA_game_engine
             Content.RootDirectory = "Content";
 
             // Set window size
-            graphics.PreferredBackBufferWidth = SCREENWIDTH;
-            graphics.PreferredBackBufferHeight = SCREENHEIGHT;
 
-            // Set fullscreen on
-            graphics.IsFullScreen = false;
+            Resolution.Init(ref graphics);
+            Resolution.SetVirtualResolution(PIXELWIDTH, PIXELHEIGHT);
 
-            // Apply graphic changes
-            graphics.ApplyChanges();
+            Resolution.SetResolution(SCREENWIDTH, SCREENHEIGHT, false);
         }
 
         protected override void Initialize()
         {
             base.Initialize();
-
+            Camera.Initialize();
         }
 
         protected override void LoadContent()
@@ -60,6 +60,10 @@ namespace FNA_game_engine
             Input.Update();
             UpdateObjects();
             map.Update(objects);
+            UpdateCamera();
+
+            Camera.rotation += camrot;
+
             base.Update(gameTime);
         }
 
@@ -68,8 +72,10 @@ namespace FNA_game_engine
             // set color to LightPink
             GraphicsDevice.Clear(Color.LightPink);
 
+            Resolution.BeginDraw();
+
             // Draw sprite(s)
-            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Camera.GetTransformMatrix());
             DrawObjects();
             map.DrawWalls(spriteBatch);
             spriteBatch.End();
@@ -84,9 +90,19 @@ namespace FNA_game_engine
             objects.Add(new Enemy(new Vector2(300, 522)));
 
             // Add walls
-            map.walls.Add(new Wall(new Rectangle(256, 256, 256, 256), true));
+            map.walls.Add(new Wall(new Rectangle(76, 460, 206, 60), true));
 
-            map.walls.Add(new Wall(new Rectangle(0, 650, 1280, 128), true));
+            map.walls.Add(new Wall(new Rectangle(456, 280, 146, 56), true));
+
+            map.walls.Add(new Wall(new Rectangle(780, 160, 236, 64), true));
+
+            map.walls.Add(new Wall(new Rectangle(730, 480, 76, 30), true));
+
+            map.walls.Add(new Wall(new Rectangle(980, 490, 76, 30), true));
+
+            map.walls.Add(new Wall(new Rectangle(1100, 320, 90, 26), true));
+
+            map.walls.Add(new Wall(new Rectangle(0, 650, 4096, 128), true));
 
             // Add decors
             map.decors.Add(new Decor(Vector2.Zero, "background", 1f));
@@ -122,6 +138,22 @@ namespace FNA_game_engine
             {
                 map.decors[i].Draw(spriteBatch);
             }
+        }
+
+        private void UpdateCamera()
+        {
+            if (objects.Count == 0)
+            {
+                return;
+            }
+
+            Camera.Update(GetCamHeightDiff(objects[0].position + objects[0].center));
+        }
+
+        private Vector2 GetCamHeightDiff(Vector2 pos)
+        {
+            pos.Y = pos.Y - 130;
+            return pos;
         }
     }
 }

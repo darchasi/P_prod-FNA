@@ -19,7 +19,7 @@ namespace FNA_game_engine
         public float scale = 1f, rotation = 0f;
         public float layerDepth = .5f;
         public bool active = true;
-        protected Vector2 center;
+        public Vector2 center;
         // will need to change for object walkthough-able
         public bool collidable = true;
         protected int boundingBoxWidth, boundingBoxHeight;
@@ -99,7 +99,7 @@ namespace FNA_game_engine
             }
         }*/
 
-        private void CalculateCenter()
+        public void CalculateCenter()
         {
             if (image == null)
             {

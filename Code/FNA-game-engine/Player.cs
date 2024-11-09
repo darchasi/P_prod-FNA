@@ -25,6 +25,7 @@ namespace FNA_game_engine
 
         public override void Initilize()
         {
+            jumpVelocity = 20f;
             score = 0;
             base.Initilize();
         }

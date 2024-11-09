@@ -16,7 +16,7 @@ namespace FNA_game_engine
     public class Enemy : Character
     {
         int respawnTimer;
-        const int maxRespawnTimer = 60;
+        const int maxRespawnTimer = 20;
 
         Random random = new Random();
 
@@ -65,6 +65,7 @@ namespace FNA_game_engine
             active = false;
             respawnTimer = maxRespawnTimer;
             Player.score++;
+            //Game1.camrot += 0.005f;
             explosion.Play(0.05f, 0f, 0f);
 
             base.ProjectileResponse();
