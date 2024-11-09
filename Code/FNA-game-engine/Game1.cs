@@ -22,6 +22,8 @@ namespace FNA_game_engine
 
         public List<GameObject> objects = new List<GameObject>();
         public Map map = new Map();
+
+        GameHUD gameHUD = new GameHUD();
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -49,6 +51,7 @@ namespace FNA_game_engine
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             map.Load(Content);
+            gameHUD.Load(Content);
             LoadLevel();
         }
 
@@ -71,6 +74,7 @@ namespace FNA_game_engine
             map.DrawWalls(spriteBatch);
             spriteBatch.End();
 
+            gameHUD.Draw(spriteBatch);
             base.Draw(gameTime);
         }
         public void LoadLevel()

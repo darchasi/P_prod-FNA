@@ -12,6 +12,7 @@ namespace FNA_game_engine
 {
     public class Player : FireCharacter
     {
+        public static int score;
         public Player() 
         {
 
@@ -24,6 +25,7 @@ namespace FNA_game_engine
 
         public override void Initilize()
         {
+            score = 0;
             base.Initilize();
         }
 
