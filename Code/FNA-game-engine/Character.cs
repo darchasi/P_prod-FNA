@@ -20,11 +20,11 @@ namespace FNA_game_engine
 
         protected float decel = 1.2f; // lower number is, slower character slows down.
         protected float accel = 1.2f; // lower number is, slower character takes off.
-        protected float maxSpeed = 5f;
+        protected float maxSpeed = 7f;
 
-        const float gravity = 1f;
-        const float jumpVelocity = 16f; // how much jump.
-        const float maxFallVelocity = 32;
+        public float gravity = 1f;
+        public float jumpVelocity = 16f; // how much jump.
+        public float maxFallVelocity = 32;
 
         protected bool jumping;
         // static = always available even if no Character loaded

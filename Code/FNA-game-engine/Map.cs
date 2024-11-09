@@ -75,14 +75,17 @@ namespace FNA_game_engine
 
     public class Wall
     {
-        public Color defaultColor = Color.Black;
+        public Color defaultColor = Color.LightYellow;
         public Single defaultScale = 1f;
         public Single defaultRotation = 0f;
         public Single defaultLayerDepth = .7f;
         public Rectangle wall;
         public bool active;
 
-        public Wall() { }
+        public Wall()
+        {
+
+        }
 
         public Wall(Rectangle inputRectangle, bool isActive)
         {
