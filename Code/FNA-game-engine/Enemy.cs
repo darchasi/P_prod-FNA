@@ -64,6 +64,7 @@ namespace FNA_game_engine
         {
             active = false;
             respawnTimer = maxRespawnTimer;
+            Player.score++;
             explosion.Play(0.05f, 0f, 0f);
 
             base.ProjectileResponse();
