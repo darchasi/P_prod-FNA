@@ -30,14 +30,11 @@ namespace FNA_game_engine
             Content.RootDirectory = "Content";
 
             // Set window size
-            graphics.PreferredBackBufferWidth = SCREENWIDTH;
-            graphics.PreferredBackBufferHeight = SCREENHEIGHT;
 
-            // Set fullscreen on
-            graphics.IsFullScreen = false;
+            Resolution.Init(ref graphics);
+            Resolution.SetVirtualResolution(SCREENWIDTH, SCREENHEIGHT);
 
-            // Apply graphic changes
-            graphics.ApplyChanges();
+            Resolution.SetResolution(800, 600, false);
         }
 
         protected override void Initialize()
@@ -68,8 +65,10 @@ namespace FNA_game_engine
             // set color to LightPink
             GraphicsDevice.Clear(Color.LightPink);
 
+            Resolution.BeginDraw();
+
             // Draw sprite(s)
-            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Resolution.getTransformationMatrix());
             DrawObjects();
             map.DrawWalls(spriteBatch);
             spriteBatch.End();
