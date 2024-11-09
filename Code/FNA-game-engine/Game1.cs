@@ -56,6 +56,7 @@ namespace FNA_game_engine
         {
             Input.Update();
             UpdateObjects();
+            map.Update(objects);
             base.Update(gameTime);
         }
 
@@ -78,10 +79,14 @@ namespace FNA_game_engine
 
             objects.Add(new Enemy(new Vector2(300, 522)));
 
-            //Add walls
+            // Add walls
             map.walls.Add(new Wall(new Rectangle(256, 256, 256, 256), true));
 
             map.walls.Add(new Wall(new Rectangle(0, 650, 1280, 128), true));
+
+            // Add decors
+            map.decors.Add(new Decor(Vector2.Zero, "background", 1f));
+            map.LoadMap(Content);
 
             LoadObjects();
         }
@@ -107,6 +112,11 @@ namespace FNA_game_engine
             for (int i = 0; i < objects.Count; i++)
             {
                 objects[i].Draw(spriteBatch);
+            }
+
+            for (int i = 0; i < map.decors.Count; i++)
+            {
+                map.decors[i].Draw(spriteBatch);
             }
         }
     }

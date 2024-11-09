@@ -14,6 +14,7 @@ namespace FNA_game_engine
 {
     public class Map
     {
+        public List<Decor> decors = new List<Decor>();
         public List<Wall> walls = new List<Wall>();
         Texture2D wallImage;
 
@@ -25,10 +26,25 @@ namespace FNA_game_engine
         {
             wallImage = TextureLoader.Load("pixel", content);
         }
+        public void LoadMap(ContentManager content)
+        {
+            for (int i = 0; i < decors.Count; i++)
+            {
+                decors[i].Load(content, decors[i].imagePath);
+            }
+        }
 
-        /// <summary>
-        /// Checks for collision between two rectangles
-        /// </summary>
+        // No need to pass Map since this is Map class, using this instead
+        public void Update(List<GameObject> gameObjects)
+        {
+            for (int i = 0;i < decors.Count;i++)
+            {
+                decors[i].Update(gameObjects, this);
+            }
+
+        }
+
+        // Checks for collision between two rectangles
         public Rectangle CheckCollision(Rectangle input)
         {
             // for each wall, check if it collides with input rectangle
@@ -44,9 +60,7 @@ namespace FNA_game_engine
             return Rectangle.Empty;
         }
 
-        /// <summary>
-        /// Draw walls 
-        /// </summary>
+
         public void DrawWalls(SpriteBatch spriteBatch)
         {
             for (int i = 0; i < walls.Count; i++)
@@ -74,6 +88,58 @@ namespace FNA_game_engine
         {
             wall = inputRectangle;
             active = isActive;
+        }
+    }
+
+    public class Decor : GameObject
+    {
+        public string imagePath;
+        public Rectangle sourceRectangle;
+
+        public string Name { get { return imagePath; } }
+
+        public Decor()
+        {
+            collidable = false;
+        }
+
+        public Decor(Vector2 inputPosition, string inputImagePath, float inputDepth)
+        {
+            position = inputPosition;
+            imagePath = inputImagePath;
+            layerDepth = inputDepth;
+            active = true;
+            collidable = false;
+        }
+
+        public virtual void Load(ContentManager content, string asset)
+        {
+            image = TextureLoader.Load(asset, content);
+            image.Name = asset;
+            boundingBoxWidth = image.Width;
+            boundingBoxHeight = image.Height;
+
+            if (sourceRectangle == Rectangle.Empty)
+            {
+                sourceRectangle = new Rectangle(0, 0, image.Width, image.Height);
+            }
+        }
+
+        public void SetImage(Texture2D input, string newPath)
+        {
+            image = input;
+            imagePath = newPath;
+            // set both var to image.Width
+            boundingBoxWidth = sourceRectangle.Width = image.Width;
+            boundingBoxHeight= sourceRectangle.Height = image.Height;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            if (image != null && active)
+            {
+                spriteBatch.Draw(image, position, sourceRectangle, drawColor, rotation, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+            }
         }
     }
 }
