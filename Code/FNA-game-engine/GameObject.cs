@@ -85,7 +85,7 @@ namespace FNA_game_engine
             }
         }
 
-        public virtual void ArrowResponse()
+        public virtual void ProjectileResponse()
         {
 
         }

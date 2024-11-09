@@ -14,6 +14,9 @@ namespace FNA_game_engine
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        public const int SCREENWIDTH = 1280;
+        public const int SCREENHEIGHT = 720;
+        
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -25,8 +28,8 @@ namespace FNA_game_engine
             Content.RootDirectory = "Content";
 
             // Set window size
-            graphics.PreferredBackBufferWidth = 1280;
-            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = SCREENWIDTH;
+            graphics.PreferredBackBufferHeight = SCREENHEIGHT;
 
             // Set fullscreen on
             graphics.IsFullScreen = false;
@@ -72,6 +75,8 @@ namespace FNA_game_engine
         public void LoadLevel()
         {
             objects.Add(new Player(new Vector2(640, 360)));
+
+            objects.Add(new Enemy(new Vector2(300, 522)));
 
             //Add walls
             map.walls.Add(new Wall(new Rectangle(256, 256, 256, 256), true));
