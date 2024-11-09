@@ -68,7 +68,7 @@ namespace FNA_game_engine
                 if (objects[i].active && objects[i] != owner && objects[i].CheckCollision(boundingBox))
                 {
                     Destroy();
-                    objects[i].ArrowResponse();
+                    objects[i].ProjectileResponse();
                     return;
                 }
             }

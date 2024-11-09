@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enemy.cs" />
     <Compile Include="Projectile.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="FireCharacter.cs" />

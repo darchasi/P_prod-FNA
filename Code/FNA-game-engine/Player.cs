@@ -51,7 +51,7 @@ namespace FNA_game_engine
                 {
                     MoveLeft();
                 }
-                if (Input.KeyPressed(Keys.W) || Input.KeyPressed(Keys.Up))
+                if (Input.KeyPressed(Keys.Space))
                 {
                     Jump(map);
                 }
@@ -76,7 +76,7 @@ namespace FNA_game_engine
                 }
             }
 
-            if (Input.KeyPressed(Keys.Space))
+            if (Input.KeyPressed(Keys.W))
             {
                 Fire();
             }
