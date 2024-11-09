@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Animations\Animation.cs" />
     <Compile Include="Animations\AnimationLoader.cs" />
+    <Compile Include="Animations\AnimatedObject.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="GameHUD.cs" />
     <Compile Include="Projectile.cs" />

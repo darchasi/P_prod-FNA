@@ -36,6 +36,7 @@ namespace FNA_game_engine
         public int height;
         public int gridX; // how many frames in X direction
         public int gridY; // how many frames in Y direction
+        public List<Animation> animationList = new List<Animation>();
 
         public AnimationSet()
         {
