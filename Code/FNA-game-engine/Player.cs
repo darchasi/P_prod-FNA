@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
+using System.Security;
 namespace FNA_game_engine
 {
     public class Player : FireCharacter
@@ -32,8 +33,17 @@ namespace FNA_game_engine
 
         public override void Load(ContentManager content)
         {
-            image = TextureLoader.Load("player1", content);
+            image = TextureLoader.Load("spritesheet", content);
+
+            // Load animation
+            LoadAnimation("ShyBoy.anm", content);
+            ChangeAnimation(Animations.IdleLeft);
             base.Load(content);
+
+            boundingBoxOffSet.X = 0;
+            boundingBoxOffSet.Y = 0;
+            boundingBoxWidth = animationSet.width;
+            boundingBoxHeight = animationSet.height;
         }
 
         public override void Update(List<GameObject> objects, Map map)
@@ -83,6 +93,39 @@ namespace FNA_game_engine
             {
                 Fire();
             }
+        }
+        protected override void UpdateAnimations()
+        {
+            if (currentAnimation == null)
+            {
+                return;
+            }
+
+            base.UpdateAnimations();
+
+            if (velocity !=  Vector2.Zero || jumping)
+            {
+                if (direction.X < 0 && AnimationIsNot(Animations.RunLeft))
+                {
+                    ChangeAnimation(Animations.RunLeft);
+                }
+                else if (direction.X > 0 && AnimationIsNot(Animations.RunRight))
+                {
+                    ChangeAnimation(Animations.RunRight);
+                }
+            }
+            else if (velocity == Vector2.Zero || !jumping)
+            {
+                if (direction.X < 0 && AnimationIsNot(Animations.IdleLeft))
+                {
+                    ChangeAnimation(Animations.IdleLeft);
+                }
+                else if (direction.X > 0 && AnimationIsNot(Animations.IdleRight))
+                {
+                    ChangeAnimation(Animations.IdleRight);
+                }
+            }
+
         }
     }
 }

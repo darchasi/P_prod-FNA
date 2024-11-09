@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace FNA_game_engine
 {
-    public class Character : GameObject
+    public class Character : AnimatedObject
     {
         public Vector2 velocity;
 

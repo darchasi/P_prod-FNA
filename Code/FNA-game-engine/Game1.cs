@@ -147,7 +147,8 @@ namespace FNA_game_engine
                 return;
             }
 
-            Camera.Update(GetCamHeightDiff(objects[0].position + objects[0].center));
+            Camera.Update(objects[0].position);
+            //Camera.Update(GetCamHeightDiff(objects[0].position + objects[0].center));
         }
 
         private Vector2 GetCamHeightDiff(Vector2 pos)
