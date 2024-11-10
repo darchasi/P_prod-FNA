@@ -57,7 +57,7 @@ namespace FNA_game_engine
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 #if DEBUG
-            editor.LoadTextures(Content);
+            editor.LoadTextures(Content, map);
 #endif
             map.Load(Content);
             gameHUD.Load(Content);
@@ -117,7 +117,7 @@ namespace FNA_game_engine
             
             objects.Add(new Player(new Vector2(1652, 2940)));
 
-            objects.Add(new Enemy(new Vector2(300, 522)));
+            objects.Add(new Enemy(new Vector2(1392, 3002)));
 
             /*
             map.walls.Add(new Wall(new Rectangle(16, 860, 2060, 60), true));

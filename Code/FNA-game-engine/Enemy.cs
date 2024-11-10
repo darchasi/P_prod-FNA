@@ -36,7 +36,7 @@ namespace FNA_game_engine
         {
             active = true;
             collidable = false;
-            position.X = random.Next(0, Game1.SCREENWIDTH);
+            position.X = random.Next(1342, 1922);
             base.Initialize();
         }
 

@@ -23,7 +23,7 @@ namespace FNA_game_engine
         // will need to change for object walkthough-able
         public bool collidable = true;
         protected int boundingBoxWidth, boundingBoxHeight;
-        protected Vector2 boundingBoxOffSet;
+        protected Vector2 boundingBoxOffset;
         Texture2D boundingBoxImage;
         protected Vector2 direction = new Vector2(1,0);
         // for dev
@@ -37,7 +37,7 @@ namespace FNA_game_engine
             get
             {
                 // returns new rectangle with position calculated with current position + offset, converted to int
-                return new Rectangle((int)(position.X + boundingBoxOffSet.X), (int)(position.Y + boundingBoxOffSet.Y), boundingBoxWidth, boundingBoxHeight);
+                return new Rectangle((int)(position.X + boundingBoxOffset.X), (int)(position.Y + boundingBoxOffset.Y), boundingBoxWidth, boundingBoxHeight);
             }
         }
 
@@ -88,7 +88,8 @@ namespace FNA_game_engine
         {
             if (boundingBoxImage != null && drawBoundingBoxes && active)
             {
-                spriteBatch.Draw(boundingBoxImage, new Vector2(boundingBox.X, boundingBox.Y), boundingBox, new Color(120,120,120,120), 0f, Vector2.Zero, 1f, SpriteEffects.None, .1f);
+                // new Color(120,120,120,120) for debug
+                spriteBatch.Draw(boundingBoxImage, new Vector2(boundingBox.X, boundingBox.Y), boundingBox, Color.Transparent, 0f, Vector2.Zero, 1f, SpriteEffects.None, .1f);
             }
             if (image != null && active)
             {
