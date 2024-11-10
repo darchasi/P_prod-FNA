@@ -27,6 +27,8 @@ namespace FNA_game_engine
         public Map map = new Map();
 
         GameHUD gameHUD = new GameHUD();
+        Editor editor;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -42,6 +44,10 @@ namespace FNA_game_engine
 
         protected override void Initialize()
         {
+#if DEBUG
+            editor = new Editor(this);
+            editor.Show();
+#endif
             base.Initialize();
             Camera.Initialize();
         }
@@ -49,7 +55,9 @@ namespace FNA_game_engine
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+#if DEBUG
+            editor.LoadTextures(Content);
+#endif
             map.Load(Content);
             gameHUD.Load(Content);
             LoadLevel();
@@ -62,6 +70,9 @@ namespace FNA_game_engine
             map.Update(objects);
             UpdateCamera();
 
+#if DEBUG
+            editor.Update(objects, map);
+#endif
             Camera.rotation += camrot;
 
             base.Update(gameTime);
@@ -76,6 +87,9 @@ namespace FNA_game_engine
 
             // Draw sprite(s)
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Camera.GetTransformMatrix());
+#if DEBUG
+            editor.Draw(spriteBatch);
+#endif
             DrawObjects();
             map.DrawWalls(spriteBatch);
             spriteBatch.End();
@@ -104,8 +118,8 @@ namespace FNA_game_engine
 
             map.walls.Add(new Wall(new Rectangle(0, 650, 4096, 128), true));
 
-            // Add decors
-            map.decors.Add(new Decor(Vector2.Zero, "background", 1f));
+            // Add decor
+            map.decor.Add(new Decor(Vector2.Zero, "background", 1f));
             map.LoadMap(Content);
 
             LoadObjects();
@@ -114,7 +128,7 @@ namespace FNA_game_engine
         {
             for (int i = 0; i < objects.Count; i++)
             {
-                objects[i].Initilize();
+                objects[i].Initialize();
                 objects[i].Load(Content);
             }
         }
@@ -134,9 +148,9 @@ namespace FNA_game_engine
                 objects[i].Draw(spriteBatch);
             }
 
-            for (int i = 0; i < map.decors.Count; i++)
+            for (int i = 0; i < map.decor.Count; i++)
             {
-                map.decors[i].Draw(spriteBatch);
+                map.decor[i].Draw(spriteBatch);
             }
         }
 

@@ -20,7 +20,7 @@ namespace FNA_game_engine
 
         public FireCharacter() { }
 
-        public override void Initilize()
+        public override void Initialize()
         {
             if (projectiles.Count == 0)
             {
@@ -29,7 +29,7 @@ namespace FNA_game_engine
                     projectiles.Add(new Projectile());
                 }
             }
-            base.Initilize();
+            base.Initialize();
         }
 
         public void Fire()

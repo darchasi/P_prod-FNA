@@ -30,11 +30,11 @@ namespace FNA_game_engine
         // static = always available even if no Character loaded
         public static bool applyGravity = true;
 
-        public override void Initilize()
+        public override void Initialize()
         {
             velocity = Vector2.Zero;
             jumping = false;
-            base.Initilize();
+            base.Initialize();
         }
         public override void Update(List<GameObject> objects, Map map)
         {

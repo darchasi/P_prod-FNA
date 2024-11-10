@@ -24,11 +24,11 @@ namespace FNA_game_engine
             position = inputPosition;
         }
 
-        public override void Initilize()
+        public override void Initialize()
         {
             jumpVelocity = 20f;
             score = 0;
-            base.Initilize();
+            base.Initialize();
         }
 
         public override void Load(ContentManager content)

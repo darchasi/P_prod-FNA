@@ -21,6 +21,8 @@ namespace FNA_game_engine
         /// <returns></returns>
         public static Texture2D Load(string filePath, ContentManager content)
         {
+            // if Microsoft.Xna.Framework.Content.ContentLoadException: 'Could not load asset you already know who it is, by stargazerscam! Error: The content file was not found
+            // add image to Content and copy in newer
             Texture2D image = content.Load<Texture2D>(filePath);
 
             if (usingPipeline == false)

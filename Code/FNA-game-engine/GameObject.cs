@@ -28,6 +28,9 @@ namespace FNA_game_engine
         protected Vector2 direction = new Vector2(1,0);
         // for dev
         const bool drawBoundingBoxes = true;
+
+        public Vector2 startPosition = new Vector2(-1, -1);
+
         // property use so that boundingBox calculates its position every time it is called, this way it is always up to date even if it changes position each frame.
         public Rectangle boundingBox
         {
@@ -44,9 +47,17 @@ namespace FNA_game_engine
         
         }
 
-        public virtual void Initilize()
+        public virtual void Initialize()
         {
+            if (startPosition == new Vector2(-1,-1))
+            {
+                startPosition = position;
+            }
+        }
 
+        public virtual void SetToDefaultPosition()
+        {
+            position = startPosition;
         }
 
         public virtual void Load(ContentManager content)

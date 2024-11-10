@@ -82,8 +82,5 @@ namespace FNA_game_engine
         {
             active = false;
         }
-
-        // 6. Bullets and Decorations pt. 1 | Making a 2D Game Engine with FNA
-        // Time : 8:00
     }
 }
