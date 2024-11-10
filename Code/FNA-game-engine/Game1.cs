@@ -15,8 +15,8 @@ namespace FNA_game_engine
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         public static float camrot = 0;
-        public const int PIXELWIDTH = 640;
-        public const int PIXELHEIGHT = 360;
+        public const int PIXELWIDTH = 640 *2;
+        public const int PIXELHEIGHT = 360*2;
         public const int SCREENWIDTH = 1280;
         public const int SCREENHEIGHT = 720;
         
@@ -50,6 +50,7 @@ namespace FNA_game_engine
 #endif
             base.Initialize();
             Camera.Initialize();
+            Global.Initialize(this);
         }
 
         protected override void LoadContent()
@@ -60,7 +61,7 @@ namespace FNA_game_engine
 #endif
             map.Load(Content);
             gameHUD.Load(Content);
-            LoadLevel();
+            LoadLevel("RunAndBuild.lvl");
         }
 
         protected override void Update(GameTime gameTime)
@@ -73,6 +74,7 @@ namespace FNA_game_engine
 #if DEBUG
             editor.Update(objects, map);
 #endif
+            Camera.zoom = 0.8f;
             Camera.rotation += camrot;
 
             base.Update(gameTime);
@@ -97,29 +99,34 @@ namespace FNA_game_engine
             gameHUD.Draw(spriteBatch);
             base.Draw(gameTime);
         }
-        public void LoadLevel()
+        public void LoadLevel(string fileName)
         {
-            objects.Add(new Player(new Vector2(640, 360)));
+            Global.levelName = fileName;
+
+            // Load level data
+
+            LevelData levelData = XmlHelper.Load("Content\\Levels\\" +  fileName);
+
+
+            // Add walls
+            map.walls = levelData.walls;
+
+            // Add decor
+            map.decor = levelData.decor;
+
+            
+            objects.Add(new Player(new Vector2(1652, 2940)));
 
             objects.Add(new Enemy(new Vector2(300, 522)));
 
-            // Add walls
-            map.walls.Add(new Wall(new Rectangle(76, 460, 206, 60), true));
+            /*
+            map.walls.Add(new Wall(new Rectangle(16, 860, 2060, 60), true));
 
             map.walls.Add(new Wall(new Rectangle(456, 280, 146, 56), true));
 
-            map.walls.Add(new Wall(new Rectangle(780, 160, 236, 64), true));
-
-            map.walls.Add(new Wall(new Rectangle(730, 480, 76, 30), true));
-
-            map.walls.Add(new Wall(new Rectangle(980, 490, 76, 30), true));
-
-            map.walls.Add(new Wall(new Rectangle(1100, 320, 90, 26), true));
-
-            map.walls.Add(new Wall(new Rectangle(0, 650, 4096, 128), true));
-
-            // Add decor
             map.decor.Add(new Decor(Vector2.Zero, "background", 1f));
+            */
+
             map.LoadMap(Content);
 
             LoadObjects();
@@ -161,13 +168,14 @@ namespace FNA_game_engine
                 return;
             }
 
-            Camera.Update(objects[0].position);
-            //Camera.Update(GetCamHeightDiff(objects[0].position + objects[0].center));
+            //Camera.Update(objects[0].position);
+            Camera.Update(GetCamHeightDiff(objects[0].position));
         }
 
         private Vector2 GetCamHeightDiff(Vector2 pos)
         {
-            pos.Y = pos.Y - 130;
+            pos.Y = pos.Y + 54;
+            pos.X = pos.X + 54;
             return pos;
         }
     }

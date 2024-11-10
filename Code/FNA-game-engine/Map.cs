@@ -18,9 +18,9 @@ namespace FNA_game_engine
         public List<Wall> walls = new List<Wall>();
         Texture2D wallImage;
 
-        public int mapWidth = 15;
-        public int mapHeight = 9;
-        public int tileSize = 128;
+        public int mapWidth = 160;
+        public int mapHeight = 90;
+        public int tileSize = 48;
 
         public void Load(ContentManager content)
         {
