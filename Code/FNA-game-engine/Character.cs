@@ -135,10 +135,7 @@ namespace FNA_game_engine
                 jumping = true;
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
         // calculate if next frame will cause a collision, if yes, stop the character
@@ -155,62 +152,42 @@ namespace FNA_game_engine
                 maxY = (int)jumpVelocity;
             }
 
-            if (applyGravity)
+            // Stop movement at X contact
+            if (xAxis && velocity.X != 0)
             {
-                // Stop le movement au contact X
-                if (xAxis && velocity.X != 0)
+                if (velocity.X > 0)
                 {
-                    if (velocity.X > 0)
-                    {
-                        futureBoundingBox.X += maxX;
-                    }
-                    else
-                    {
-                        futureBoundingBox.X -= maxX;
-                    }
+                    futureBoundingBox.X += maxX;
                 }
-                // Stop movement at Y contact
-
-                else if (!xAxis && velocity.Y != gravity)
+                else
                 {
-                    if (velocity.Y > 0)
-                    {
-                        futureBoundingBox.Y += maxY;
-                    }
-                    else
-                    {
-                        futureBoundingBox.Y -= maxY;
-                    }
+                    futureBoundingBox.X -= maxX;
                 }
             }
-            else
+            // Stop movement at Y contact
+            else if (!applyGravity && !xAxis && velocity.Y != 0)
             {
-                // Stop le movement au contact X
-                if (xAxis && velocity.X != 0)
+                if (velocity.Y > 0)
                 {
-                    if (velocity.X > 0)
-                    {
-                        futureBoundingBox.X += maxX;
-                    }
-                    else
-                    {
-                        futureBoundingBox.X -= maxX;
-                    }
+                    futureBoundingBox.Y += maxY;
                 }
-                // Stop movement at Y contact
-                else if (!xAxis && velocity.Y != gravity)
+                else
                 {
-                    if (velocity.Y > 0)
-                    {
-                        futureBoundingBox.Y += maxY;
-                    }
-                    else
-                    {
-                        futureBoundingBox.Y -= maxY;
-                    }
+                    futureBoundingBox.Y -= maxY;
                 }
             }
-
+            // Stop movement at Y contact
+            else if (applyGravity && !xAxis && velocity.Y != gravity)
+            {
+                if (velocity.Y > 0)
+                {
+                    futureBoundingBox.Y += maxY;
+                }
+                else
+                {
+                    futureBoundingBox.Y -= maxY;
+                }
+            }
 
             // Check for wall collision
             Rectangle wallCollision = map.CheckCollision(futureBoundingBox);
@@ -233,7 +210,7 @@ namespace FNA_game_engine
 
             for (int i = 0; i < objects.Count; i++)
             {
-                if (objects[i] != this && objects[i].active && objects[i].collidable)
+                if (objects[i] != this && objects[i].active && objects[i].collidable && objects[i].CheckCollision(futureBoundingBox))
                 {
                     return true;
                 }
@@ -245,7 +222,7 @@ namespace FNA_game_engine
 
         public void LandResponse(Rectangle wallCollision)
         {
-            position.Y = wallCollision.Top - (boundingBoxHeight + boundingBoxOffSet.Y);
+            position.Y = wallCollision.Top - (boundingBoxHeight + boundingBoxOffset.Y);
 
             velocity.Y = 0;
 
@@ -254,7 +231,7 @@ namespace FNA_game_engine
 
         protected Rectangle OnGround(Map map)
         {
-            Rectangle futureBoundingBox = new Rectangle((int)(position.X + boundingBoxOffSet.X), (int)(position.Y + boundingBoxOffSet.Y + (velocity.Y + gravity)), boundingBoxWidth, boundingBoxHeight);
+            Rectangle futureBoundingBox = new Rectangle((int)(position.X + boundingBoxOffset.X), (int)(position.Y + boundingBoxOffset.Y + (velocity.Y + gravity)), boundingBoxWidth, boundingBoxHeight);
 
             return map.CheckCollision(futureBoundingBox);
         }

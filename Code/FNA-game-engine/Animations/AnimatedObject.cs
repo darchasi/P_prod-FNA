@@ -25,7 +25,7 @@ namespace FNA_game_engine
 
         protected enum Animations
         {
-            RunLeft, RunRight, IdleLeft, IdleRight,
+            RunLeft, RunRight, IdleLeft, IdleRight, PickUp,
         }
 
         protected void LoadAnimation(string path, ContentManager content)
