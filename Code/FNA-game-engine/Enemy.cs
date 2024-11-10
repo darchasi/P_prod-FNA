@@ -32,12 +32,12 @@ namespace FNA_game_engine
             position = inputPosition;
         }
 
-        public override void Initilize()
+        public override void Initialize()
         {
             active = true;
             collidable = false;
             position.X = random.Next(0, Game1.SCREENWIDTH);
-            base.Initilize();
+            base.Initialize();
         }
 
         public override void Load(ContentManager content)
@@ -54,7 +54,7 @@ namespace FNA_game_engine
                 respawnTimer--;
                 if (respawnTimer <= 0)
                 {
-                    Initilize();
+                    Initialize();
                 }
             }
             base.Update(objects, map);

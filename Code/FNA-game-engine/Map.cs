@@ -14,7 +14,7 @@ namespace FNA_game_engine
 {
     public class Map
     {
-        public List<Decor> decors = new List<Decor>();
+        public List<Decor> decor = new List<Decor>();
         public List<Wall> walls = new List<Wall>();
         Texture2D wallImage;
 
@@ -28,18 +28,18 @@ namespace FNA_game_engine
         }
         public void LoadMap(ContentManager content)
         {
-            for (int i = 0; i < decors.Count; i++)
+            for (int i = 0; i < decor.Count; i++)
             {
-                decors[i].Load(content, decors[i].imagePath);
+                decor[i].Load(content, decor[i].imagePath);
             }
         }
 
         // No need to pass Map since this is Map class, using this instead
         public void Update(List<GameObject> gameObjects)
         {
-            for (int i = 0;i < decors.Count;i++)
+            for (int i = 0;i < decor.Count;i++)
             {
-                decors[i].Update(gameObjects, this);
+                decor[i].Update(gameObjects, this);
             }
 
         }
@@ -70,6 +70,17 @@ namespace FNA_game_engine
                     spriteBatch.Draw(wallImage, new Vector2(walls[i].wall.X, walls[i].wall.Y), walls[i].wall, walls[i].defaultColor, walls[i].defaultRotation, Vector2.Zero, walls[i].defaultScale, SpriteEffects.None, walls[i].defaultLayerDepth);
                 }
             }
+        }
+
+        // Get tile index from coordonates
+        public Point GetTileIndex(Vector2 inputPosition)
+        {
+            if (inputPosition == new Vector2 (-1, -1))
+            {
+                return new Point(-1, -1);
+            }
+
+            return new Point((int)inputPosition.X / tileSize, (int)inputPosition.Y / tileSize);
         }
     }
 
