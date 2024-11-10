@@ -947,7 +947,7 @@ namespace FNA_game_engine
             savePath = "";
 
             //Filter specifies what types of files we want to save or open:
-            saveFileDialog.Filter = "JORGE (.jorge)|*.jorge";
+            saveFileDialog.Filter = "LVL (.lvl)|*.lvl";
 
             //Try/catch blocks will stop the program from crashing if an error occurs. If an error occurs in the try block,
             //whatever is inside catch will be called. Useful to display errors, but very expensive to use CPU side.
@@ -1012,7 +1012,7 @@ namespace FNA_game_engine
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             //What file type do we want?
-            openFileDialog1.Filter = "JORGE (.jorge)|*.jorge";
+            openFileDialog1.Filter = "LVL (.lvl)|*.lvl";
 
             //Don't allow the user to pick more than one file:
             openFileDialog1.Multiselect = false;

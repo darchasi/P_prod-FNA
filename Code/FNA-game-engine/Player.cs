@@ -40,10 +40,10 @@ namespace FNA_game_engine
             ChangeAnimation(Animations.IdleLeft);
             base.Load(content);
 
-            boundingBoxOffSet.X = 0;
-            boundingBoxOffSet.Y = 0;
-            boundingBoxWidth = animationSet.width;
-            boundingBoxHeight = animationSet.height;
+            boundingBoxOffSet.X = animationSet.width /4;
+            boundingBoxOffSet.Y = 10;
+            boundingBoxWidth = animationSet.width /2;
+            boundingBoxHeight = animationSet.height - 20;
         }
 
         public override void Update(List<GameObject> objects, Map map)
