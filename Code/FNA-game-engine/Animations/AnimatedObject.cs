@@ -19,8 +19,8 @@ namespace FNA_game_engine
         protected AnimationSet animationSet = new AnimationSet();
         protected Animation currentAnimation;
 
-        protected bool flipRightFrames = true;
-        protected bool flipLeftFrames = false;
+        protected bool flipRightFrames = false;
+        protected bool flipLeftFrames = true;
         protected SpriteEffects spriteEffects = SpriteEffects.None;
 
         protected enum Animations

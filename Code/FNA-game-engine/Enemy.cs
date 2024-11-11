@@ -66,7 +66,7 @@ namespace FNA_game_engine
             respawnTimer = maxRespawnTimer;
             Player.score++;
             //Game1.camrot += 0.005f;
-            explosion.Play(0.05f, 0f, 0f);
+            explosion.Play(0.5f, 0f, 0f);
 
             base.ProjectileResponse();
         }

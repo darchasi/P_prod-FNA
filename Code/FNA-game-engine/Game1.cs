@@ -61,7 +61,7 @@ namespace FNA_game_engine
 #endif
             map.Load(Content);
             gameHUD.Load(Content);
-            LoadLevel("RunAndBuild.lvl");
+            LoadLevel("NewLevel.lvl");
         }
 
         protected override void Update(GameTime gameTime)
@@ -74,7 +74,7 @@ namespace FNA_game_engine
 #if DEBUG
             editor.Update(objects, map);
 #endif
-            Camera.zoom = 0.8f;
+            Camera.zoom = 1.8f;
             Camera.rotation += camrot;
 
             base.Update(gameTime);

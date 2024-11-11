@@ -35,17 +35,17 @@ namespace FNA_game_engine
 
         public override void Load(ContentManager content)
         {
-            image = TextureLoader.Load("spritesheet", content);
+            image = TextureLoader.Load("player-spritesheet", content);
 
             // Load animation
-            LoadAnimation("ShyBoy.anm", content);
+            LoadAnimation("Player1.anm", content);
             ChangeAnimation(Animations.IdleLeft);
             base.Load(content);
 
-            boundingBoxOffset.X = animationSet.width /4;
-            boundingBoxOffset.Y = 10;
+            boundingBoxOffset.X = animationSet.width/4;
+            boundingBoxOffset.Y = 20;
             boundingBoxWidth = animationSet.width /2;
-            boundingBoxHeight = animationSet.height - 20;
+            boundingBoxHeight = animationSet.height -22;
 
             // Load song
             // No need to add "Content\\" because the content manager already starts in Content folder by default
@@ -54,7 +54,7 @@ namespace FNA_game_engine
             if (songInstance == null)
             {
                 songInstance = song.CreateInstance();
-                songInstance.Volume = 0.2f;
+                songInstance.Volume = 1.2f;
             }
         }
 

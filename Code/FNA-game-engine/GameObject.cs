@@ -89,7 +89,7 @@ namespace FNA_game_engine
             if (boundingBoxImage != null && drawBoundingBoxes && active)
             {
                 // new Color(120,120,120,120) for debug
-                spriteBatch.Draw(boundingBoxImage, new Vector2(boundingBox.X, boundingBox.Y), boundingBox, Color.Transparent, 0f, Vector2.Zero, 1f, SpriteEffects.None, .1f);
+                spriteBatch.Draw(boundingBoxImage, new Vector2(boundingBox.X, boundingBox.Y), boundingBox, /*Color.Transparent*/ new Color(120, 120, 120, 120), 0f, Vector2.Zero, 1f, SpriteEffects.None, .1f);
             }
             if (image != null && active)
             {
