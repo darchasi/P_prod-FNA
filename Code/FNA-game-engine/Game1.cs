@@ -74,7 +74,7 @@ namespace FNA_game_engine
 #if DEBUG
             editor.Update(objects, map);
 #endif
-            Camera.zoom = 1.8f;
+            Camera.zoom = 2.4f;
             Camera.rotation += camrot;
 
             base.Update(gameTime);
@@ -114,10 +114,11 @@ namespace FNA_game_engine
             // Add decor
             map.decor = levelData.decor;
 
-            
             objects.Add(new Player(new Vector2(1652, 2940)));
 
             objects.Add(new Enemy(new Vector2(1392, 3002)));
+
+            objects.Add(new Costume(objects[0], "hat"));
 
             /*
             map.walls.Add(new Wall(new Rectangle(16, 860, 2060, 60), true));

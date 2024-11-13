@@ -15,7 +15,6 @@ namespace FNA_game_engine
     public class Character : AnimatedObject
     {
         public Vector2 velocity;
-
         // customize feel of the movement
 
         protected float decel = 1.2f; // lower number is, slower character slows down.
@@ -32,6 +31,7 @@ namespace FNA_game_engine
 
         public override void Initialize()
         {
+            movable = true;
             velocity = Vector2.Zero;
             jumping = false;
             base.Initialize();

@@ -13,6 +13,7 @@ namespace FNA_game_engine
 {
     public class GameObject
     {
+        public bool movable = false;
         protected Texture2D image;
         public Vector2 position;
         public Color drawColor = Color.White;
