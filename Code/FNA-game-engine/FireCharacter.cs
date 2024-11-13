@@ -38,7 +38,7 @@ namespace FNA_game_engine
             {
                 if (!projectiles[i].active)
                 {
-                    projectiles[i].Fire(this, position, direction); ;
+                    projectiles[i].Fire(this, position, direction);
                     break;
                 }
             }

@@ -114,7 +114,7 @@ namespace FNA_game_engine
 
         public Decor()
         {
-            collidable = false;
+            playerCollidable = false;
         }
 
         public Decor(Vector2 inputPosition, string inputImagePath, float inputDepth)
@@ -123,7 +123,7 @@ namespace FNA_game_engine
             imagePath = inputImagePath;
             layerDepth = inputDepth;
             active = true;
-            collidable = false;
+            playerCollidable = false;
         }
 
         public virtual void Load(ContentManager content, string asset)

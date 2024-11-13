@@ -35,7 +35,7 @@ namespace FNA_game_engine
         public override void Initialize()
         {
             active = true;
-            collidable = false;
+            playerCollidable = false;
             position.X = random.Next(1342, 1922);
             base.Initialize();
         }
@@ -66,7 +66,7 @@ namespace FNA_game_engine
             respawnTimer = maxRespawnTimer;
             Player.score++;
             //Game1.camrot += 0.005f;
-            explosion.Play(0.5f, 0f, 0f);
+            explosion.Play(0.1f, 0f, 0f);
 
             base.ProjectileResponse();
         }

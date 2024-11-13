@@ -18,59 +18,72 @@ namespace FNA_game_engine
     public class Costume : GameObject
     {
         public string name = "new costume";
-        public int offSetX = 0;
-        public int offSetY = 0;
-        enum Costumes
-        {
-            hat,
-        };
-
+        public int offsetX = 0;
+        public int offsetY = 0;
+        public int turnOfsetX = 0;
+        public bool mirror = false;
         public GameObject sourceObject;
+        protected SpriteEffects spriteEffects = SpriteEffects.None;
 
         public Costume()
         {
 
         }
-        public override void Update(List<GameObject> objects, Map map)
+        public Costume(GameObject source, string costumeName, float layer, int XOS, int YOS, int TOF)
         {
-            /*
-             * 
-             * HERE
-             * 
-             * VVVV*/
-
-            if (sourceObject is Player)
-            {
-
-            }
-            position = GetOffSet(sourceObject.position);
-        }
-
-        public Vector2 GetOffSet(Vector2 sourcePos)
-        {
-            sourcePos.X += offSetX;
-            sourcePos.Y += offSetY;
-            return sourcePos;
-        }
-        public Costume(GameObject source, string costumeName)
-        {
-            name = "hat";
-            layerDepth = 0.49f;
+            projectileCollidable = false;
+            playerCollidable = false;
+            name = costumeName;
+            layerDepth = layer;
             sourceObject = source;
             position = sourceObject.position;
-            offSetX = 16;
-            offSetY = 2;
+            offsetX = XOS;
+            offsetY = YOS;
+            turnOfsetX = TOF;
         }
+        public override void Update(List<GameObject> objects, Map map)
+        {
+            if (sourceObject.direction.X == 1)
+            {
+                this.direction.X = 1;
+                spriteEffects = SpriteEffects.None;
+                position = SetOffset(sourceObject.position, false);
+            }
+            else if (sourceObject.direction.X == -1)
+            {
+                this.direction.X = -1;
+                spriteEffects = SpriteEffects.FlipHorizontally;
+                position = SetOffset(sourceObject.position, true);
+            }
+            else
+            {
+                position = SetOffset(sourceObject.position, false);
+            }
+
+        }
+
+        public Vector2 SetOffset(Vector2 sourcePos, bool turn)
+        {
+            if (turn)
+            {
+                sourcePos.X += turnOfsetX;
+            }
+            sourcePos.X += offsetX;
+            sourcePos.Y += offsetY;
+            return sourcePos;
+        }
+
         public override void Load(ContentManager content)
         {
             image = TextureLoader.Load(name, content);
 
         }
+        
         public override void Draw(SpriteBatch spriteBatch)
         {
             if (image != null)
             {
-                spriteBatch.Draw(image, position, null, drawColor, MathHelper.ToRadians(rotation), Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+                spriteBatch.Draw(image, position, null, drawColor, MathHelper.ToRadians(rotation), Vector2.Zero, scale, spriteEffects, layerDepth);
             }
         }
     }

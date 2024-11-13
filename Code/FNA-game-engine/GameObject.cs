@@ -13,7 +13,6 @@ namespace FNA_game_engine
 {
     public class GameObject
     {
-        public bool movable = false;
         protected Texture2D image;
         public Vector2 position;
         public Color drawColor = Color.White;
@@ -22,11 +21,12 @@ namespace FNA_game_engine
         public bool active = true;
         public Vector2 center;
         // will need to change for object walkthough-able
-        public bool collidable = true;
+        public bool projectileCollidable = true;
+        public bool playerCollidable = true;
         protected int boundingBoxWidth, boundingBoxHeight;
         protected Vector2 boundingBoxOffset;
         Texture2D boundingBoxImage;
-        protected Vector2 direction = new Vector2(1,0);
+        public Vector2 direction = new Vector2(1,0);
         // for dev
         const bool drawBoundingBoxes = true;
 

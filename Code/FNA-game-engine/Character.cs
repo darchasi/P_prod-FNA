@@ -31,17 +31,16 @@ namespace FNA_game_engine
 
         public override void Initialize()
         {
-            movable = true;
             velocity = Vector2.Zero;
             jumping = false;
             base.Initialize();
         }
+
         public override void Update(List<GameObject> objects, Map map)
         {
             UpdateMovement(objects, map);
             base.Update(objects, map);
         }
-
         private void UpdateMovement(List<GameObject> objects, Map map)
         {
             // true for X
@@ -210,7 +209,7 @@ namespace FNA_game_engine
 
             for (int i = 0; i < objects.Count; i++)
             {
-                if (objects[i] != this && objects[i].active && objects[i].collidable && objects[i].CheckCollision(futureBoundingBox))
+                if (objects[i] != this && objects[i].active && objects[i].playerCollidable && objects[i].CheckCollision(futureBoundingBox))
                 {
                     return true;
                 }
@@ -222,7 +221,7 @@ namespace FNA_game_engine
 
         public void LandResponse(Rectangle wallCollision)
         {
-            position.Y = wallCollision.Top - (boundingBoxHeight + boundingBoxOffset.Y);
+             position.Y = wallCollision.Top - (boundingBoxHeight + boundingBoxOffset.Y);
 
             velocity.Y = 0;
 

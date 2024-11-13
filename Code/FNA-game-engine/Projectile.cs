@@ -65,7 +65,7 @@ namespace FNA_game_engine
         {
             for (int i = 0 ; i < objects.Count; i++)
             {
-                if (objects[i].active && objects[i] != owner && objects[i].CheckCollision(boundingBox))
+                if (objects[i].active && objects[i] != owner && objects[i].projectileCollidable && objects[i].CheckCollision(boundingBox))
                 {
                     Destroy();
                     objects[i].ProjectileResponse();

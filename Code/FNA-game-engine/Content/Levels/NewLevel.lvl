@@ -20,7 +20,7 @@
       <X>896</X>
       <Y>512</Y>
     </center>
-    <collidable>true</collidable>
+    <playerCollidable>true</playerCollidable>
     <startPosition>
       <X>1652</X>
       <Y>2940</Y>
@@ -32,7 +32,8 @@
     <gravity>1</gravity>
     <jumpVelocity>20</jumpVelocity>
     <maxFallVelocity>32</maxFallVelocity>
-  </Player>
+  
+</Player>
   <Enemy>
     <position>
       <X>1842</X>
@@ -53,7 +54,7 @@
       <X>64</X>
       <Y>64</Y>
     </center>
-    <collidable>false</collidable>
+    <playerCollidable>false</playerCollidable>
     <startPosition>
       <X>1842</X>
       <Y>3002</Y>
@@ -65,7 +66,8 @@
     <gravity>1</gravity>
     <jumpVelocity>16</jumpVelocity>
     <maxFallVelocity>32</maxFallVelocity>
-  </Enemy>
+  
+</Enemy>
   <walls>
     <Wall>
       <defaultColor>
@@ -388,7 +390,7 @@
         <X>0</X>
         <Y>0</Y>
       </center>
-      <collidable>false</collidable>
+      <playerCollidable>false</playerCollidable>
       <startPosition>
         <X>0</X>
         <Y>0</Y>
