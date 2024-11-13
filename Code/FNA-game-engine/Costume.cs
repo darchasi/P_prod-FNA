@@ -37,11 +37,12 @@ namespace FNA_game_engine
              * 
              * HERE
              * 
-             * VVVV
-            if (sourceObject.movable && sourceObject.IsSub)
+             * VVVV*/
+
+            if (sourceObject is Player)
             {
-                Player char = new (Player)sourceOobject
-            }*/
+
+            }
             position = GetOffSet(sourceObject.position);
         }
 
