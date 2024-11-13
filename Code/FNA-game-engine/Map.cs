@@ -18,9 +18,9 @@ namespace FNA_game_engine
         public List<Wall> walls = new List<Wall>();
         Texture2D wallImage;
 
-        public int mapWidth = 160;
-        public int mapHeight = 90;
-        public int tileSize = 48;
+        public int mapWidth = 240; // 8k background image / 
+        public int mapHeight = 135;
+        public int tileSize = 32;
 
         public void Load(ContentManager content)
         {
@@ -114,7 +114,7 @@ namespace FNA_game_engine
 
         public Decor()
         {
-            collidable = false;
+            playerCollidable = false;
         }
 
         public Decor(Vector2 inputPosition, string inputImagePath, float inputDepth)
@@ -123,7 +123,7 @@ namespace FNA_game_engine
             imagePath = inputImagePath;
             layerDepth = inputDepth;
             active = true;
-            collidable = false;
+            playerCollidable = false;
         }
 
         public virtual void Load(ContentManager content, string asset)

@@ -14,8 +14,7 @@ namespace FNA_game_engine
     public class Player : FireCharacter
     {
         public static int score;
-        SoundEffect song;
-        SoundEffectInstance songInstance;
+
         public Player() 
         {
 
@@ -46,32 +45,12 @@ namespace FNA_game_engine
             boundingBoxOffset.Y = 20;
             boundingBoxWidth = animationSet.width /2;
             boundingBoxHeight = animationSet.height -22;
-
-            // Load song
-            // No need to add "Content\\" because the content manager already starts in Content folder by default
-            song = content.Load<SoundEffect>("Audio\\song");
-
-            if (songInstance == null)
-            {
-                songInstance = song.CreateInstance();
-                songInstance.Volume = 1.2f;
-            }
         }
 
         public override void Update(List<GameObject> objects, Map map)
         {
             CheckInput(objects, map);
-            UpdateMusic();
             base.Update(objects, map);
-        }
-
-        private void UpdateMusic()
-        {
-            if (songInstance.State != SoundState.Playing)
-            {
-                songInstance.IsLooped = true;
-                songInstance.Play();
-            }
         }
 
         private void CheckInput(List<GameObject> objects, Map map)

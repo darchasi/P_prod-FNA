@@ -3,44 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|c:\\users\\pu78ifh\\desktop\\p_prod-fna\\code\\fna-game-engine\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|c:\\users\\pu78ifh\\desktop\\p_prod-fna\\code\\fna-game-engine\\costume.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:costume.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\content\\animations\\shyboy.anm||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:content\\animations\\shyboy.anm||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\utilities\\textureloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:utilities\\textureloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\utilities\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:utilities\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\animations\\animatedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:animations\\animatedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\firecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:firecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\utilities\\textureloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:utilities\\textureloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\content\\levels\\newlevel.lvl||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:content\\levels\\newlevel.lvl||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\editor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:editor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\utilities\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:utilities\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\animations\\animationloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:animations\\animationloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\utilities\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:utilities\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\content\\animations\\shyboy.anm||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:content\\animations\\shyboy.anm||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\gamehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,48 +91,8 @@
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\utilities\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:utilities\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\pickableitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:pickableitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\animations\\animationloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:animations\\animationloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\animations\\animatedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:animations\\animatedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\firecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:firecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\content\\animations\\player1.anm||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:content\\animations\\player1.anm||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\content\\48grid.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:content\\48grid.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\content\\128grid.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:content\\128grid.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\utilities\\xmlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,59 +106,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Costume.cs",
+              "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Costume.cs",
+              "RelativeDocumentMoniker": "Costume.cs",
+              "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Costume.cs",
+              "RelativeToolTip": "Costume.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T06:59:33.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Editor.designer.cs",
+              "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Editor.designer.cs",
+              "RelativeDocumentMoniker": "Editor.designer.cs",
+              "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Editor.designer.cs",
+              "RelativeToolTip": "Editor.designer.cs",
+              "ViewState": "AQIAAGQCAAAAAAAAAAAtwHQCAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T06:42:32.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NewLevel.lvl",
+              "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\Levels\\NewLevel.lvl",
+              "RelativeDocumentMoniker": "Content\\Levels\\NewLevel.lvl",
+              "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\Levels\\NewLevel.lvl",
+              "RelativeToolTip": "Content\\Levels\\NewLevel.lvl",
+              "ViewState": "AQIAAIkBAAAAAAAAAAAAAJQBAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-13T06:34:46.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Map.cs",
               "RelativeDocumentMoniker": "Map.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Map.cs",
               "RelativeToolTip": "Map.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAowAQAAAAjAAAA",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAowIIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T14:04:14.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "LevelData.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\LevelData.cs",
               "RelativeDocumentMoniker": "LevelData.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\LevelData.cs",
               "RelativeToolTip": "LevelData.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAIBJwAgAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T14:04:13.024Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "GameHUD.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\GameHUD.cs",
               "RelativeDocumentMoniker": "GameHUD.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\GameHUD.cs",
               "RelativeToolTip": "GameHUD.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAIBJwAQAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T14:04:11.403Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Enemy.cs",
               "RelativeDocumentMoniker": "Enemy.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Enemy.cs",
               "RelativeToolTip": "Enemy.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAIwEoAAAAAAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwCQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T14:04:09.939Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Utilities\\Camera.cs",
               "RelativeDocumentMoniker": "Utilities\\Camera.cs",
@@ -170,25 +207,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "Projectile.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Projectile.cs",
               "RelativeDocumentMoniker": "Projectile.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Projectile.cs",
               "RelativeToolTip": "Projectile.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowAgAAAAjAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAIwAgAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T14:01:54.206Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 5,
               "Title": "FireCharacter.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\FireCharacter.cs",
               "RelativeDocumentMoniker": "FireCharacter.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\FireCharacter.cs",
               "RelativeToolTip": "FireCharacter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T13:58:28.469Z"
             },
@@ -200,25 +237,25 @@
               "RelativeDocumentMoniker": "Character.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Character.cs",
               "RelativeToolTip": "Character.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACEAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T13:58:14.07Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 10,
               "Title": "Editor.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Editor.cs",
               "RelativeDocumentMoniker": "Editor.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Editor.cs",
               "RelativeToolTip": "Editor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAArAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T13:56:19.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
               "Title": "Editor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Editor.cs",
               "RelativeDocumentMoniker": "Editor.cs",
@@ -229,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 19,
               "Title": "ShyBoy.anm",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\Animations\\ShyBoy.anm",
               "RelativeDocumentMoniker": "Content\\Animations\\ShyBoy.anm",
@@ -241,53 +278,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "PickableItem.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\PickableItem.cs",
               "RelativeDocumentMoniker": "PickableItem.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\PickableItem.cs",
               "RelativeToolTip": "PickableItem.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAIBJwAQAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T10:12:27.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Player1.anm",
-              "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\Animations\\Player1.anm",
-              "RelativeDocumentMoniker": "Content\\Animations\\Player1.anm",
-              "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\Animations\\Player1.anm",
-              "RelativeToolTip": "Content\\Animations\\Player1.anm",
-              "ViewState": "AQIAACEAAAAAAAAAAAD4vy4AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-11T08:47:01.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "128grid.png -  [Fran\u00E7ais (France)] - PNG [128x128, 32\u00A0bits, PNG]",
-              "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\128grid.png",
-              "RelativeDocumentMoniker": "Content\\128grid.png",
-              "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\128grid.png -  [Fran\u00E7ais (France)] - PNG [128x128, 32\u00A0bits, PNG]",
-              "RelativeToolTip": "Content\\128grid.png -  [Fran\u00E7ais (France)] - PNG [128x128, 32\u00A0bits, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-11-11T08:46:29.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "48grid.png -  [Fran\u00E7ais (France)] - PNG [48x48, 32\u00A0bits, PNG]",
-              "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\48grid.png",
-              "RelativeDocumentMoniker": "Content\\48grid.png",
-              "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Content\\48grid.png -  [Fran\u00E7ais (France)] - PNG [48x48, 32\u00A0bits, PNG]",
-              "RelativeToolTip": "Content\\48grid.png -  [Fran\u00E7ais (France)] - PNG [48x48, 32\u00A0bits, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-11-11T08:46:26.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "AnimationLoader.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Animations\\AnimationLoader.cs",
               "RelativeDocumentMoniker": "Animations\\AnimationLoader.cs",
@@ -299,44 +302,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "AnimatedObject.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Animations\\AnimatedObject.cs",
               "RelativeDocumentMoniker": "Animations\\AnimatedObject.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Animations\\AnimatedObject.cs",
               "RelativeToolTip": "Animations\\AnimatedObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T08:43:53.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAjwC4AAAA1AAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAIwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T08:27:59.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\GameObject.cs",
               "RelativeDocumentMoniker": "GameObject.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\GameObject.cs",
               "RelativeToolTip": "GameObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T08:03:16.56Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "Input.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Utilities\\Input.cs",
               "RelativeDocumentMoniker": "Utilities\\Input.cs",
@@ -348,13 +351,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "TextureLoader.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Utilities\\TextureLoader.cs",
               "RelativeDocumentMoniker": "Utilities\\TextureLoader.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Utilities\\TextureLoader.cs",
               "RelativeToolTip": "Utilities\\TextureLoader.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAqwCYAAABHAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T07:10:15.324Z"
             },
@@ -372,19 +375,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 7,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAgwEwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T07:10:15.403Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pu78ifh\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

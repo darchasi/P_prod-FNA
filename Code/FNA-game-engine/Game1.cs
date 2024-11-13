@@ -28,6 +28,8 @@ namespace FNA_game_engine
 
         GameHUD gameHUD = new GameHUD();
         Editor editor;
+        SoundEffect song;
+        SoundEffectInstance songInstance;
 
         public Game1()
         {
@@ -61,6 +63,15 @@ namespace FNA_game_engine
 #endif
             map.Load(Content);
             gameHUD.Load(Content);
+            // Load song
+            // No need to add "Content\\" because the content manager already starts in Content folder by default
+            song = Content.Load<SoundEffect>("Audio\\song");
+
+            if (songInstance == null)
+            {
+                songInstance = song.CreateInstance();
+                songInstance.Volume = 0.2f;
+            }
             LoadLevel("NewLevel.lvl");
         }
 
@@ -70,11 +81,12 @@ namespace FNA_game_engine
             UpdateObjects();
             map.Update(objects);
             UpdateCamera();
+            UpdateMusic();
 
 #if DEBUG
             editor.Update(objects, map);
 #endif
-            Camera.zoom = 1.8f;
+            Camera.zoom = 2.4f;
             Camera.rotation += camrot;
 
             base.Update(gameTime);
@@ -99,6 +111,14 @@ namespace FNA_game_engine
             gameHUD.Draw(spriteBatch);
             base.Draw(gameTime);
         }
+        private void UpdateMusic()
+        {
+            if (songInstance.State != SoundState.Playing)
+            {
+                songInstance.IsLooped = true;
+                songInstance.Play();
+            }
+        }
         public void LoadLevel(string fileName)
         {
             Global.levelName = fileName;
@@ -114,10 +134,15 @@ namespace FNA_game_engine
             // Add decor
             map.decor = levelData.decor;
 
-            
             objects.Add(new Player(new Vector2(1652, 2940)));
 
             objects.Add(new Enemy(new Vector2(1392, 3002)));
+
+            objects.Add(new Costume(objects[0], "hat", 0.490f, 16, 2, 0));
+
+            objects.Add(new Costume(objects[0], "lantern", 0.480f, -78, -83, -34));
+
+            //objects.Add(new Costume(objects[0], "lantern", 0.51f, -78, -83, -34));
 
             /*
             map.walls.Add(new Wall(new Rectangle(16, 860, 2060, 60), true));

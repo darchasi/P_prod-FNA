@@ -20,7 +20,7 @@
       <X>896</X>
       <Y>512</Y>
     </center>
-    <collidable>true</collidable>
+    <playerCollidable>true</playerCollidable>
     <startPosition>
       <X>1652</X>
       <Y>2940</Y>
@@ -32,7 +32,8 @@
     <gravity>1</gravity>
     <jumpVelocity>20</jumpVelocity>
     <maxFallVelocity>32</maxFallVelocity>
-  </Player>
+  
+</Player>
   <Enemy>
     <position>
       <X>1842</X>
@@ -53,7 +54,7 @@
       <X>64</X>
       <Y>64</Y>
     </center>
-    <collidable>false</collidable>
+    <playerCollidable>false</playerCollidable>
     <startPosition>
       <X>1842</X>
       <Y>3002</Y>
@@ -65,7 +66,8 @@
     <gravity>1</gravity>
     <jumpVelocity>16</jumpVelocity>
     <maxFallVelocity>32</maxFallVelocity>
-  </Enemy>
+  
+</Enemy>
   <walls>
     <Wall>
       <defaultColor>
@@ -82,7 +84,7 @@
         <X>1392</X>
         <Y>3120</Y>
         <Width>672</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>1392</X>
           <Y>3120</Y>
@@ -105,7 +107,7 @@
         <X>2064</X>
         <Y>2976</Y>
         <Width>240</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>2064</X>
           <Y>2976</Y>
@@ -128,7 +130,7 @@
         <X>1680</X>
         <Y>2784</Y>
         <Width>240</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>1680</X>
           <Y>2784</Y>
@@ -151,7 +153,7 @@
         <X>1392</X>
         <Y>2928</Y>
         <Width>144</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>1392</X>
           <Y>2928</Y>
@@ -174,7 +176,7 @@
         <X>1104</X>
         <Y>2688</Y>
         <Width>192</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>1104</X>
           <Y>2688</Y>
@@ -197,7 +199,7 @@
         <X>1056</X>
         <Y>3120</Y>
         <Width>144</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>1056</X>
           <Y>3120</Y>
@@ -220,7 +222,7 @@
         <X>912</X>
         <Y>2880</Y>
         <Width>192</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>912</X>
           <Y>2880</Y>
@@ -242,8 +244,8 @@
       <wall>
         <X>1296</X>
         <Y>3456</Y>
-        <Width>48</Width>
-        <Height>48</Height>
+        <Width>32</Width>
+        <Height>32</Height>
         <Location>
           <X>1296</X>
           <Y>3456</Y>
@@ -266,7 +268,7 @@
         <X>1152</X>
         <Y>3408</Y>
         <Width>144</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>1152</X>
           <Y>3408</Y>
@@ -289,7 +291,7 @@
         <X>1584</X>
         <Y>3360</Y>
         <Width>96</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>1584</X>
           <Y>3360</Y>
@@ -312,7 +314,7 @@
         <X>1872</X>
         <Y>3456</Y>
         <Width>336</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>1872</X>
           <Y>3456</Y>
@@ -335,7 +337,7 @@
         <X>2208</X>
         <Y>3312</Y>
         <Width>192</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>2208</X>
           <Y>3312</Y>
@@ -358,7 +360,7 @@
         <X>2400</X>
         <Y>3120</Y>
         <Width>144</Width>
-        <Height>48</Height>
+        <Height>32</Height>
         <Location>
           <X>2400</X>
           <Y>3120</Y>
@@ -388,7 +390,7 @@
         <X>0</X>
         <Y>0</Y>
       </center>
-      <collidable>false</collidable>
+      <playerCollidable>false</playerCollidable>
       <startPosition>
         <X>0</X>
         <Y>0</Y>

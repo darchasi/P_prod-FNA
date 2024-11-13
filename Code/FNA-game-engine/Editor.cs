@@ -38,7 +38,7 @@ namespace FNA_game_engine
             //IMPORTANT: Add the object types you want the editor to support here, then also add the constructor for object type in the addButton_Click function.
             //Also, make sure NumOfObjects is always the last item in this list so some other code below works properly.
 
-            Enemy, PickableItem, NumOfObjects, // put every new object BEFORE NumOfObjects
+            Enemy, PickableItem, Costume, NumOfObjects,// put every new object BEFORE NumOfObjects
         };
 
         const string objectsNamespace = "FNA_game_engine."; //IMPORTANT: Type the namespace here that all of your classes will be in! Make sure you spell it exactly and put a . at the end!
@@ -111,16 +111,19 @@ namespace FNA_game_engine
 
         public void LoadTextures(ContentManager content, Map map)
         {
-            if (map.tileSize % 64 == 0)
+            if (map.tileSize % 64 == 0 && map.tileSize > 32)
             {
                 grid = TextureLoader.Load("128grid", content);
+            }
+            else if (map.tileSize % 32 == 0)
+            {
+                grid = TextureLoader.Load("32grid", content);
             }
             else
             {
                 grid = TextureLoader.Load("48grid", content);
             }
 
-            grid = TextureLoader.Load("48grid", content);
             pixel = TextureLoader.Load("pixel", content);
         }
 

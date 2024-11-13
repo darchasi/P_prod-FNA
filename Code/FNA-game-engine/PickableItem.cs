@@ -27,7 +27,7 @@ namespace FNA_game_engine
         public override void Initialize()
         {
             base.Initialize();
-            collidable = false;
+            playerCollidable = false;
         }
 
         public override void Load(ContentManager content)
