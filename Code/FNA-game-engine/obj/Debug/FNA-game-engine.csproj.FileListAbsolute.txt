@@ -26,10 +26,8 @@ C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engi
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA_game_engine.Editor.resources
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.GenerateResource.cache
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.CoreCompileInputs.cache
-C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game.79B5E29A.Up2Date
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.exe
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.pdb
-C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\Levels\newlevelagain.lvl
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\32grid.png
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\hat.png
 C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.AssemblyReference.cache
@@ -66,3 +64,10 @@ C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\FNA-game-engine
 C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\FNA-game-engine.pdb
 C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.CopyComplete
 C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\lantern.png
+C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\lantern.png
+C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.SuggestedBindingRedirects.cache
+C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.CopyComplete
+C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\lantern-held-spritesheet.png
+C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\lantern-spritesheet.png
+C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\Animations\LanternDown.anm
+C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\Animations\LanternHeld.anm

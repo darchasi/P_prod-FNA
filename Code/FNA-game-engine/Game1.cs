@@ -22,7 +22,6 @@ namespace FNA_game_engine
         
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
         public List<GameObject> objects = new List<GameObject>();
         public Map map = new Map();
 
@@ -138,11 +137,11 @@ namespace FNA_game_engine
 
             objects.Add(new Enemy(new Vector2(1392, 3002)));
 
-            objects.Add(new Costume(objects[0], "hat", 0.490f, 16, 2, 0));
+            objects.Add(new Costume(objects[0], "hat.png", null, 0.490f, 16, 2, 0));
 
-            objects.Add(new Costume(objects[0], "lantern", 0.480f, -78, -83, -34));
+            objects[0].costumes.Add(new Costume(objects[0], "lantern-held-spritesheet.png", "LanternHeld.anm", 0.480f, 0, 0, 0));
 
-            //objects.Add(new Costume(objects[0], "lantern", 0.51f, -78, -83, -34));
+            //objects.Add(new Costume(objects[0], "lantern", 0.510f, -78, -83, -34));
 
             /*
             map.walls.Add(new Wall(new Rectangle(16, 860, 2060, 60), true));
