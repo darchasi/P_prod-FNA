@@ -81,7 +81,7 @@
     <Compile Include="Animations\Animation.cs" />
     <Compile Include="Animations\AnimationLoader.cs" />
     <Compile Include="Animations\AnimatedObject.cs" />
-    <Compile Include="Costume.cs" />
+    <Compile Include="Equipement.cs" />
     <Compile Include="Editor.cs">
       <SubType>Form</SubType>
     </Compile>

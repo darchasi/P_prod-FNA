@@ -15,7 +15,7 @@ using System.Xml.Linq;
 
 namespace FNA_game_engine
 {
-    public class Costume : AnimatedObject
+    public class Equipement : AnimatedObject
     {
         public string name = "new costume";
         public int offsetX = 0;
@@ -25,11 +25,11 @@ namespace FNA_game_engine
         public GameObject sourceObject;
         public string anmPath;
 
-        public Costume()
+        public Equipement()
         {
 
         }
-        public Costume(GameObject source, string costumeName, string inputAnmPath, float layer, int XOS, int YOS, int TOF)
+        public Equipement(GameObject source, string costumeName, string inputAnmPath, float layer, int XOS, int YOS, int TOF)
         {
             anmPath = inputAnmPath;
             projectileCollidable = false;
@@ -41,7 +41,7 @@ namespace FNA_game_engine
             offsetX = XOS;
             offsetY = YOS;
             turnOfsetX = TOF;
-            sourceObject.costumes.Add(this);
+            sourceObject.equipements.Add(this);
         }
         public override void Update(List<GameObject> objects, Map map)
         {

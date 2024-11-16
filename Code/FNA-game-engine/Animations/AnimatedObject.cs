@@ -79,10 +79,11 @@ namespace FNA_game_engine
                 spriteEffects = SpriteEffects.None;
             }
 
-            if (costumes.Count() > 0)
+            if (equipements.Count() > 0)
             {
-                // Animations enum removed, using strings instead , need to finish this
-                costumes.ForEach(eq => eq.ChangeAnimation(AnimatedObject.Animations. Where(costumes.Select(eqi => eqi.animationSet.animationList.Where(an => an.name == currentAnimation.name).ToList().Last()).ToList().Last()))));
+                // DOES NOT WORK BECAUSE IS RAN BEFORE EQUIPEMENT.LOAD GIVES EQUIPEMENTS THEIR ANIMATION
+
+                equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());
             }
         }
 

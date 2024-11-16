@@ -71,3 +71,7 @@ C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\lante
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\lantern-spritesheet.png
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\Animations\LanternDown.anm
 C:\Users\pu78ifh\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\Animations\LanternHeld.anm
+C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\lantern-held-spritesheet.png
+C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\lantern-spritesheet.png
+C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\Animations\LanternHeld.anm
+C:\Users\nimal\Desktop\P_prod-FNA\Code\FNA-game-engine\bin\Debug\Content\Animations\LanternDown.anm

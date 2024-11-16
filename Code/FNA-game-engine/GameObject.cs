@@ -13,7 +13,7 @@ namespace FNA_game_engine
 {
     public class GameObject
     {
-        public List<Costume> costumes = new List<Costume>();
+        public List<Equipement> equipements = new List<Equipement>();
         protected Texture2D image;
         public Vector2 position;
         public Color drawColor = Color.White;
