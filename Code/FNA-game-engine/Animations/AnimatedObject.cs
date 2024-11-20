@@ -82,8 +82,15 @@ namespace FNA_game_engine
             if (equipements.Count() > 0)
             {
                 // DOES NOT WORK BECAUSE IS RAN BEFORE EQUIPEMENT.LOAD GIVES EQUIPEMENTS THEIR ANIMATION
+                foreach (Equipement equipement in equipements)
+                {
+                    if (equipement.animationSet.animationList.Count > 0)
+                    {
+                        equipement.ChangeAnimation(equipement.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last().name.ToString());
+                    }
+                }
+                //equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());
 
-                equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());
             }
         }
 
