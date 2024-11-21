@@ -26,15 +26,20 @@ namespace FNA_game_engine
         {
             wallImage = TextureLoader.Load("pixel", content);
         }
+        /*
         public void LoadMap(ContentManager content)
         {
             for (int i = 0; i < decor.Count; i++)
             {
                 decor[i].Load(content, decor[i].imagePath);
             }
+        }*/
+        public void LoadMap(ContentManager content)
+        {
+            decor.ToList().ForEach(d => d.Load(content, d.imagePath));
         }
 
-        // No need to pass Map since this is Map class, using this instead
+        /*
         public void Update(List<GameObject> gameObjects)
         {
             for (int i = 0;i < decor.Count;i++)
@@ -42,25 +47,40 @@ namespace FNA_game_engine
                 decor[i].Update(gameObjects, this);
             }
 
+        }*/
+        // No need to pass Map since this is Map class, using this instead
+        public void Update(List<GameObject> gameObjects)
+        {
+            decor.ToList().ForEach(d => d.Update(gameObjects, this));
+
         }
 
-        // Checks for collision between two rectangles
-        public Rectangle CheckCollision(Rectangle input)
+        /*public Rectangle CheckCollision(Rectangle input)
         {
             // for each wall, check if it collides with input rectangle
             for (int i = 0; i < walls.Count; i++)
             {
-                // if it collides return the rectangle it collided with
+                
                 if (walls[i] != null && walls[i].wall.Intersects(input) == true && walls[i].active == true)
                 {
                     return walls[i].wall;
                 }
             }
-            //otherwise returns an empty rectangle
+            
             return Rectangle.Empty;
+        }*/
+
+        // Checks for collision between two rectangles
+        public Rectangle CheckCollision(Rectangle input)
+        {
+            // if it collides return the rectangle it collided with
+            var collision = walls.FirstOrDefault(wall =>wall != null && wall.wall.Intersects(input) && wall.active);
+            //otherwise returns an empty rectangle
+            return collision?.wall ?? Rectangle.Empty;
         }
 
 
+        /*
         public void DrawWalls(SpriteBatch spriteBatch)
         {
             for (int i = 0; i < walls.Count; i++)
@@ -70,6 +90,23 @@ namespace FNA_game_engine
                     spriteBatch.Draw(wallImage, new Vector2(walls[i].wall.X, walls[i].wall.Y), walls[i].wall, walls[i].defaultColor, walls[i].defaultRotation, Vector2.Zero, walls[i].defaultScale, SpriteEffects.None, walls[i].defaultLayerDepth);
                 }
             }
+        }
+        */
+        public void DrawWalls(SpriteBatch spriteBatch)
+        {
+            walls.Where(wall => wall != null && wall.active).ToList().ForEach(wall =>
+            {
+                spriteBatch.Draw(wallImage,
+                    new Vector2(wall.wall.X, wall.wall.Y),
+                    wall.wall,
+                    wall.defaultColor,
+                    wall.defaultRotation,
+                    Vector2.Zero,
+                    wall.defaultScale,
+                    SpriteEffects.None, wall.defaultLayerDepth
+                );
+             });
+                
         }
 
         // Get tile index from coordonates

@@ -63,6 +63,7 @@ namespace FNA_game_engine
         }
         private void CheckCollision(List<GameObject> objects, Map map)
         {
+            /*
             for (int i = 0 ; i < objects.Count; i++)
             {
                 if (objects[i].active && objects[i] != owner && objects[i].projectileCollidable && objects[i].CheckCollision(boundingBox))
@@ -71,8 +72,18 @@ namespace FNA_game_engine
                     objects[i].ProjectileResponse();
                     return;
                 }
+            }*/
+
+            var collidedObject =  objects.FirstOrDefault(obj => obj.active && obj != owner && obj.projectileCollidable && obj.CheckCollision(boundingBox));
+
+            if (collidedObject != null)
+            {
+                Destroy();
+                collidedObject.ProjectileResponse();
+                return;
             }
 
+            //Verify collision
             if (map.CheckCollision(boundingBox) != Rectangle.Empty)
             {
                 Destroy();

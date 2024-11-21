@@ -85,7 +85,7 @@ namespace FNA_game_engine
 #if DEBUG
             editor.Update(objects, map);
 #endif
-            Camera.zoom = 2.4f;
+            Camera.zoom = 1.4f;
             Camera.rotation += camrot;
 
             base.Update(gameTime);
@@ -157,33 +157,57 @@ namespace FNA_game_engine
         }
         public void LoadObjects()
         {
-            for (int i = 0; i < objects.Count; i++)
+            /*for (int i = 0; i < objects.Count; i++)
             {
                 objects[i].Initialize();
-                /*
-                if (objects[i].equipements.Count > 0)
+                
+                //if (objects[i].equipements.Count > 0)
+                //{
+                //    foreach (Equipement equipement in objects[i].equipements)
+                //    {
+                //        equipement.Initialize();
+                //        equipement.Load(Content);
+                //    }
+                //}
+                objects[i].Load(Content);
+            }
+            
+            objects.ForEach(obj =>
+            {
+                obj.Initialize();
+
+                if (obj.equipements.Count > 0)
                 {
-                    foreach (Equipement equipement in objects[i].equipements)
+                    obj.equipements.ForEach(equipement =>
                     {
                         equipement.Initialize();
                         equipement.Load(Content);
-                    }
-                }*/
-                objects[i].Load(Content);
-            }
+                    });
+                }
+
+                obj.Load(Content);
+            })
+            */
+
+            objects.ToList().ForEach(obj => {
+                obj.Initialize();
+                obj.Load(Content);
+            });
+
         }
 
         public void UpdateObjects()
         {
-            for (int i = 0; i < objects.Count; i++)
+            /*for (int i = 0; i < objects.Count; i++)
             {
                 objects[i].Update(objects, map);
-            }
+            }*/
+            objects.ToList().ForEach(obj => obj.Update(objects, map));
         }
 
         public void DrawObjects()
         {
-            for (int i = 0; i < objects.Count; i++)
+            /*for (int i = 0; i < objects.Count; i++)
             {
                 objects[i].Draw(spriteBatch);
             }
@@ -191,7 +215,11 @@ namespace FNA_game_engine
             for (int i = 0; i < map.decor.Count; i++)
             {
                 map.decor[i].Draw(spriteBatch);
-            }
+            }*/
+
+            objects.ToList().ForEach(obj => obj.Draw(spriteBatch));
+
+            map.decor.ToList().ForEach(obj => obj.Draw(spriteBatch));
         }
 
         private void UpdateCamera()
