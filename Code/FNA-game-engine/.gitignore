@@ -2,7 +2,7 @@
 *.so
 *.dylib
 *.dll
-*.vs
+*.vs/
 *obj
 Debug/
 Release/
