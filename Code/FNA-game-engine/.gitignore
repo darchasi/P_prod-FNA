@@ -2,8 +2,8 @@
 *.so
 *.dylib
 *.dll
-**/.vs/
-**/obj/
+*.vs
+*obj
 Debug/
 Release/
 *.csproj.user
