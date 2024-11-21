@@ -2,8 +2,9 @@
 *.so
 *.dylib
 *.dll
-**/.vs/
-**/obj/
+.vs/FNA-game-engine/v17/*
+*.suo
+*obj
 Debug/
 Release/
 *.csproj.user
