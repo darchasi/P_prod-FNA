@@ -13,6 +13,7 @@ namespace FNA_game_engine
 {
     public class GameObject
     {
+        public List<Equipement> equipements = new List<Equipement>();
         protected Texture2D image;
         public Vector2 position;
         public Color drawColor = Color.White;
@@ -90,7 +91,7 @@ namespace FNA_game_engine
             if (boundingBoxImage != null && drawBoundingBoxes && active)
             {
                 // new Color(120,120,120,120) for debug
-                spriteBatch.Draw(boundingBoxImage, new Vector2(boundingBox.X, boundingBox.Y), boundingBox, /*Color.Transparent*/ new Color(120, 120, 120, 120), 0f, Vector2.Zero, 1f, SpriteEffects.None, .1f);
+                spriteBatch.Draw(boundingBoxImage, new Vector2(boundingBox.X, boundingBox.Y), boundingBox, Color.Transparent, 0f, Vector2.Zero, 1f, SpriteEffects.None, .1f);
             }
             if (image != null && active)
             {

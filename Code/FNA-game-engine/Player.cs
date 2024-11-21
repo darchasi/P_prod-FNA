@@ -14,6 +14,14 @@ namespace FNA_game_engine
     public class Player : FireCharacter
     {
         public static int score;
+        int currentAnimState;
+        enum animStates
+        {
+            IdleLeft,
+            IdleRight,
+            RunLeft,
+            RunRight
+        }
 
         public Player() 
         {
@@ -38,7 +46,7 @@ namespace FNA_game_engine
 
             // Load animation
             LoadAnimation("Player1.anm", content);
-            ChangeAnimation(Animations.IdleLeft);
+            ChangeAnimation("IdleLeft");
             base.Load(content);
 
             boundingBoxOffset.X = animationSet.width/4;
@@ -106,24 +114,28 @@ namespace FNA_game_engine
 
             if (velocity !=  Vector2.Zero || jumping)
             {
-                if (direction.X < 0 && AnimationIsNot(Animations.RunLeft))
+                if (direction.X < 0 && AnimationIsNot("RunLeft"))
                 {
-                    ChangeAnimation(Animations.RunLeft);
+                    currentAnimState = (int)animStates.RunLeft;
+                    ChangeAnimation("RunLeft");
                 }
-                else if (direction.X > 0 && AnimationIsNot(Animations.RunRight))
+                else if (direction.X > 0 && AnimationIsNot("RunRight"))
                 {
-                    ChangeAnimation(Animations.RunRight);
+                    currentAnimState = (int)animStates.RunRight;
+                    ChangeAnimation("RunRight");
                 }
             }
             else if (velocity == Vector2.Zero || !jumping)
             {
-                if (direction.X < 0 && AnimationIsNot(Animations.IdleLeft))
+                if (direction.X < 0 && AnimationIsNot("IdleLeft"))
                 {
-                    ChangeAnimation(Animations.IdleLeft);
+                    currentAnimState = (int)animStates.IdleLeft;
+                    ChangeAnimation("IdleLeft");
                 }
-                else if (direction.X > 0 && AnimationIsNot(Animations.IdleRight))
+                else if (direction.X > 0 && AnimationIsNot("IdleRight"))
                 {
-                    ChangeAnimation(Animations.IdleRight);
+                    currentAnimState = (int)animStates.IdleRight;
+                    ChangeAnimation("IdleRight");
                 }
             }
 

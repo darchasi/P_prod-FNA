@@ -15,7 +15,7 @@ using System.Xml.Linq;
 
 namespace FNA_game_engine
 {
-    public class Costume : GameObject
+    public class Equipement : AnimatedObject
     {
         public string name = "new costume";
         public int offsetX = 0;
@@ -23,14 +23,15 @@ namespace FNA_game_engine
         public int turnOfsetX = 0;
         public bool mirror = false;
         public GameObject sourceObject;
-        protected SpriteEffects spriteEffects = SpriteEffects.None;
+        public string anmPath;
 
-        public Costume()
+        public Equipement()
         {
 
         }
-        public Costume(GameObject source, string costumeName, float layer, int XOS, int YOS, int TOF)
+        public Equipement(GameObject source, string costumeName, string inputAnmPath, float layer, int XOS, int YOS, int TOF)
         {
+            anmPath = inputAnmPath;
             projectileCollidable = false;
             playerCollidable = false;
             name = costumeName;
@@ -40,6 +41,7 @@ namespace FNA_game_engine
             offsetX = XOS;
             offsetY = YOS;
             turnOfsetX = TOF;
+            sourceObject.equipements.Add(this);
         }
         public override void Update(List<GameObject> objects, Map map)
         {
@@ -60,6 +62,12 @@ namespace FNA_game_engine
                 position = SetOffset(sourceObject.position, false);
             }
 
+            base.Update(objects, map);
+            if (currentAnimation != null)
+            {
+                UpdateAnimations();
+            }
+
         }
 
         public Vector2 SetOffset(Vector2 sourcePos, bool turn)
@@ -75,16 +83,28 @@ namespace FNA_game_engine
 
         public override void Load(ContentManager content)
         {
-            image = TextureLoader.Load(name, content);
+            if (anmPath != null)
+            {
+                image = TextureLoader.Load(name, content);
+                // Load animation
+                LoadAnimation(anmPath, content);
+                ChangeAnimation("IdleLeft");
+            }
+            else
+            {
+                image = TextureLoader.Load(name, content);
+            }
+
+            base.Load(content);
 
         }
-        
+        /*
         public override void Draw(SpriteBatch spriteBatch)
         {
             if (image != null)
             {
                 spriteBatch.Draw(image, position, null, drawColor, MathHelper.ToRadians(rotation), Vector2.Zero, scale, spriteEffects, layerDepth);
             }
-        }
+        }*/
     }
 }

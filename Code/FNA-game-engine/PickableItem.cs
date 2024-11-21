@@ -37,7 +37,7 @@ namespace FNA_game_engine
 
             //Load any animation stuff if this object animates:
             LoadAnimation("PowerUp.anm", content);
-            ChangeAnimation(Animations.IdleLeft); //Set our default animation.
+            ChangeAnimation("IdleLeft"); //Set our default animation.
 
             //Load stuff from our parent class:
             base.Load(content);
@@ -65,10 +65,10 @@ namespace FNA_game_engine
             {
                 if (objects[i] is Player)
                 {
-                    if (objects[i].CheckCollision(boundingBox) && AnimationIsNot(Animations.PickUp))
+                    if (objects[i].CheckCollision(boundingBox) && AnimationIsNot("PickUp"))
                     {
                         Player.score++;
-                        ChangeAnimation(Animations.PickUp);
+                        ChangeAnimation("PickUp");
                     }
                 }
             }
@@ -82,7 +82,7 @@ namespace FNA_game_engine
             }
             base.UpdateAnimations();
 
-            if (AnimationComplete() && GetAnimationName(Animations.PickUp) == currentAnimation.name)
+            if (AnimationComplete() && GetAnimationName("PickUp") == currentAnimation.name)
             {
                 active = false;
             }

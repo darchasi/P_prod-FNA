@@ -17,16 +17,11 @@ namespace FNA_game_engine
         protected float animationTimer;
         protected int currentAnimationX = -1, currentAnimationY = -1;
         protected AnimationSet animationSet = new AnimationSet();
-        protected Animation currentAnimation;
+        public Animation currentAnimation;
 
         protected bool flipRightFrames = false;
         protected bool flipLeftFrames = true;
         protected SpriteEffects spriteEffects = SpriteEffects.None;
-
-        protected enum Animations
-        {
-            RunLeft, RunRight, IdleLeft, IdleRight, PickUp,
-        }
 
         protected void LoadAnimation(string path, ContentManager content)
         {
@@ -57,7 +52,7 @@ namespace FNA_game_engine
             }
         }
 
-        protected virtual void ChangeAnimation(Animations newAnimation)
+        public virtual void ChangeAnimation(string newAnimation)
         {
             currentAnimation = GetAnimation(newAnimation);
 
@@ -84,9 +79,22 @@ namespace FNA_game_engine
                 spriteEffects = SpriteEffects.None;
             }
 
+            if (equipements.Count() > 0)
+            {
+                // DOES NOT WORK BECAUSE IS RAN BEFORE EQUIPEMENT.LOAD GIVES EQUIPEMENTS THEIR ANIMATION
+                foreach (Equipement equipement in equipements)
+                {
+                    if (equipement.animationSet.animationList.Count > 0)
+                    {
+                        equipement.ChangeAnimation(equipement.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last().name.ToString());
+                    }
+                }
+                //equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());
+
+            }
         }
 
-        private Animation GetAnimation(Animations animation)
+        private Animation GetAnimation(string animation)
         {
             string name = GetAnimationName(animation);
 
@@ -153,13 +161,13 @@ namespace FNA_game_engine
                 spriteBatch.Draw(image, position, new Rectangle(currentAnimationX, currentAnimationY, animationSet.width, animationSet.height), drawColor, rotation, Vector2.Zero, scale, spriteEffects, layerDepth);
             }
         }
-        protected string GetAnimationName(Animations animation)
+        protected string GetAnimationName(string animation)
         {
             //Make an accurately spaced string. Example: "RunLeft" will now be "Run Left":
             return AddSpacesToSentence(animation.ToString(), false);
         }
 
-        protected bool AnimationIsNot(Animations input)
+        protected bool AnimationIsNot(string input)
         {
             //Used to check if our currentAnimation isn't set to the one passed in:
             return currentAnimation != null && GetAnimationName(input) != currentAnimation.name;
