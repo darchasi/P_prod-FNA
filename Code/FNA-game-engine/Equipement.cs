@@ -29,8 +29,23 @@ namespace FNA_game_engine
         {
 
         }
+
+        public Equipement(string costumeName, string inputAnmPath, float layer, int XOS, int YOS, int TOF)
+        {
+            active = false;
+            anmPath = inputAnmPath;
+            projectileCollidable = false;
+            playerCollidable = false;
+            name = costumeName;
+            layerDepth = layer;
+            offsetX = XOS;
+            offsetY = YOS;
+            turnOfsetX = TOF;
+        }
+
         public Equipement(GameObject source, string costumeName, string inputAnmPath, float layer, int XOS, int YOS, int TOF)
         {
+            active = true;
             anmPath = inputAnmPath;
             projectileCollidable = false;
             playerCollidable = false;
@@ -43,9 +58,32 @@ namespace FNA_game_engine
             turnOfsetX = TOF;
             sourceObject.equipements.Add(this);
         }
+
+        public override void Initialize()
+        {
+            if (sourceObject != null)
+            {
+                active = true;
+            }
+            if (startPosition == new Vector2(-1, -1))
+            {
+                startPosition = position;
+            }
+            
+        }
         public override void Update(List<GameObject> objects, Map map)
         {
-            if (sourceObject.direction.X == 1)
+            if (sourceObject != null)
+            {
+                active = true;
+
+            }
+            else
+            {
+                active = false;
+            }
+
+            if (sourceObject.direction.X == 1 && active)
             {
                 this.direction.X = 1;
                 spriteEffects = SpriteEffects.None;
@@ -98,6 +136,7 @@ namespace FNA_game_engine
             base.Load(content);
 
         }
+
         /*
         public override void Draw(SpriteBatch spriteBatch)
         {

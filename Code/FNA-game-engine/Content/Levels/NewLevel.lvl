@@ -372,8 +372,8 @@
   <decor>
     <Decor>
       <position>
-        <X>0</X>
-        <Y>0</Y>
+        <X>1000</X>
+        <Y>1400</Y>
       </position>
       <drawColor>
         <B>255</B>
@@ -395,12 +395,12 @@
         <X>0</X>
         <Y>0</Y>
       </startPosition>
-      <imagePath>FNA-background1</imagePath>
+      <imagePath>biom</imagePath>
       <sourceRectangle>
         <X>0</X>
         <Y>0</Y>
-        <Width>7680</Width>
-        <Height>4320</Height>
+        <Width>3840</Width>
+        <Height>2160</Height>
         <Location>
           <X>0</X>
           <Y>0</Y>

@@ -85,7 +85,7 @@ namespace FNA_game_engine
 #if DEBUG
             editor.Update(objects, map);
 #endif
-            Camera.zoom = 2.4f;
+            Camera.zoom = 1.4f;
             Camera.rotation += camrot;
 
             base.Update(gameTime);
@@ -139,8 +139,8 @@ namespace FNA_game_engine
 
             //objects.Add(new Equipement(objects[0], "hat.png", null, 0.490f, 16, 2, 0));
 
-            objects[0].equipements.Add(new Equipement(objects[0], "lantern-held-spritesheet.png", "LanternHeld.anm", 0.450f, 0, 0, 0));
-            objects.Add(objects[0].equipements.Last());
+            //objects[0].equipements.Add(new Equipement(objects[0], "lantern-spritesheet.png", "Lantern.anm", 0.450f, 0, 0, 0));
+            //objects.Add(objects[0].equipements.Last());
             //objects.Add(new Equipement(objects[0], "lantern", 0.510f, -78, -83, -34));
 
             /*
@@ -178,6 +178,10 @@ namespace FNA_game_engine
             for (int i = 0; i < objects.Count; i++)
             {
                 objects[i].Update(objects, map);
+                if (objects[i].equipements.Count() > 0)
+                {
+                    objects[i].equipements.ForEach(equipement => equipement.Update(objects, map));
+                }
             }
         }
 

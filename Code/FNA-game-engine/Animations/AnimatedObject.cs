@@ -16,7 +16,7 @@ namespace FNA_game_engine
         protected int currentAnimationFrame;
         protected float animationTimer;
         protected int currentAnimationX = -1, currentAnimationY = -1;
-        protected AnimationSet animationSet = new AnimationSet();
+        public AnimationSet animationSet = new AnimationSet();
         public Animation currentAnimation;
 
         protected bool flipRightFrames = false;

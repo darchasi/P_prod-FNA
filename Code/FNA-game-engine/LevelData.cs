@@ -20,6 +20,7 @@ namespace FNA_game_engine
         [XmlElement("Player", Type = typeof(Player))]
         [XmlElement("Enemy", Type = typeof(Enemy))]
         [XmlElement("PickableItem", Type = typeof(PickableItem))]
+        [XmlElement("Equipement", Type = typeof(Equipement))]
         public List<GameObject> objects { get; set; }
 
         public List<Wall> walls { get; set; }

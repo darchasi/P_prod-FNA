@@ -112,33 +112,64 @@ namespace FNA_game_engine
 
             base.UpdateAnimations();
 
-            if (velocity !=  Vector2.Zero || jumping)
+            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() >= 0)
             {
-                if (direction.X < 0 && AnimationIsNot("RunLeft"))
+                if (velocity != Vector2.Zero || jumping)
                 {
-                    currentAnimState = (int)animStates.RunLeft;
-                    ChangeAnimation("RunLeft");
+                    if (direction.X < 0 && AnimationIsNot("RunLightLeft"))
+                    {
+                        currentAnimState = (int)animStates.RunLeft;
+                        ChangeAnimation("RunLightLeft");
+                    }
+                    else if (direction.X > 0 && AnimationIsNot("RunLightRight"))
+                    {
+                        currentAnimState = (int)animStates.RunRight;
+                        ChangeAnimation("RunLightRight");
+                    }
                 }
-                else if (direction.X > 0 && AnimationIsNot("RunRight"))
+                else if (velocity == Vector2.Zero || !jumping)
                 {
-                    currentAnimState = (int)animStates.RunRight;
-                    ChangeAnimation("RunRight");
+                    if (direction.X < 0 && AnimationIsNot("IdleLightLeft"))
+                    {
+                        currentAnimState = (int)animStates.IdleLeft;
+                        ChangeAnimation("IdleLightLeft");
+                    }
+                    else if (direction.X > 0 && AnimationIsNot("IdleLightRight"))
+                    {
+                        currentAnimState = (int)animStates.IdleRight;
+                        ChangeAnimation("IdleLightRight");
+                    }
                 }
             }
-            else if (velocity == Vector2.Zero || !jumping)
+            else
             {
-                if (direction.X < 0 && AnimationIsNot("IdleLeft"))
+                if (velocity != Vector2.Zero || jumping)
                 {
-                    currentAnimState = (int)animStates.IdleLeft;
-                    ChangeAnimation("IdleLeft");
+                    if (direction.X < 0 && AnimationIsNot("RunLeft"))
+                    {
+                        currentAnimState = (int)animStates.RunLeft;
+                        ChangeAnimation("RunLeft");
+                    }
+                    else if (direction.X > 0 && AnimationIsNot("RunRight"))
+                    {
+                        currentAnimState = (int)animStates.RunRight;
+                        ChangeAnimation("RunRight");
+                    }
                 }
-                else if (direction.X > 0 && AnimationIsNot("IdleRight"))
+                else if (velocity == Vector2.Zero || !jumping)
                 {
-                    currentAnimState = (int)animStates.IdleRight;
-                    ChangeAnimation("IdleRight");
+                    if (direction.X < 0 && AnimationIsNot("IdleLeft"))
+                    {
+                        currentAnimState = (int)animStates.IdleLeft;
+                        ChangeAnimation("IdleLeft");
+                    }
+                    else if (direction.X > 0 && AnimationIsNot("IdleRight"))
+                    {
+                        currentAnimState = (int)animStates.IdleRight;
+                        ChangeAnimation("IdleRight");
+                    }
                 }
             }
-
         }
     }
 }
