@@ -2,7 +2,8 @@
 *.so
 *.dylib
 *.dll
-.vs/
+.vs/FNA-game-engine/v17/*
+*.suo
 *obj
 Debug/
 Release/
