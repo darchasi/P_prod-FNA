@@ -1,14 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FNA_game_engine
 {
@@ -157,21 +151,7 @@ namespace FNA_game_engine
         }
         public void LoadObjects()
         {
-            /*for (int i = 0; i < objects.Count; i++)
-            {
-                objects[i].Initialize();
-                
-                //if (objects[i].equipements.Count > 0)
-                //{
-                //    foreach (Equipement equipement in objects[i].equipements)
-                //    {
-                //        equipement.Initialize();
-                //        equipement.Load(Content);
-                //    }
-                //}
-                objects[i].Load(Content);
-            }
-            
+            /*
             objects.ForEach(obj =>
             {
                 obj.Initialize();
@@ -188,7 +168,6 @@ namespace FNA_game_engine
                 obj.Load(Content);
             })
             */
-
             objects.ToList().ForEach(obj => {
                 obj.Initialize();
                 obj.Load(Content);
@@ -198,27 +177,12 @@ namespace FNA_game_engine
 
         public void UpdateObjects()
         {
-            /*for (int i = 0; i < objects.Count; i++)
-            {
-                objects[i].Update(objects, map);
-            }*/
             objects.ToList().ForEach(obj => obj.Update(objects, map));
         }
 
         public void DrawObjects()
         {
-            /*for (int i = 0; i < objects.Count; i++)
-            {
-                objects[i].Draw(spriteBatch);
-            }
-
-            for (int i = 0; i < map.decor.Count; i++)
-            {
-                map.decor[i].Draw(spriteBatch);
-            }*/
-
             objects.ToList().ForEach(obj => obj.Draw(spriteBatch));
-
             map.decor.ToList().ForEach(obj => obj.Draw(spriteBatch));
         }
 

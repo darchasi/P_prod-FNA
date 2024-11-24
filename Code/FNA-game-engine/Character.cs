@@ -1,14 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FNA_game_engine
 {
@@ -43,39 +35,64 @@ namespace FNA_game_engine
         }
         private void UpdateMovement(List<GameObject> objects, Map map)
         {
-            // true for X
+            // Appliquer la gravité avant de vérifier les collisions
+            if (applyGravity)
+            {
+                ApplyGravity(map);
+            }
+
+            // Gérer les mouvements horizontaux
             if (velocity.X != 0 && CheckCollisions(map, objects, true))
             {
                 velocity.X = 0;
             }
             position.X += velocity.X;
-            // false for Y
+
+            // Gérer les mouvements verticaux
             if (velocity.Y != 0 && CheckCollisions(map, objects, false))
             {
                 velocity.Y = 0;
+                jumping = false; // Réinitialiser le saut si une collision est détectée
             }
             position.Y += velocity.Y;
 
-            if (applyGravity)
-            {
-                ApplyGravity(map);
-            }
+            // Décélération pour les mouvements horizontaux
             velocity.X = TendToZero(velocity.X, decel);
+
+            // Décélération verticale uniquement si la gravité est désactivée
             if (!applyGravity)
             {
                 velocity.Y = TendToZero(velocity.Y, decel);
             }
         }
+
         private void ApplyGravity(Map map)
         {
-            if (jumping || OnGround(map) == Rectangle.Empty)
+            // Vérifier si le personnage est au sol
+            bool isOnGround = OnGround(map) != Rectangle.Empty;
+
+            if (!isOnGround || jumping)
             {
                 velocity.Y += gravity;
             }
+
+            // Limiter la vitesse de chute
             if (velocity.Y > maxFallVelocity)
             {
                 velocity.Y = maxFallVelocity;
             }
+        }
+
+        protected Rectangle OnGround(Map map)
+        {
+            // Ajuster légèrement vers le bas pour détecter le sol
+            Rectangle futureBoundingBox = new Rectangle(
+                (int)(position.X + boundingBoxOffset.X),
+                (int)(position.Y + boundingBoxOffset.Y + 1), // +1 pour simuler un léger déplacement vers le bas
+                boundingBoxWidth,
+                boundingBoxHeight
+            );
+            return map.CheckCollision(futureBoundingBox);
         }
 
         protected void MoveRight()
@@ -226,13 +243,6 @@ namespace FNA_game_engine
             velocity.Y = 0;
 
             jumping = false;
-        }
-
-        protected Rectangle OnGround(Map map)
-        {
-            Rectangle futureBoundingBox = new Rectangle((int)(position.X + boundingBoxOffset.X), (int)(position.Y + boundingBoxOffset.Y + (velocity.Y + gravity)), boundingBoxWidth, boundingBoxHeight);
-
-            return map.CheckCollision(futureBoundingBox);
         }
 
         // Move value towards 0

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 
 namespace FNA_game_engine
@@ -63,16 +57,6 @@ namespace FNA_game_engine
         }
         private void CheckCollision(List<GameObject> objects, Map map)
         {
-            /*
-            for (int i = 0 ; i < objects.Count; i++)
-            {
-                if (objects[i].active && objects[i] != owner && objects[i].projectileCollidable && objects[i].CheckCollision(boundingBox))
-                {
-                    Destroy();
-                    objects[i].ProjectileResponse();
-                    return;
-                }
-            }*/
 
             var collidedObject =  objects.FirstOrDefault(obj => obj.active && obj != owner && obj.projectileCollidable && obj.CheckCollision(boundingBox));
 

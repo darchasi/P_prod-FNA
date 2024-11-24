@@ -1,14 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FNA_game_engine
 {
@@ -26,49 +21,18 @@ namespace FNA_game_engine
         {
             wallImage = TextureLoader.Load("pixel", content);
         }
-        /*
-        public void LoadMap(ContentManager content)
-        {
-            for (int i = 0; i < decor.Count; i++)
-            {
-                decor[i].Load(content, decor[i].imagePath);
-            }
-        }*/
+
         public void LoadMap(ContentManager content)
         {
             decor.ToList().ForEach(d => d.Load(content, d.imagePath));
         }
 
-        /*
-        public void Update(List<GameObject> gameObjects)
-        {
-            for (int i = 0;i < decor.Count;i++)
-            {
-                decor[i].Update(gameObjects, this);
-            }
-
-        }*/
         // No need to pass Map since this is Map class, using this instead
         public void Update(List<GameObject> gameObjects)
         {
             decor.ToList().ForEach(d => d.Update(gameObjects, this));
 
         }
-
-        /*public Rectangle CheckCollision(Rectangle input)
-        {
-            // for each wall, check if it collides with input rectangle
-            for (int i = 0; i < walls.Count; i++)
-            {
-                
-                if (walls[i] != null && walls[i].wall.Intersects(input) == true && walls[i].active == true)
-                {
-                    return walls[i].wall;
-                }
-            }
-            
-            return Rectangle.Empty;
-        }*/
 
         // Checks for collision between two rectangles
         public Rectangle CheckCollision(Rectangle input)
@@ -79,19 +43,6 @@ namespace FNA_game_engine
             return collision?.wall ?? Rectangle.Empty;
         }
 
-
-        /*
-        public void DrawWalls(SpriteBatch spriteBatch)
-        {
-            for (int i = 0; i < walls.Count; i++)
-            {
-                if (walls[i] != null && walls[i].active== true)
-                {
-                    spriteBatch.Draw(wallImage, new Vector2(walls[i].wall.X, walls[i].wall.Y), walls[i].wall, walls[i].defaultColor, walls[i].defaultRotation, Vector2.Zero, walls[i].defaultScale, SpriteEffects.None, walls[i].defaultLayerDepth);
-                }
-            }
-        }
-        */
         public void DrawWalls(SpriteBatch spriteBatch)
         {
             walls.Where(wall => wall != null && wall.active).ToList().ForEach(wall =>
