@@ -113,7 +113,7 @@ namespace FNA_game_engine
 
         private void HandleFire()
         {
-            if (Input.KeyPressed(Keys.W))
+            if (Input.KeyPressed(Keys.E))
             {
                 Fire();
             }

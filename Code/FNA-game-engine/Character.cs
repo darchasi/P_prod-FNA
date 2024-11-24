@@ -42,19 +42,33 @@ namespace FNA_game_engine
             }
 
             // Gérer les mouvements horizontaux
-            if (velocity.X != 0 && CheckCollisions(map, objects, true))
+            if (velocity.X != 0)
             {
-                velocity.X = 0;
+                // Vérifier la collision horizontale avant de déplacer
+                if (!CheckCollisions(map, objects, true)) // true = vérifier les collisions horizontales
+                {
+                    position.X += velocity.X; // Appliquer le mouvement si pas de collision
+                }
+                else
+                {
+                    velocity.X = 0; // Stopper le mouvement si collision
+                }
             }
-            position.X += velocity.X;
 
             // Gérer les mouvements verticaux
-            if (velocity.Y != 0 && CheckCollisions(map, objects, false))
+            if (velocity.Y != 0)
             {
-                velocity.Y = 0;
-                jumping = false; // Réinitialiser le saut si une collision est détectée
+                // Vérifier la collision verticale avant de déplacer
+                if (!CheckCollisions(map, objects, false)) // false = vérifier les collisions verticales
+                {
+                    position.Y += velocity.Y; // Appliquer le mouvement si pas de collision
+                }
+                else
+                {
+                    velocity.Y = 0; // Stopper le mouvement si collision
+                    jumping = false; // Réinitialiser le saut si une collision est détectée
+                }
             }
-            position.Y += velocity.Y;
 
             // Décélération pour les mouvements horizontaux
             velocity.X = TendToZero(velocity.X, decel);
@@ -65,6 +79,7 @@ namespace FNA_game_engine
                 velocity.Y = TendToZero(velocity.Y, decel);
             }
         }
+
 
         private void ApplyGravity(Map map)
         {
@@ -92,6 +107,7 @@ namespace FNA_game_engine
                 boundingBoxWidth,
                 boundingBoxHeight
             );
+
             return map.CheckCollision(futureBoundingBox);
         }
 

@@ -138,10 +138,20 @@ namespace FNA_game_engine
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (image != null && active)
+            if (IsReadyToDraw())
             {
-                spriteBatch.Draw(image, position, sourceRectangle, drawColor, rotation, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+                DrawImage(spriteBatch);
             }
+        }
+
+        private bool IsReadyToDraw()
+        {
+            return image != null && active;
+        }
+
+        private void DrawImage(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(image, position, sourceRectangle, drawColor, rotation, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
         }
     }
 }
