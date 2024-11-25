@@ -87,6 +87,7 @@ namespace FNA_game_engine
                     if (equipement.animationSet.animationList.Count > 0)
                     {
                         equipement.ChangeAnimation(equipement.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last().name.ToString());
+                        this.ChangeAnimation(this.animationSet.animationList.Where(animation => animation.name == equipement.currentAnimation.name).Last().name.ToString());
                     }
                 }
                 //equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());

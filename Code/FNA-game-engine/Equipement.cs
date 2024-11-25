@@ -30,6 +30,7 @@ namespace FNA_game_engine
 
         }
 
+        /*
         public Equipement(string costumeName, string inputAnmPath, float layer, int XOS, int YOS, int TOF)
         {
             active = false;
@@ -41,11 +42,11 @@ namespace FNA_game_engine
             offsetX = XOS;
             offsetY = YOS;
             turnOfsetX = TOF;
-        }
+        }*/
 
-        public Equipement(GameObject source, string costumeName, string inputAnmPath, float layer, int XOS, int YOS, int TOF)
+        public Equipement(GameObject source, string costumeName, string inputAnmPath, float layer, int XOS, int YOS, int TOF, bool isActive)
         {
-            active = true;
+            active = isActive;
             anmPath = inputAnmPath;
             projectileCollidable = false;
             playerCollidable = false;

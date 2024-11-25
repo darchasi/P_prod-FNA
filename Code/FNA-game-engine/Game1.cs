@@ -173,6 +173,12 @@ namespace FNA_game_engine
             }
         }
 
+        public void LoadObject(GameObject gameObj)
+        {
+            gameObj.Initialize();
+            gameObj.Load(Content);
+        }
+
         public void UpdateObjects()
         {
             for (int i = 0; i < objects.Count; i++)

@@ -29,8 +29,6 @@ namespace FNA_game_engine
         {
             base.Initialize();
             playerCollidable = false;
-            this.loot.Add(new Equipement("lantern-spritesheet.png", "Lantern.anm", 0.450f, 0, 0, 0));
-            this.loot.Last().Initialize();
         }
 
         public override void Load(ContentManager content)
@@ -44,7 +42,8 @@ namespace FNA_game_engine
 
             //Load stuff from our parent class:
             base.Load(content);
-
+            this.loot.Add(new Equipement(this, "lantern-spritesheet.png", "Lantern.anm", 0.450f, 0, 0, 0, false));
+            this.loot.Last().Initialize();
 
             this.loot.ForEach(equipement => equipement.Load(content));
             //Customize the size of our bounding box for collisions:
@@ -73,9 +72,13 @@ namespace FNA_game_engine
                     if (objects[i].CheckCollision(boundingBox) && AnimationIsNot("PickUp"))
                     {
                         Player.score++;
-                        this.loot.ForEach(equipement => equipement.sourceObject = objects[0]);
-                        this.loot.ForEach(equipement => equipement.Initialize());
-                        objects[0].equipements.AddRange(loot);
+                        //this.loot.ForEach(equipement => equipement.sourceObject = objects[0]);
+                        //this.loot.ForEach(equipement => equipement.Initialize());
+                        objects[0].equipements.Add(loot.Last());
+                        loot.Last().sourceObject = objects[0];
+                        objects.Add(objects[0].equipements.Last());
+                        this.equipements.Remove(loot.Last());
+                        //objects.Add(loot.Last());
                         // ADDRANGE TO PLAYER EQUIPEMENT
 
                         // HERE

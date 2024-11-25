@@ -57,6 +57,7 @@
             this.layerDepthLabel = new System.Windows.Forms.Label();
             this.layerDepth = new System.Windows.Forms.NumericUpDown();
             this.gameGroupBox = new System.Windows.Forms.GroupBox();
+            this.drawSelected = new System.Windows.Forms.CheckBox();
             this.resetNPC = new System.Windows.Forms.Button();
             this.paused = new System.Windows.Forms.CheckBox();
             this.mapSizeGroup = new System.Windows.Forms.GroupBox();
@@ -74,7 +75,6 @@
             this.decorSourceXLabel = new System.Windows.Forms.Label();
             this.decorSourceX = new System.Windows.Forms.NumericUpDown();
             this.sourceRectangleLabel = new System.Windows.Forms.Label();
-            this.drawSelected = new System.Windows.Forms.CheckBox();
             this.menuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xPosition)).BeginInit();
@@ -428,6 +428,18 @@
             this.gameGroupBox.TabStop = false;
             this.gameGroupBox.Text = "Game";
             // 
+            // drawSelected
+            // 
+            this.drawSelected.AutoSize = true;
+            this.drawSelected.Checked = true;
+            this.drawSelected.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.drawSelected.Location = new System.Drawing.Point(7, 49);
+            this.drawSelected.Name = "drawSelected";
+            this.drawSelected.Size = new System.Drawing.Size(112, 17);
+            this.drawSelected.TabIndex = 6;
+            this.drawSelected.Text = "Highlight Selected";
+            this.drawSelected.UseVisualStyleBackColor = true;
+            // 
             // resetNPC
             // 
             this.resetNPC.Location = new System.Drawing.Point(7, 17);
@@ -643,18 +655,6 @@
             this.sourceRectangleLabel.Text = "Source Rectangle:";
             this.sourceRectangleLabel.Visible = false;
             // 
-            // drawSelected
-            // 
-            this.drawSelected.AutoSize = true;
-            this.drawSelected.Checked = true;
-            this.drawSelected.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.drawSelected.Location = new System.Drawing.Point(7, 49);
-            this.drawSelected.Name = "drawSelected";
-            this.drawSelected.Size = new System.Drawing.Size(112, 17);
-            this.drawSelected.TabIndex = 6;
-            this.drawSelected.Text = "Highlight Selected";
-            this.drawSelected.UseVisualStyleBackColor = true;
-            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -697,6 +697,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Editor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Editor_FormClosing);
+            this.Load += new System.EventHandler(this.Editor_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.groupBox1.ResumeLayout(false);
