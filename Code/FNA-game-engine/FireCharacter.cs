@@ -1,5 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -39,7 +39,7 @@ namespace FNA_game_engine
             base.Update(objects, map);
         }
 
-        public override void Draw (SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             projectiles.ToList().ForEach(p => p.Draw(spriteBatch));
             base.Draw(spriteBatch);

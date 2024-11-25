@@ -30,7 +30,6 @@
       <Y>0</Y>
     </velocity>
     <gravity>1</gravity>
-    <jumpVelocity>20</jumpVelocity>
     <maxFallVelocity>32</maxFallVelocity>
   </Player>
   <Enemy>
