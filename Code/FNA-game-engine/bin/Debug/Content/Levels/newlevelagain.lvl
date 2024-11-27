@@ -17,10 +17,10 @@
     <layerDepth>0.5</layerDepth>
     <active>true</active>
     <center>
-      <X>896</X>
-      <Y>512</Y>
+      <X>512</X>
+      <Y>384</Y>
     </center>
-    <playerCollidable>true</playerCollidable>
+    <collidable>true</collidable>
     <startPosition>
       <X>1652</X>
       <Y>2940</Y>
@@ -30,13 +30,12 @@
       <Y>0</Y>
     </velocity>
     <gravity>1</gravity>
-    <jumpVelocity>28</jumpVelocity>
+    <jumpVelocity>20</jumpVelocity>
     <maxFallVelocity>32</maxFallVelocity>
-  
-</Player>
+  </Player>
   <Enemy>
     <position>
-      <X>1842</X>
+      <X>1405</X>
       <Y>3002</Y>
     </position>
     <drawColor>
@@ -54,9 +53,9 @@
       <X>64</X>
       <Y>64</Y>
     </center>
-    <playerCollidable>false</playerCollidable>
+    <collidable>false</collidable>
     <startPosition>
-      <X>1842</X>
+      <X>1405</X>
       <Y>3002</Y>
     </startPosition>
     <velocity>
@@ -66,8 +65,7 @@
     <gravity>1</gravity>
     <jumpVelocity>16</jumpVelocity>
     <maxFallVelocity>32</maxFallVelocity>
-  
-</Enemy>
+  </Enemy>
   <walls>
     <Wall>
       <defaultColor>
@@ -84,7 +82,7 @@
         <X>1392</X>
         <Y>3120</Y>
         <Width>672</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>1392</X>
           <Y>3120</Y>
@@ -107,7 +105,7 @@
         <X>2064</X>
         <Y>2976</Y>
         <Width>240</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>2064</X>
           <Y>2976</Y>
@@ -130,7 +128,7 @@
         <X>1680</X>
         <Y>2784</Y>
         <Width>240</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>1680</X>
           <Y>2784</Y>
@@ -153,7 +151,7 @@
         <X>1392</X>
         <Y>2928</Y>
         <Width>144</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>1392</X>
           <Y>2928</Y>
@@ -176,7 +174,7 @@
         <X>1104</X>
         <Y>2688</Y>
         <Width>192</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>1104</X>
           <Y>2688</Y>
@@ -199,7 +197,7 @@
         <X>1056</X>
         <Y>3120</Y>
         <Width>144</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>1056</X>
           <Y>3120</Y>
@@ -222,7 +220,7 @@
         <X>912</X>
         <Y>2880</Y>
         <Width>192</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>912</X>
           <Y>2880</Y>
@@ -244,8 +242,8 @@
       <wall>
         <X>1296</X>
         <Y>3456</Y>
-        <Width>32</Width>
-        <Height>32</Height>
+        <Width>48</Width>
+        <Height>48</Height>
         <Location>
           <X>1296</X>
           <Y>3456</Y>
@@ -268,7 +266,7 @@
         <X>1152</X>
         <Y>3408</Y>
         <Width>144</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>1152</X>
           <Y>3408</Y>
@@ -291,7 +289,7 @@
         <X>1584</X>
         <Y>3360</Y>
         <Width>96</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>1584</X>
           <Y>3360</Y>
@@ -314,7 +312,7 @@
         <X>1872</X>
         <Y>3456</Y>
         <Width>336</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>1872</X>
           <Y>3456</Y>
@@ -337,7 +335,7 @@
         <X>2208</X>
         <Y>3312</Y>
         <Width>192</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>2208</X>
           <Y>3312</Y>
@@ -360,10 +358,240 @@
         <X>2400</X>
         <Y>3120</Y>
         <Width>144</Width>
-        <Height>32</Height>
+        <Height>48</Height>
         <Location>
           <X>2400</X>
           <Y>3120</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1824</X>
+        <Y>3024</Y>
+        <Width>144</Width>
+        <Height>48</Height>
+        <Location>
+          <X>1824</X>
+          <Y>3024</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1872</X>
+        <Y>2976</Y>
+        <Width>144</Width>
+        <Height>48</Height>
+        <Location>
+          <X>1872</X>
+          <Y>2976</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1632</X>
+        <Y>2928</Y>
+        <Width>48</Width>
+        <Height>96</Height>
+        <Location>
+          <X>1632</X>
+          <Y>2928</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1440</X>
+        <Y>2976</Y>
+        <Width>192</Width>
+        <Height>48</Height>
+        <Location>
+          <X>1440</X>
+          <Y>2976</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1440</X>
+        <Y>3024</Y>
+        <Width>48</Width>
+        <Height>96</Height>
+        <Location>
+          <X>1440</X>
+          <Y>3024</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1344</X>
+        <Y>3072</Y>
+        <Width>96</Width>
+        <Height>48</Height>
+        <Location>
+          <X>1344</X>
+          <Y>3072</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1728</X>
+        <Y>2928</Y>
+        <Width>48</Width>
+        <Height>96</Height>
+        <Location>
+          <X>1728</X>
+          <Y>2928</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1776</X>
+        <Y>2928</Y>
+        <Width>48</Width>
+        <Height>96</Height>
+        <Location>
+          <X>1776</X>
+          <Y>2928</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1824</X>
+        <Y>2976</Y>
+        <Width>48</Width>
+        <Height>48</Height>
+        <Location>
+          <X>1824</X>
+          <Y>2976</Y>
+        </Location>
+      </wall>
+      <active>true</active>
+    </Wall>
+    <Wall>
+      <defaultColor>
+        <B>224</B>
+        <G>255</G>
+        <R>255</R>
+        <A>255</A>
+        <PackedValue>4292935679</PackedValue>
+      </defaultColor>
+      <defaultScale>1</defaultScale>
+      <defaultRotation>0</defaultRotation>
+      <defaultLayerDepth>0.7</defaultLayerDepth>
+      <wall>
+        <X>1872</X>
+        <Y>3072</Y>
+        <Width>144</Width>
+        <Height>48</Height>
+        <Location>
+          <X>1872</X>
+          <Y>3072</Y>
         </Location>
       </wall>
       <active>true</active>
@@ -372,8 +600,8 @@
   <decor>
     <Decor>
       <position>
-        <X>1000</X>
-        <Y>1400</Y>
+        <X>0</X>
+        <Y>0</Y>
       </position>
       <drawColor>
         <B>255</B>
@@ -390,17 +618,17 @@
         <X>0</X>
         <Y>0</Y>
       </center>
-      <playerCollidable>false</playerCollidable>
+      <collidable>false</collidable>
       <startPosition>
         <X>0</X>
         <Y>0</Y>
       </startPosition>
-      <imagePath>biom</imagePath>
+      <imagePath>FNA-background1</imagePath>
       <sourceRectangle>
         <X>0</X>
         <Y>0</Y>
-        <Width>3840</Width>
-        <Height>2160</Height>
+        <Width>7680</Width>
+        <Height>4320</Height>
         <Location>
           <X>0</X>
           <Y>0</Y>

@@ -4,57 +4,119 @@
     <animationList>
       <Animation>
         <animationOrder>
-          <int>0</int>
-          <int>1</int>
-          <int>2</int>
-          <int>3</int>
-          <int>4</int>
-          <int>5</int>
-          <int>6</int>
-          <int>7</int>
-          <int>8</int>
-          <int>9</int>
-          <int>10</int>
-          <int>11</int>
-          <int>12</int>
-          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
         </animationOrder>
         <name>Run Right</name>
         <speed>4</speed>
       </Animation>
       <Animation>
         <animationOrder>
-          <int>0</int>
-          <int>1</int>
-          <int>2</int>
-          <int>3</int>
-          <int>4</int>
-          <int>5</int>
-          <int>6</int>
-          <int>7</int>
-          <int>8</int>
-          <int>9</int>
-          <int>10</int>
-          <int>11</int>
-          <int>12</int>
-          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
         </animationOrder>
         <name>Run Left</name>
         <speed>4</speed>
       </Animation>
       <Animation>
         <animationOrder>
-          <int>1</int>  
+          <int>42</int>
+          <int>43</int>
+          <int>44</int>
+          <int>45</int>
+          <int>46</int>
+          <int>47</int>
+          <int>48</int>
+          <int>49</int>
+          <int>50</int>
+          <int>51</int>
+          <int>52</int>
         </animationOrder>
-        <name>Idle Right</name>
-        <speed>16</speed>
+        <name>Run Light Right</name>
+        <speed>4</speed>
       </Animation>
       <Animation>
         <animationOrder>
+          <int>42</int>
+          <int>43</int>
+          <int>44</int>
+          <int>45</int>
+          <int>46</int>
+          <int>47</int>
+          <int>48</int>
+          <int>49</int>
+          <int>50</int>
+          <int>51</int>
+          <int>52</int>
+        </animationOrder>
+        <name>Run Light Left</name>
+        <speed>4</speed>
+      </Animation>
+      <Animation>
+        <animationOrder>
+          <int>0</int>
           <int>1</int>
+          <int>2</int>
+          <int>3</int>
+          <int>4</int>
+          <int>5</int>
+        </animationOrder>
+        <name>Idle Right</name>
+        <speed>22</speed>
+      </Animation>
+      <Animation>
+        <animationOrder>
+          <int>0</int>
+          <int>1</int>
+          <int>2</int>
+          <int>3</int>
+          <int>4</int>
+          <int>5</int>
         </animationOrder>
         <name>Idle Left</name>
-        <speed>16</speed>
+        <speed>22</speed>
+      </Animation>
+      <Animation>
+        <animationOrder>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+        </animationOrder>
+        <name>Idle Light Right</name>
+        <speed>22</speed>
+      </Animation>
+      <Animation>
+        <animationOrder>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+        </animationOrder>
+        <name>Idle Light Left</name>
+        <speed>22</speed>
       </Animation>
     </animationList>
     <width>64</width>

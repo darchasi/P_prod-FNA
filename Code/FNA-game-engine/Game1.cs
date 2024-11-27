@@ -133,8 +133,8 @@ namespace FNA_game_engine
 
             //objects.Add(new Equipement(objects[0], "hat.png", null, 0.490f, 16, 2, 0));
 
-            objects[0].equipements.Add(new Equipement(objects[0], "lantern-held-spritesheet.png", "LanternHeld.anm", 0.450f, 0, 0, 0));
-            objects.Add(objects[0].equipements.Last());
+            //objects[0].equipements.Add(new Equipement(objects[0], "lantern-spritesheet.png", "Lantern.anm", 0.450f, 0, 0, 0));
+            //objects.Add(objects[0].equipements.Last());
             //objects.Add(new Equipement(objects[0], "lantern", 0.510f, -78, -83, -34));
 
             /*
@@ -151,33 +151,28 @@ namespace FNA_game_engine
         }
         public void LoadObjects()
         {
-            /*
-            objects.ForEach(obj =>
+            for (int i = 0; i < objects.Count; i++)
             {
-                obj.Initialize();
-
-                if (obj.equipements.Count > 0)
-                {
-                    obj.equipements.ForEach(equipement =>
-                    {
-                        equipement.Initialize();
-                        equipement.Load(Content);
-                    });
-                }
-
-                obj.Load(Content);
-            })
-            */
-            objects.ToList().ForEach(obj => {
-                obj.Initialize();
-                obj.Load(Content);
-            });
+                objects.ToList().ForEach(obj => {
+                    obj.Initialize();
+                    obj.Load(Content);
+                });
+            }
 
         }
 
         public void UpdateObjects()
-        {
-            objects.ToList().ForEach(obj => obj.Update(objects, map));
+    {
+            objects.ForEach(obj =>
+            {
+                obj.Update(objects, map);
+                {
+                    if (obj.equipements.Count() > 0)
+                    {
+                        obj.equipements.ForEach(equipement => equipement.Update(objects, map));
+                    }
+                }
+            });
         }
 
         public void DrawObjects()

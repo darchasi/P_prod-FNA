@@ -38,7 +38,7 @@ namespace FNA_game_engine
             //IMPORTANT: Add the object types you want the editor to support here, then also add the constructor for object type in the addButton_Click function.
             //Also, make sure NumOfObjects is always the last item in this list so some other code below works properly.
 
-            Enemy, PickableItem, Costume, NumOfObjects,// put every new object BEFORE NumOfObjects
+            Enemy, PickableItem, Equipement, NumOfObjects,// put every new object BEFORE NumOfObjects
         };
 
         const string objectsNamespace = "FNA_game_engine."; //IMPORTANT: Type the namespace here that all of your classes will be in! Make sure you spell it exactly and put a . at the end!
@@ -89,6 +89,11 @@ namespace FNA_game_engine
 
                 //Load the object and add it into our list:
                 newObject.Load(game.Content);
+                /*
+                if (newObject.equipements.Count > 0)
+                {
+                    newObject.equipements.ForEach(equip => equip.Load(game.Content));
+                }*/
                 game.objects.Add(newObject);
 
                 placingItem = true;
@@ -1017,6 +1022,11 @@ namespace FNA_game_engine
 
             //Finally, we can save out an XML file containing our level data:
             XmlHelper.Save(levelData, savePath);
+        }
+
+        private void Editor_Load(object sender, EventArgs e)
+        {
+
         }
 
         public void OpenLevel()
