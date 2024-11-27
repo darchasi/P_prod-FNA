@@ -52,20 +52,14 @@
 ### LoadObjects
 
 ```C#
-for (int i = 0; i < objects.Count; i++)
+    for (int i = 0; i < objects.Count; i++)
     {
-        objects[i].Initialize();
-        //if (objects[i].equipements.Count > 0)
-        //{
-        //    foreach (Equipement equipement in objects[i].equipements)
-        //    {
-        //        equipement.Initialize();
-        //        equipement.Load(Content);
-        //    }
-        //}
-        objects[i].Load(Content);
+        objects[i].Update(objects, map);
+        if (objects[i].equipements.Count() > 0)
+        {
+            objects[i].equipements.ForEach(equipement => equipement.Update(objects, map));
+        }
     }
-
 ```
 
 ### UpdateObjects

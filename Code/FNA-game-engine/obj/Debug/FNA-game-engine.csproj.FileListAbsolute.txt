@@ -1,0 +1,4 @@
+C:\Users\pu78ifh\Documents\GitHub\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.AssemblyReference.cache
+C:\Users\pu78ifh\Documents\GitHub\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA_game_engine.Editor.resources
+C:\Users\pu78ifh\Documents\GitHub\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.GenerateResource.cache
+C:\Users\pu78ifh\Documents\GitHub\P_prod-FNA\Code\FNA-game-engine\obj\Debug\FNA-game-engine.csproj.CoreCompileInputs.cache
