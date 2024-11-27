@@ -19,6 +19,7 @@ namespace FNA_game_engine
         public AnimationSet animationSet = new AnimationSet();
         public Animation currentAnimation;
 
+        public bool syncingAnimation;
         protected bool flipRightFrames = false;
         protected bool flipLeftFrames = true;
         protected SpriteEffects spriteEffects = SpriteEffects.None;
@@ -54,6 +55,7 @@ namespace FNA_game_engine
 
         public virtual void ChangeAnimation(string newAnimation)
         {
+
             currentAnimation = GetAnimation(newAnimation);
 
             if (currentAnimation == null)
@@ -69,8 +71,9 @@ namespace FNA_game_engine
             CalculateFramePosition();
 
             // Check if this is an animation that we want to flip
-
-            if (flipRightFrames && currentAnimation.name.Contains("Right") || flipLeftFrames && currentAnimation.name.Contains("Left"))
+            //flipLeftFrames = (flipRightFrames && currentAnimation.name.Contains("Right")) || (flipLeftFrames && currentAnimation.name.Contains("Left"));
+            
+            if ((flipRightFrames && currentAnimation.name.Contains("Right")) || (flipLeftFrames && currentAnimation.name.Contains("Left")))
             {
                 spriteEffects = SpriteEffects.FlipHorizontally;
             }
@@ -79,7 +82,7 @@ namespace FNA_game_engine
                 spriteEffects = SpriteEffects.None;
             }
 
-            if (equipements.Count() > 0)
+            if (equipements.Count() > 0 && !syncingAnimation)
             {
                 // DOES NOT WORK BECAUSE IS RAN BEFORE EQUIPEMENT.LOAD GIVES EQUIPEMENTS THEIR ANIMATION
                 foreach (Equipement equipement in equipements)
@@ -87,7 +90,9 @@ namespace FNA_game_engine
                     if (equipement.animationSet.animationList.Count > 0)
                     {
                         equipement.ChangeAnimation(equipement.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last().name.ToString());
+                        syncingAnimation = true;
                         this.ChangeAnimation(this.animationSet.animationList.Where(animation => animation.name == equipement.currentAnimation.name).Last().name.ToString());
+                        syncingAnimation = false;
                     }
                 }
                 //equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());

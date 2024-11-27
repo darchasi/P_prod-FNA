@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\pu78ifh\\Documents\\GitHub\\P_prod-FNA\\Code\\FNA-game-engine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Documents\\GitHub\\P_prod-FNA\\Code\\FNA-game-engine\\animations\\animatedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|c:\\users\\pu78ifh\\documents\\github\\p_prod-fna\\code\\fna-game-engine\\animations\\animatedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:animations\\animatedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|c:\\users\\pu78ifh\\documents\\github\\p_prod-fna\\code\\fna-game-engine\\equipement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|C:\\Users\\pu78ifh\\Documents\\GitHub\\P_prod-FNA\\Code\\FNA-game-engine\\equipement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF489211-CDAB-4870-9172-E049BD2F44C9}|FNA-game-engine.csproj|solutionrelative:equipement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -121,8 +121,7 @@
               "RelativeToolTip": "Equipement.cs",
               "ViewState": "AQIAAG8AAAAAAAAAAAAgwDAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T12:20:12.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:20:12.756Z"
             },
             {
               "$type": "Document",
@@ -132,7 +131,7 @@
               "RelativeDocumentMoniker": "Animations\\AnimatedObject.cs",
               "ToolTip": "C:\\Users\\pu78ifh\\Documents\\GitHub\\P_prod-FNA\\Code\\FNA-game-engine\\Animations\\AnimatedObject.cs",
               "RelativeToolTip": "Animations\\AnimatedObject.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAgwE8AAAANAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAwwFoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T08:43:53.974Z",
               "EditorCaption": ""
@@ -147,8 +146,7 @@
               "RelativeToolTip": "GameObject.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAAiwEwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T08:03:16.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T08:03:16.56Z"
             },
             {
               "$type": "Document",
@@ -160,8 +158,7 @@
               "RelativeToolTip": "Game1.cs",
               "ViewState": "AQIAAFgAAAAAAAAAAAAQwG4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:10:15.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T07:10:15.403Z"
             },
             {
               "$type": "Document",
@@ -173,8 +170,7 @@
               "RelativeToolTip": "Editor.designer.cs",
               "ViewState": "AQIAAO8BAAAAAAAAAAAtwPsBAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T06:42:32.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T06:42:32.61Z"
             },
             {
               "$type": "Document",
@@ -186,8 +182,7 @@
               "RelativeToolTip": "PickableItem.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAQwE8AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T10:12:27.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T10:12:27.091Z"
             },
             {
               "$type": "Document",
@@ -198,8 +193,7 @@
               "ToolTip": "C:\\Users\\pu78ifh\\Documents\\GitHub\\P_prod-FNA\\Code\\FNA-game-engine\\Editor.cs [Design]",
               "RelativeToolTip": "Editor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T13:55:52.387Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-11T13:55:52.387Z"
             },
             {
               "$type": "Document",
@@ -211,8 +205,7 @@
               "RelativeToolTip": "Editor.cs",
               "ViewState": "AQIAAEQAAAAAAAAAAAApwFsAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T13:56:19.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T13:56:19.284Z"
             },
             {
               "$type": "Document",
@@ -224,8 +217,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\Desktop\\P_prod-FNA\\Code\\FNA-game-engine\\Costume.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAowCsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T06:59:33.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T06:59:33.318Z"
             },
             {
               "$type": "Document",
@@ -237,8 +229,7 @@
               "RelativeToolTip": "Content\\Levels\\NewLevel.lvl",
               "ViewState": "AQIAAG4BAAAAAAAAAAAAAJQBAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-13T06:34:46.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T06:34:46.687Z"
             },
             {
               "$type": "Document",
@@ -298,8 +289,7 @@
               "RelativeToolTip": "Utilities\\Camera.cs",
               "ViewState": "AQIAAGoAAAAAAAAAAAAQwHsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T14:04:08.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T14:04:08.949Z"
             },
             {
               "$type": "Document",
@@ -311,8 +301,7 @@
               "RelativeToolTip": "Utilities\\TextureLoader.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAQwB8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:10:15.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T07:10:15.324Z"
             },
             {
               "$type": "Document",
@@ -324,8 +313,7 @@
               "RelativeToolTip": "Utilities\\Input.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAgwBsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:10:15.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T07:10:15.299Z"
             },
             {
               "$type": "Document",
@@ -361,8 +349,7 @@
               "RelativeToolTip": "Animations\\AnimationLoader.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAgwBwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T08:44:54.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T08:44:54.329Z"
             },
             {
               "$type": "Document",
