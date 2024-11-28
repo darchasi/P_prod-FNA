@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
+using System.Linq;
+
 namespace FNA_game_engine
 {
     public class Player : FireCharacter
@@ -13,7 +15,11 @@ namespace FNA_game_engine
             IdleLeft,
             IdleRight,
             RunLeft,
-            RunRight
+            RunRight,
+            IdleLightLeft,
+            IdleLightRight,
+            RunLightLeft,
+            RunLightRight
         }
 
         public Player() 
@@ -138,25 +144,53 @@ namespace FNA_game_engine
 
         private void HandleMovementAnimation()
         {
-            if (direction.X < 0 && AnimationIsNot("RunLeft"))
+            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() >= 0)
             {
-                SetAnimationState(animStates.RunLeft, "RunLeft");
+                if (direction.X < 0 && AnimationIsNot("RunLightLeft"))
+                {
+                    SetAnimationState(animStates.RunLightLeft, "RunLightLeft");
+                }
+                else if (direction.X > 0 && AnimationIsNot("RunLightRight"))
+                {
+                    SetAnimationState(animStates.RunLightRight, "RunLightRight");
+                }
             }
-            else if (direction.X > 0 && AnimationIsNot("RunRight"))
+            else
             {
-                SetAnimationState(animStates.RunRight, "RunRight");
+                if (direction.X < 0 && AnimationIsNot("RunLeft"))
+                {
+                    SetAnimationState(animStates.RunLeft, "RunLeft");
+                }
+                else if (direction.X > 0 && AnimationIsNot("RunRight"))
+                {
+                    SetAnimationState(animStates.RunRight, "RunRight");
+                }
             }
         }
 
         private void HandleIdleAnimation()
         {
-            if (direction.X < 0 && AnimationIsNot("IdleLeft"))
+            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() >= 0)
             {
-                SetAnimationState(animStates.IdleLeft, "IdleLeft");
+                if (direction.X < 0 && AnimationIsNot("IdleLightLeft"))
+                {
+                    SetAnimationState(animStates.IdleLightLeft, "IdleLightLeft");
+                }
+                else if (direction.X > 0 && AnimationIsNot("IdleLightRight"))
+                {
+                    SetAnimationState(animStates.IdleLightRight, "IdleLightRight");
+                }
             }
-            else if (direction.X > 0 && AnimationIsNot("IdleRight"))
+            else
             {
-                SetAnimationState(animStates.IdleRight, "IdleRight");
+                if (direction.X < 0 && AnimationIsNot("IdleLeft"))
+                {
+                    SetAnimationState(animStates.IdleLeft, "IdleLeft");
+                }
+                else if (direction.X > 0 && AnimationIsNot("IdleRight"))
+                {
+                    SetAnimationState(animStates.IdleRight, "IdleRight");
+                }
             }
         }
 

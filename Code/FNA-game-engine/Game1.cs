@@ -162,7 +162,16 @@ namespace FNA_game_engine
         }
 
         public void UpdateObjects()
-    {
+        {
+            for (int i = 0; i < objects.Count; i++)
+            {
+                objects[i].Update(objects, map);
+                if (objects[i].equipements.Count() > 0)
+                {
+                    objects[i].equipements.ForEach(equipement => equipement.Update(objects, map));
+                }
+            }
+            /*
             objects.ForEach(obj =>
             {
                 obj.Update(objects, map);
@@ -172,7 +181,7 @@ namespace FNA_game_engine
                         obj.equipements.ForEach(equipement => equipement.Update(objects, map));
                     }
                 }
-            });
+            });*/
         }
 
         public void DrawObjects()
