@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace FNA_game_engine
 {
@@ -9,8 +10,8 @@ namespace FNA_game_engine
         public Vector2 velocity;
         // customize feel of the movement
 
-        protected float decel = 1.2f; // lower number is, slower character slows down.
-        protected float accel = 1.2f; // lower number is, slower character takes off.
+        protected float decel = 0.5f; // lower number is, slower character slows down.
+        protected float accel = 1f; // lower number is, slower character takes off.
         protected float maxSpeed = 8f;
 
         public float gravity = 1f;
@@ -103,7 +104,7 @@ namespace FNA_game_engine
             // Ajuster légèrement vers le bas pour détecter le sol
             Rectangle futureBoundingBox = new Rectangle(
                 (int)(position.X + boundingBoxOffset.X),
-                (int)(position.Y + boundingBoxOffset.Y + 1), // +1 pour simuler un léger déplacement vers le bas
+                (int)(position.Y + boundingBoxOffset.Y + gravity), // +1 pour simuler un léger déplacement vers le bas
                 boundingBoxWidth,
                 boundingBoxHeight
             );
@@ -176,13 +177,13 @@ namespace FNA_game_engine
         {
             Rectangle futureBoundingBox = boundingBox;
 
-            int maxX = (int)maxSpeed;
-            int maxY = (int)maxSpeed;
-
+            int maxX = (int)(Math.Abs(velocity.X) + accel);
+            int maxY = (int)(velocity.Y + gravity);
+            /*
             if (applyGravity)
             {
                 maxY = (int)jumpVelocity;
-            }
+            }*/
 
             // Stop movement at X contact
             if (xAxis && velocity.X != 0)
@@ -217,7 +218,7 @@ namespace FNA_game_engine
                 }
                 else
                 {
-                    futureBoundingBox.Y -= maxY;
+                    futureBoundingBox.Y -= (int)jumpVelocity;
                 }
             }
 
@@ -227,7 +228,7 @@ namespace FNA_game_engine
             if (wallCollision != Rectangle.Empty)
             {
                 // Lands character on floor if it gets too close
-                if (applyGravity && velocity.Y >= gravity && (futureBoundingBox.Bottom > wallCollision.Top - maxSpeed) && (futureBoundingBox.Bottom <= wallCollision.Top + velocity.Y))
+                if (applyGravity && velocity.Y >= gravity && (futureBoundingBox.Bottom > wallCollision.Top))
                 {
                     LandResponse(wallCollision);
                     return true;
@@ -254,7 +255,7 @@ namespace FNA_game_engine
 
         public void LandResponse(Rectangle wallCollision)
         {
-             position.Y = wallCollision.Top - (boundingBoxHeight + boundingBoxOffset.Y);
+            position.Y = wallCollision.Top - (boundingBoxHeight + boundingBoxOffset.Y);
 
             velocity.Y = 0;
 
