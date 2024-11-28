@@ -228,7 +228,7 @@ namespace FNA_game_engine
             if (wallCollision != Rectangle.Empty)
             {
                 // Lands character on floor if it gets too close
-                if (applyGravity && velocity.Y >= gravity && (futureBoundingBox.Bottom > wallCollision.Top))
+                if (applyGravity && velocity.Y >= gravity && (futureBoundingBox.Bottom > wallCollision.Top) && (boundingBox.Right > wallCollision.Left) && (boundingBox.Left < wallCollision.Right))
                 {
                     LandResponse(wallCollision);
                     return true;
