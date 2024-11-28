@@ -1029,6 +1029,11 @@ namespace FNA_game_engine
 
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         public void OpenLevel()
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();

@@ -21,6 +21,7 @@ namespace FNA_game_engine
 
         GameHUD gameHUD = new GameHUD();
         Editor editor;
+        GameInterface gameInterface;
         SoundEffect song;
         SoundEffectInstance songInstance;
 
@@ -40,8 +41,10 @@ namespace FNA_game_engine
         protected override void Initialize()
         {
 #if DEBUG
+            gameInterface = new GameInterface();
+            gameInterface.Show();/*
             editor = new Editor(this);
-            editor.Show();
+            editor.Show();*/
 #endif
             base.Initialize();
             Camera.Initialize();
@@ -52,7 +55,8 @@ namespace FNA_game_engine
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 #if DEBUG
-            editor.LoadTextures(Content, map);
+
+            //editor.LoadTextures(Content, map);
 #endif
             map.Load(Content);
             gameHUD.Load(Content);
@@ -77,7 +81,7 @@ namespace FNA_game_engine
             UpdateMusic();
 
 #if DEBUG
-            editor.Update(objects, map);
+            //editor.Update(objects, map);
 #endif
             Camera.zoom = 1.4f;
             Camera.rotation += camrot;
@@ -95,7 +99,7 @@ namespace FNA_game_engine
             // Draw sprite(s)
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Camera.GetTransformMatrix());
 #if DEBUG
-            editor.Draw(spriteBatch);
+            //editor.Draw(spriteBatch);
 #endif
             DrawObjects();
             map.DrawWalls(spriteBatch);
