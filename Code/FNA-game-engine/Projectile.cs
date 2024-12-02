@@ -21,7 +21,7 @@ namespace FNA_game_engine
 
         public override void Load(ContentManager content)
         {
-            image = TextureLoader.Load("bullet", content);
+            image = TextureLoader.Load("bullet1", content);
             base.Load(content);
         }
 
