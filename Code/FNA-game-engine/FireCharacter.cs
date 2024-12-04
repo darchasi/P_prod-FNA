@@ -12,6 +12,11 @@ namespace FNA_game_engine
         const int numOfProjectiles = 20;
 
         public FireCharacter() { }
+        enum animStates
+        {
+            RunLeft,
+            RunRight,
+        }
 
         public override void Initialize()
         {
@@ -43,6 +48,19 @@ namespace FNA_game_engine
         {
             projectiles.ToList().ForEach(p => p.Draw(spriteBatch));
             base.Draw(spriteBatch);
+        }
+
+        private void HandleMovementAnimation()
+        {
+                if (direction.X < 0 && AnimationIsNot("RunLeft"))
+                {
+                    SetAnimationState(animStates.RunLeft, "RunLeft");
+                }
+                else if (direction.X > 0 && AnimationIsNot("RunRight"))
+                {
+                    SetAnimationState(animStates.RunRight, "RunRight");
+                }
+            
         }
     }
 }
