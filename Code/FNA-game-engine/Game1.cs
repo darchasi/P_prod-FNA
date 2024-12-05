@@ -40,9 +40,9 @@ namespace FNA_game_engine
 
         protected override void Initialize()
         {
+
 #if DEBUG
-            gameInterface = new GameInterface();
-            gameInterface.Show();/*
+            /*
             editor = new Editor(this);
             editor.Show();*/
 #endif
@@ -162,7 +162,8 @@ namespace FNA_game_engine
                     obj.Load(Content);
                 });
             }
-
+            gameInterface = new GameInterface(this);
+            gameInterface.Show();
         }
 
         public void UpdateObjects()

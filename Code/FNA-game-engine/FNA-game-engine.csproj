@@ -103,6 +103,11 @@
     <Compile Include="Map.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\Camera.cs" />
     <Compile Include="Utilities\Global.cs" />
     <Compile Include="Utilities\Input.cs" />
@@ -171,6 +176,10 @@
     <Content Include="Content\spritesheet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\MinimizeFinalBlue.png" />
+    <None Include="Resources\CloseFinalBlue.png" />
+    <None Include="Resources\InnoWeeksMusiqueIcon.png" />
+    <None Include="Resources\images.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GameInterface.resx">
@@ -180,6 +189,10 @@
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

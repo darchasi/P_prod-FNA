@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <animation>
+    <animationList>
+      <Animation>
+        <animationOrder>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+        </animationOrder>
+        <name>Run Light Right</name>
+        <speed>12</speed>
+      </Animation>
+      <Animation>
+        <animationOrder>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+        </animationOrder>
+        <name>Run Light Left</name>
+        <speed>12</speed>
+      </Animation>
+      <Animation>
+        <animationOrder>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+        </animationOrder>
+        <name>Idle Light Right</name>
+        <speed>24</speed>
+      </Animation>
+      <Animation>
+        <animationOrder>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+        </animationOrder>
+        <name>Idle Light Left</name>
+        <speed>24</speed>
+      </Animation>
+    </animationList>
+    <width>64</width>
+    <height>64</height>
+    <gridX>14</gridX>
+    <gridY>1</gridY>
+  </animation>
+  <texturePath>Textures\lantern-spritesheet.png</texturePath>
+</AnimationData>
