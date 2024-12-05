@@ -35,7 +35,7 @@ namespace FNA_game_engine
 
             //Load stuff from our parent class:
             base.Load(content);
-            this.loot.Add(new Equipement(this, "lantern-spritesheet.png", "Lantern.anm", 0.450f, 0, 0, 0, false));
+            //this.loot.Add(new Equipement(this, "lantern-spritesheet.png", "Lantern.anm", 0.450f, 0, 0, 0, false));
             this.loot.Add(new Equipement(this, "crossbow-spritesheet.png", "Crossbow.anm",0.500f, 0, 0, 0, false));
             this.loot.Last().Initialize();
 
