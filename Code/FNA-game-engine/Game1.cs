@@ -171,17 +171,6 @@ namespace FNA_game_engine
                     objects[i].equipements.ForEach(equipement => equipement.Update(objects, map));
                 }
             }
-            /*
-            objects.ForEach(obj =>
-            {
-                obj.Update(objects, map);
-                {
-                    if (obj.equipements.Count() > 0)
-                    {
-                        obj.equipements.ForEach(equipement => equipement.Update(objects, map));
-                    }
-                }
-            });*/
         }
 
         public void DrawObjects()

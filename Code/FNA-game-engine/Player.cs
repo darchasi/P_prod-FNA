@@ -19,7 +19,7 @@ namespace FNA_game_engine
             IdleLightLeft,
             IdleLightRight,
             RunLightLeft,
-            RunLightRight
+            RunLightRight,
         }
 
         public Player() 

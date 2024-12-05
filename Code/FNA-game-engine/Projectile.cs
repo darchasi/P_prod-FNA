@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace FNA_game_engine
 {
@@ -9,9 +10,7 @@ namespace FNA_game_engine
     {
         const float speed = 12f;
         Character owner;
-
         int destroyTimer;
-
         const int maxTimer = 180; // bullet destroy timer in ticks (60ticks/sec)
 
         public Projectile()
@@ -55,6 +54,15 @@ namespace FNA_game_engine
             active = true;
             destroyTimer = maxTimer;
         }
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            if (!active) return;
+
+            SpriteEffects spriteEffect = direction.X < 0 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+
+            spriteBatch.Draw(image,position,null,Color.White,0f, Vector2.Zero,1f,spriteEffect,0f);
+        }
+
         private void CheckCollision(List<GameObject> objects, Map map)
         {
 
@@ -73,6 +81,7 @@ namespace FNA_game_engine
                 Destroy();
             }
         }
+
         public void Destroy()
         {
             active = false;
