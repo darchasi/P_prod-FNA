@@ -121,16 +121,24 @@ namespace FNA_game_engine
 
         private void HandleFire()
         {
+            bool hasCrossbow = equipements.Any(equip => equip.name == "crossbow-spritesheet.png");
 
-            if (Input.KeyPressed(Keys.E) && timeAttack == 0)
+            if (hasCrossbow && Input.IsKeyDown(Keys.E))
             {
-                if (equipements.Count > 0 && equipements.Where(equip => equip.name == "crossbow-spritesheet.png").Count() > 0)
+                var crossbow = equipements.FirstOrDefault(equip => equip.name == "crossbow-spritesheet.png");
+
+                if (crossbow != null && (crossbow.currentAnimation == null || !crossbow.currentAnimation.name.Contains("Fire")))
                 {
-                    timeAttack = 10;
-                    Fire();
+                    if (direction.X < 0) 
+                        crossbow.ChangeAnimation("Fire Left");
+                    else
+                        crossbow.ChangeAnimation("Fire Right");
                 }
             }
         }
+
+
+
 
         protected override void UpdateAnimations()
         {

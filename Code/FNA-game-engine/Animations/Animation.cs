@@ -16,6 +16,7 @@ namespace FNA_game_engine
         public string name;
         public List<int> animationOrder = new List<int>();
         public int speed;
+        public int currentFrame = 0;
 
         public Animation()
         {
@@ -27,6 +28,10 @@ namespace FNA_game_engine
             name = inputName;
             speed = inputSpeed;
             animationOrder = inputAnimationOrder;
+        }
+        public bool IsComplete()
+        {
+            return currentFrame >= animationOrder.Count - 1;
         }
     }
 
