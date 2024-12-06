@@ -24,6 +24,7 @@ namespace FNA_game_engine
     {
         public Game1 game;
         public Character selectedChar;
+        public Enemy selectedEnemy;
         public GameObject selectedGameObj;
 
 
@@ -152,7 +153,7 @@ namespace FNA_game_engine
 
         private void BtnSwitchGravity_Click(object sender, EventArgs e)
         {
-            /*
+            
             if (Character.applyGravity)
             {
                 Character.applyGravity = false;
@@ -162,7 +163,7 @@ namespace FNA_game_engine
             {
                 Character.applyGravity = true;
                 BtnSwitchGravity.Text = "On";
-            }*/
+            }
 
             selectedChar = (Character)LstCharacter.Items[LstCharacter.Items.Count - 1];
         }
@@ -275,6 +276,72 @@ namespace FNA_game_engine
 
         }
 
+        private void TBZoomInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBCamRotInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBEnMinRespawnInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBEnMaxRespawnInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void LblVisual_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblRotationValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblScaleValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBScaleInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblLayerDepthValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBLayerDepthInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBRotationInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void PanMaximise_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
         private void TBHitBoxOffSetX_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
@@ -351,7 +418,7 @@ namespace FNA_game_engine
 
         private void TBRotationInput_Leave(object sender, EventArgs e)
         {
-            if (TBRotationInput.Text.Last() != '.' && TBDecelInput.Text.Last() != '-')
+            if (TBRotationInput.Text.Last() != '.' && TBRotationInput.Text.Last() != '-')
             {
                 selectedGameObj.rotation = (float)Convert.ToDecimal(TBRotationInput.Text);
             }
@@ -379,7 +446,7 @@ namespace FNA_game_engine
 
         private void TBScaleInput_Leave(object sender, EventArgs e)
         {
-            if (TBScaleInput.Text.Last() != '.' && TBDecelInput.Text.Last() != '-')
+            if (TBScaleInput.Text.Last() != '.' && TBScaleInput.Text.Last() != '-')
             {
                 selectedGameObj.scale = (float)Convert.ToDecimal(TBScaleInput.Text);
             }
@@ -407,58 +474,106 @@ namespace FNA_game_engine
 
         private void TBLayerDepthInput_Leave(object sender, EventArgs e)
         {
-            if (TBLayerDepthInput.Text.Last() != '.' && TBDecelInput.Text.Last() != '-')
+            if (TBLayerDepthInput.Text.Last() != '.' && TBLayerDepthInput.Text.Last() != '-')
             {
                 selectedGameObj.layerDepth = (float)Convert.ToDecimal(TBLayerDepthInput.Text);
             }
         }
 
-
-        private void LblVisual_Click(object sender, EventArgs e)
+        private void TBZoomInput_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
 
-        }
-        
-        private void LblRotationValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblScaleValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TBScaleInput_TextChanged(object sender, EventArgs e)
-        {
-
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void LblLayerDepthValue_Click(object sender, EventArgs e)
+        private void TBZoomInput_Leave(object sender, EventArgs e)
         {
+            if (TBZoomInput.Text.Last() != '.' && (float)(Convert.ToDecimal(TBZoomInput.Text)) > 0)
+            {
+                Camera.zoom = (float)Convert.ToDecimal(TBZoomInput.Text);
+            }
+        }
+        private void TBCamRotInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
 
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void TBLayerDepthInput_TextChanged(object sender, EventArgs e)
+        private void TBCamRotInput_Leave(object sender, EventArgs e)
         {
-
+            if (TBCamRotInput.Text.Last() != '.' && (float)(Convert.ToDecimal(TBCamRotInput.Text)) > 0)
+            {
+                Camera.rotation = (float)Convert.ToDecimal(TBCamRotInput.Text);
+            }
         }
 
-        private void TBRotationInput_TextChanged(object sender, EventArgs e)
+        private void TBEnMinRespawnInput_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
 
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void TBEnMinRespawnInput_Leave(object sender, EventArgs e)
         {
+            if (TBEnMinRespawnInput.Text.Last() != '.' && (float)(Convert.ToDecimal(TBEnMinRespawnInput.Text)) > 0)
+            {
+                selectedEnemy = (Enemy)game.objects.Where(selectedobj => selectedobj.name == "Enemy1").ToList().Last();
+                selectedEnemy.minRespawnTimer = (int)Convert.ToDecimal(TBEnMinRespawnInput.Text);
+            }
+        }
 
+        private void TBEnMaxRespawnInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TBEnMaxRespawnInput_Leave(object sender, EventArgs e)
+        {
+            if (TBEnMaxRespawnInput.Text.Last() != '.' && (float)(Convert.ToDecimal(TBEnMaxRespawnInput.Text)) > 0)
+            {
+                selectedEnemy = (Enemy)game.objects.Where(selectedobj => selectedobj.name == "Enemy1").ToList().Last();
+                selectedEnemy.maxRespawnTimer = (int)Convert.ToDecimal(TBEnMaxRespawnInput.Text);
+            }
         }
 
 
-        private void PanMaximise_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void LstCharacter_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -469,6 +584,7 @@ namespace FNA_game_engine
         {
             selectedGameObj = (GameObject)LstGameObject.SelectedItem;
         }
+
     }
 
     // RoundButton class because Windows Forms does not have one by default

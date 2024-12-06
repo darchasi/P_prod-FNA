@@ -48,23 +48,36 @@
             this.TBLayerDepthInput = new System.Windows.Forms.TextBox();
             this.LblVisual = new System.Windows.Forms.Label();
             this.LstCharacter = new System.Windows.Forms.ListBox();
-            this.BtnExit = new System.Windows.Forms.Button();
-            this.BtnMaximise = new System.Windows.Forms.Button();
-            this.BtnReduce = new System.Windows.Forms.Button();
             this.PicBoxIcon = new System.Windows.Forms.PictureBox();
             this.TitlePanel = new System.Windows.Forms.Panel();
             this.LblMediathequeTitle = new System.Windows.Forms.Label();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.PanMaximise = new System.Windows.Forms.Panel();
+            this.BtnMaximise = new FNA_game_engine.RoundButton();
             this.PanReduce = new System.Windows.Forms.Panel();
+            this.BtnReduce = new FNA_game_engine.RoundButton();
             this.PanExit = new System.Windows.Forms.Panel();
+            this.BtnExit = new FNA_game_engine.RoundButton();
             this.LblCharSelect = new System.Windows.Forms.Label();
             this.LblGameObjSelect = new System.Windows.Forms.Label();
             this.LstGameObject = new System.Windows.Forms.ListBox();
             this.TBHitBoxOffSetY = new System.Windows.Forms.TextBox();
+            this.LblPlayer = new System.Windows.Forms.Label();
+            this.LblZoomValue = new System.Windows.Forms.Label();
+            this.TBZoomInput = new System.Windows.Forms.TextBox();
+            this.TBCamRotInput = new System.Windows.Forms.TextBox();
+            this.LblCamRotValue = new System.Windows.Forms.Label();
+            this.LblEnemySpecifics = new System.Windows.Forms.Label();
+            this.LblEnMaxRespawn = new System.Windows.Forms.Label();
+            this.LblEnMinResapwn = new System.Windows.Forms.Label();
+            this.TBEnMinRespawnInput = new System.Windows.Forms.TextBox();
+            this.TBEnMaxRespawnInput = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxIcon)).BeginInit();
             this.TitlePanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
+            this.PanMaximise.SuspendLayout();
+            this.PanReduce.SuspendLayout();
+            this.PanExit.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblPhysics
@@ -298,67 +311,6 @@
             this.LstCharacter.TabIndex = 21;
             this.LstCharacter.SelectedIndexChanged += new System.EventHandler(this.LstCharacter_SelectedIndexChanged);
             // 
-            // BtnExit
-            // 
-            this.BtnExit.AutoEllipsis = true;
-            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
-            this.BtnExit.Image = global::FNA_game_engine.Properties.Resources.CloseFinalBlue;
-            this.BtnExit.Location = new System.Drawing.Point(0, 0);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnExit.Size = new System.Drawing.Size(65, 52);
-            this.BtnExit.TabIndex = 16;
-            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // BtnMaximise
-            // 
-            this.BtnMaximise.BackColor = System.Drawing.Color.Transparent;
-            this.BtnMaximise.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnMaximise.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMaximise.FlatAppearance.BorderSize = 0;
-            this.BtnMaximise.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnMaximise.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.BtnMaximise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMaximise.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
-            this.BtnMaximise.Image = global::FNA_game_engine.Properties.Resources.MinimizeFinalBlue;
-            this.BtnMaximise.Location = new System.Drawing.Point(0, 0);
-            this.BtnMaximise.Name = "BtnMaximise";
-            this.BtnMaximise.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnMaximise.Size = new System.Drawing.Size(65, 52);
-            this.BtnMaximise.TabIndex = 21;
-            this.BtnMaximise.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.BtnMaximise.UseVisualStyleBackColor = false;
-            this.BtnMaximise.Click += new System.EventHandler(this.BtnMaximise_Click);
-            // 
-            // BtnReduce
-            // 
-            this.BtnReduce.BackColor = System.Drawing.Color.Transparent;
-            this.BtnReduce.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnReduce.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnReduce.FlatAppearance.BorderSize = 0;
-            this.BtnReduce.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnReduce.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.BtnReduce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnReduce.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
-            this.BtnReduce.Image = global::FNA_game_engine.Properties.Resources.MinimizeFinalBlue;
-            this.BtnReduce.Location = new System.Drawing.Point(0, 0);
-            this.BtnReduce.Name = "BtnReduce";
-            this.BtnReduce.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnReduce.Size = new System.Drawing.Size(65, 52);
-            this.BtnReduce.TabIndex = 17;
-            this.BtnReduce.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.BtnReduce.UseVisualStyleBackColor = false;
-            this.BtnReduce.Click += new System.EventHandler(this.BtnReduce_Click);
-            // 
             // PicBoxIcon
             // 
             this.PicBoxIcon.Image = global::FNA_game_engine.Properties.Resources.InnoWeeksMusiqueIcon;
@@ -372,7 +324,7 @@
             // TitlePanel
             // 
             this.TitlePanel.Controls.Add(this.LblMediathequeTitle);
-            this.TitlePanel.Location = new System.Drawing.Point(339, 7);
+            this.TitlePanel.Location = new System.Drawing.Point(333, 7);
             this.TitlePanel.Name = "TitlePanel";
             this.TitlePanel.Size = new System.Drawing.Size(373, 42);
             this.TitlePanel.TabIndex = 20;
@@ -381,9 +333,9 @@
             // LblMediathequeTitle
             // 
             this.LblMediathequeTitle.AutoSize = true;
-            this.LblMediathequeTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.LblMediathequeTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LblMediathequeTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 24.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMediathequeTitle.Location = new System.Drawing.Point(0, -2);
+            this.LblMediathequeTitle.Location = new System.Drawing.Point(0, 0);
             this.LblMediathequeTitle.Name = "LblMediathequeTitle";
             this.LblMediathequeTitle.Size = new System.Drawing.Size(347, 44);
             this.LblMediathequeTitle.TabIndex = 19;
@@ -407,6 +359,7 @@
             // 
             // PanMaximise
             // 
+            this.PanMaximise.Controls.Add(this.BtnMaximise);
             this.PanMaximise.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanMaximise.Location = new System.Drawing.Point(829, 0);
             this.PanMaximise.Name = "PanMaximise";
@@ -414,21 +367,84 @@
             this.PanMaximise.TabIndex = 2;
             this.PanMaximise.Paint += new System.Windows.Forms.PaintEventHandler(this.PanMaximise_Paint);
             // 
+            // BtnMaximise
+            // 
+            this.BtnMaximise.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMaximise.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnMaximise.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnMaximise.FlatAppearance.BorderSize = 0;
+            this.BtnMaximise.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnMaximise.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.BtnMaximise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMaximise.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
+            this.BtnMaximise.Image = global::FNA_game_engine.Properties.Resources.MinimizeFinalBlue;
+            this.BtnMaximise.Location = new System.Drawing.Point(0, 0);
+            this.BtnMaximise.Name = "BtnMaximise";
+            this.BtnMaximise.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BtnMaximise.Size = new System.Drawing.Size(65, 52);
+            this.BtnMaximise.TabIndex = 21;
+            this.BtnMaximise.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.BtnMaximise.UseVisualStyleBackColor = false;
+            this.BtnMaximise.Click += new System.EventHandler(this.BtnMaximise_Click);
+            // 
             // PanReduce
             // 
+            this.PanReduce.Controls.Add(this.BtnReduce);
             this.PanReduce.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanReduce.Location = new System.Drawing.Point(894, 0);
             this.PanReduce.Name = "PanReduce";
             this.PanReduce.Size = new System.Drawing.Size(65, 52);
             this.PanReduce.TabIndex = 1;
             // 
+            // BtnReduce
+            // 
+            this.BtnReduce.BackColor = System.Drawing.Color.Transparent;
+            this.BtnReduce.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnReduce.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnReduce.FlatAppearance.BorderSize = 0;
+            this.BtnReduce.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnReduce.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.BtnReduce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReduce.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
+            this.BtnReduce.Image = global::FNA_game_engine.Properties.Resources.MinimizeFinalBlue;
+            this.BtnReduce.Location = new System.Drawing.Point(0, 0);
+            this.BtnReduce.Name = "BtnReduce";
+            this.BtnReduce.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BtnReduce.Size = new System.Drawing.Size(65, 52);
+            this.BtnReduce.TabIndex = 17;
+            this.BtnReduce.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.BtnReduce.UseVisualStyleBackColor = false;
+            this.BtnReduce.Click += new System.EventHandler(this.BtnReduce_Click);
+            // 
             // PanExit
             // 
+            this.PanExit.Controls.Add(this.BtnExit);
             this.PanExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanExit.Location = new System.Drawing.Point(959, 0);
             this.PanExit.Name = "PanExit";
             this.PanExit.Size = new System.Drawing.Size(65, 52);
             this.PanExit.TabIndex = 1;
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.AutoEllipsis = true;
+            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
+            this.BtnExit.Image = global::FNA_game_engine.Properties.Resources.CloseFinalBlue;
+            this.BtnExit.Location = new System.Drawing.Point(0, 0);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BtnExit.Size = new System.Drawing.Size(65, 52);
+            this.BtnExit.TabIndex = 16;
+            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // LblCharSelect
             // 
@@ -454,7 +470,7 @@
             // 
             this.LstGameObject.DisplayMember = "name";
             this.LstGameObject.FormattingEnabled = true;
-            this.LstGameObject.Location = new System.Drawing.Point(293, 91);
+            this.LstGameObject.Location = new System.Drawing.Point(302, 91);
             this.LstGameObject.Name = "LstGameObject";
             this.LstGameObject.Size = new System.Drawing.Size(206, 95);
             this.LstGameObject.TabIndex = 23;
@@ -473,15 +489,137 @@
             this.TBHitBoxOffSetY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBHitBoxOffSetY_KeyPress);
             this.TBHitBoxOffSetY.LostFocus += new System.EventHandler(this.TBHitBoxOffSetY_Leave);
             // 
+            // LblPlayer
+            // 
+            this.LblPlayer.AutoSize = true;
+            this.LblPlayer.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlayer.Location = new System.Drawing.Point(553, 62);
+            this.LblPlayer.Name = "LblPlayer";
+            this.LblPlayer.Size = new System.Drawing.Size(166, 26);
+            this.LblPlayer.TabIndex = 26;
+            this.LblPlayer.Text = "Variables Player";
+            // 
+            // LblZoomValue
+            // 
+            this.LblZoomValue.AutoSize = true;
+            this.LblZoomValue.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblZoomValue.Location = new System.Drawing.Point(554, 152);
+            this.LblZoomValue.Name = "LblZoomValue";
+            this.LblZoomValue.Size = new System.Drawing.Size(45, 19);
+            this.LblZoomValue.TabIndex = 27;
+            this.LblZoomValue.Text = "Zoom";
+            // 
+            // TBZoomInput
+            // 
+            this.TBZoomInput.Location = new System.Drawing.Point(687, 152);
+            this.TBZoomInput.MaxLength = 5;
+            this.TBZoomInput.Name = "TBZoomInput";
+            this.TBZoomInput.Size = new System.Drawing.Size(32, 20);
+            this.TBZoomInput.TabIndex = 28;
+            this.TBZoomInput.Text = "1.4";
+            this.TBZoomInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBZoomInput.TextChanged += new System.EventHandler(this.TBZoomInput_TextChanged);
+            this.TBZoomInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBZoomInput_KeyPress);
+            this.TBZoomInput.LostFocus += new System.EventHandler(this.TBZoomInput_Leave);
+            // 
+            // TBCamRotInput
+            // 
+            this.TBCamRotInput.Location = new System.Drawing.Point(687, 190);
+            this.TBCamRotInput.MaxLength = 5;
+            this.TBCamRotInput.Name = "TBCamRotInput";
+            this.TBCamRotInput.Size = new System.Drawing.Size(32, 20);
+            this.TBCamRotInput.TabIndex = 30;
+            this.TBCamRotInput.Text = "0";
+            this.TBCamRotInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBCamRotInput.TextChanged += new System.EventHandler(this.TBCamRotInput_TextChanged);
+            this.TBCamRotInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBCamRotInput_KeyPress);
+            this.TBCamRotInput.LostFocus += new System.EventHandler(this.TBCamRotInput_Leave);
+            // 
+            // LblCamRotValue
+            // 
+            this.LblCamRotValue.AutoSize = true;
+            this.LblCamRotValue.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCamRotValue.Location = new System.Drawing.Point(554, 189);
+            this.LblCamRotValue.Name = "LblCamRotValue";
+            this.LblCamRotValue.Size = new System.Drawing.Size(112, 19);
+            this.LblCamRotValue.TabIndex = 29;
+            this.LblCamRotValue.Text = "Camera Rotation";
+            // 
+            // LblEnemySpecifics
+            // 
+            this.LblEnemySpecifics.AutoSize = true;
+            this.LblEnemySpecifics.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEnemySpecifics.Location = new System.Drawing.Point(731, 62);
+            this.LblEnemySpecifics.Name = "LblEnemySpecifics";
+            this.LblEnemySpecifics.Size = new System.Drawing.Size(293, 26);
+            this.LblEnemySpecifics.TabIndex = 31;
+            this.LblEnemySpecifics.Text = "Variables Specifique Enemies";
+            // 
+            // LblEnMaxRespawn
+            // 
+            this.LblEnMaxRespawn.AutoSize = true;
+            this.LblEnMaxRespawn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEnMaxRespawn.Location = new System.Drawing.Point(755, 151);
+            this.LblEnMaxRespawn.Name = "LblEnMaxRespawn";
+            this.LblEnMaxRespawn.Size = new System.Drawing.Size(177, 19);
+            this.LblEnMaxRespawn.TabIndex = 32;
+            this.LblEnMaxRespawn.Text = "Enemy Max Respawn Timer";
+            // 
+            // LblEnMinResapwn
+            // 
+            this.LblEnMinResapwn.AutoSize = true;
+            this.LblEnMinResapwn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEnMinResapwn.Location = new System.Drawing.Point(755, 116);
+            this.LblEnMinResapwn.Name = "LblEnMinResapwn";
+            this.LblEnMinResapwn.Size = new System.Drawing.Size(174, 19);
+            this.LblEnMinResapwn.TabIndex = 33;
+            this.LblEnMinResapwn.Text = "Enemy Min Respawn Timer";
+            // 
+            // TBEnMinRespawnInput
+            // 
+            this.TBEnMinRespawnInput.Location = new System.Drawing.Point(959, 115);
+            this.TBEnMinRespawnInput.MaxLength = 5;
+            this.TBEnMinRespawnInput.Name = "TBEnMinRespawnInput";
+            this.TBEnMinRespawnInput.Size = new System.Drawing.Size(32, 20);
+            this.TBEnMinRespawnInput.TabIndex = 34;
+            this.TBEnMinRespawnInput.Text = "50";
+            this.TBEnMinRespawnInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBEnMinRespawnInput.TextChanged += new System.EventHandler(this.TBEnMinRespawnInput_TextChanged);
+            this.TBEnMinRespawnInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBEnMinRespawnInput_KeyPress);
+            this.TBEnMinRespawnInput.LostFocus += new System.EventHandler(this.TBEnMinRespawnInput_Leave);
+            // 
+            // TBEnMaxRespawnInput
+            // 
+            this.TBEnMaxRespawnInput.Location = new System.Drawing.Point(959, 153);
+            this.TBEnMaxRespawnInput.MaxLength = 5;
+            this.TBEnMaxRespawnInput.Name = "TBEnMaxRespawnInput";
+            this.TBEnMaxRespawnInput.Size = new System.Drawing.Size(32, 20);
+            this.TBEnMaxRespawnInput.TabIndex = 35;
+            this.TBEnMaxRespawnInput.Text = "200";
+            this.TBEnMaxRespawnInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TBEnMaxRespawnInput.TextChanged += new System.EventHandler(this.TBEnMaxRespawnInput_TextChanged);
+            this.TBEnMaxRespawnInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBEnMaxRespawnInput_KeyPress);
+            this.TBEnMaxRespawnInput.LostFocus += new System.EventHandler(this.TBEnMaxRespawnInput_Leave);
+            // 
             // GameInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1024, 576);
+            this.Controls.Add(this.TBEnMaxRespawnInput);
+            this.Controls.Add(this.TBEnMinRespawnInput);
+            this.Controls.Add(this.LblEnMinResapwn);
+            this.Controls.Add(this.LblEnMaxRespawn);
+            this.Controls.Add(this.LblEnemySpecifics);
+            this.Controls.Add(this.TBCamRotInput);
+            this.Controls.Add(this.LblCamRotValue);
+            this.Controls.Add(this.TBZoomInput);
+            this.Controls.Add(this.LblZoomValue);
+            this.Controls.Add(this.LblPlayer);
+            this.Controls.Add(this.LstGameObject);
             this.Controls.Add(this.TBHitBoxOffSetY);
             this.Controls.Add(this.LblGameObjSelect);
-            this.Controls.Add(this.LstGameObject);
             this.Controls.Add(this.LblCharSelect);
             this.Controls.Add(this.LstCharacter);
             this.Controls.Add(this.LblHitBoxOffSetValue);
@@ -513,15 +651,15 @@
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();
             this.TopPanel.ResumeLayout(false);
+            this.PanMaximise.ResumeLayout(false);
+            this.PanReduce.ResumeLayout(false);
+            this.PanExit.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button BtnExit;
-        private System.Windows.Forms.Button BtnReduce;
-        private System.Windows.Forms.Button BtnMaximise;
         private System.Windows.Forms.Label LblPhysics;
         private System.Windows.Forms.Button BtnSwitchGravity;
         private System.Windows.Forms.TextBox TBGravityValueInput;
@@ -553,5 +691,18 @@
         private System.Windows.Forms.Label LblGameObjSelect;
         private System.Windows.Forms.ListBox LstGameObject;
         private System.Windows.Forms.TextBox TBHitBoxOffSetY;
+        private RoundButton BtnExit;
+        private RoundButton BtnReduce;
+        private RoundButton BtnMaximise;
+        private System.Windows.Forms.Label LblPlayer;
+        private System.Windows.Forms.Label LblZoomValue;
+        private System.Windows.Forms.TextBox TBZoomInput;
+        private System.Windows.Forms.TextBox TBCamRotInput;
+        private System.Windows.Forms.Label LblCamRotValue;
+        private System.Windows.Forms.Label LblEnemySpecifics;
+        private System.Windows.Forms.Label LblEnMaxRespawn;
+        private System.Windows.Forms.Label LblEnMinResapwn;
+        private System.Windows.Forms.TextBox TBEnMinRespawnInput;
+        private System.Windows.Forms.TextBox TBEnMaxRespawnInput;
     }
 }

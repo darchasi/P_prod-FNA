@@ -9,7 +9,7 @@ namespace FNA_game_engine
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        public static float camrot = 0;
+        public static float camrot = 0f;
         public const int PIXELWIDTH = 640 *2;
         public const int PIXELHEIGHT = 360*2;
         public const int SCREENWIDTH = 1280;
@@ -70,7 +70,8 @@ namespace FNA_game_engine
                 songInstance = song.CreateInstance();
                 songInstance.Volume = 0.2f;
             }
-            LoadLevel("RunAndBuild.lvl");
+            LoadLevel("Base.lvl");
+            Camera.zoom = 1.4f;
         }
 
         protected override void Update(GameTime gameTime)
@@ -80,12 +81,10 @@ namespace FNA_game_engine
             map.Update(objects);
             UpdateCamera();
             UpdateMusic();
-
+            Camera.rotation += camrot;
 #if DEBUG
             editor.Update(objects, map);
 #endif
-            Camera.zoom = 1.4f;
-            Camera.rotation += camrot;
 
             base.Update(gameTime);
         }

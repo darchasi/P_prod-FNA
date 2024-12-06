@@ -9,17 +9,17 @@ namespace FNA_game_engine
 {
     public class Enemy : Character
     {
-        int respawnTimer;
-        const int minRespawnTimer = 50;
-        const int maxRespawnTimer = 200;
+        public int respawnTimer;
+        public int minRespawnTimer = 50;
+        public int maxRespawnTimer = 200;
 
-        int jumpTimer;
-        const int minJumpTimer = 100;
-        const int maxJumpTimer = 200;
+        public int jumpTimer;
+        public int minJumpTimer = 100;
+        public int maxJumpTimer = 200;
 
-        int moveTimer;
-        const int minMoveTimer = 20;
-        const int maxMoveTimer = 50;
+        public int moveTimer;
+        public int minMoveTimer = 20;
+        public int maxMoveTimer = 50;
 
         Random random = new Random();
 
@@ -49,7 +49,7 @@ namespace FNA_game_engine
 
         public override void Load(ContentManager content)
         {
-            image = TextureLoader.Load("enemy", content);
+            image = TextureLoader.Load("enemy2", content);
             explosion = content.Load<SoundEffect>("Audio\\explosion");
             base.Load(content);
             ConfigureBoundingBox();
