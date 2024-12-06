@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,10 @@ namespace FNA_game_engine
         List<Projectile> projectiles = new List<Projectile>();
 
         const int numOfProjectiles = 20;
+        Vector2 startOffSet;
 
-
+        const int YOFFSET = 20;
+        const int XOFFSET = -20;
         public FireCharacter() { }
 
         public override void Initialize()
@@ -25,7 +28,18 @@ namespace FNA_game_engine
 
         public void Fire()
         {
-            projectiles.ToList().FirstOrDefault(p => !p.active)?.Fire(this, position, direction);
+            if (currentAnimation.name.Contains("Left"))
+            {
+                equipements.Where(equip => equip.name == "crossbow-spritesheet.png").ToList().Last().ChangeAnimation("Fire Left");
+            }
+            else
+            {
+                equipements.Where(equip => equip.name == "crossbow-spritesheet.png").ToList().Last().ChangeAnimation("Fire Right");
+            }
+
+            startOffSet = new Vector2(position.X + XOFFSET, position.Y + YOFFSET);
+            projectiles.ToList().FirstOrDefault(p => !p.active)?.Fire(this, startOffSet, direction);
+
         }
 
         public override void Load(ContentManager content)

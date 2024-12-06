@@ -8,6 +8,7 @@ namespace FNA_game_engine
 {
     public class Player : FireCharacter
     {
+        int timeAttack = 0;
         public static int score;
         int currentAnimState;
         enum animStates
@@ -61,6 +62,7 @@ namespace FNA_game_engine
         }
         public override void Update(List<GameObject> objects, Map map)
         {
+            timeAttack--;
             CheckInput(objects, map);
             base.Update(objects, map);
         }
@@ -119,9 +121,14 @@ namespace FNA_game_engine
 
         private void HandleFire()
         {
-            if (Input.KeyPressed(Keys.E))
+
+            if (Input.KeyPressed(Keys.E) && timeAttack == 0)
             {
-                Fire();
+                if (equipements.Count > 0 && equipements.Where(equip => equip.name == "crossbow-spritesheet.png").Count() > 0)
+                {
+                    timeAttack = 10;
+                    Fire();
+                }
             }
         }
 
@@ -144,7 +151,7 @@ namespace FNA_game_engine
 
         private void HandleMovementAnimation()
         {
-            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() >= 0)
+            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() > 0)
             {
                 if (direction.X < 0 && AnimationIsNot("RunLightLeft"))
                 {
@@ -170,7 +177,7 @@ namespace FNA_game_engine
 
         private void HandleIdleAnimation()
         {
-            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() >= 0)
+            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() > 0)
             {
                 if (direction.X < 0 && AnimationIsNot("IdleLightLeft"))
                 {

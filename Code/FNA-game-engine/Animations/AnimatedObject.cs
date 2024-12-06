@@ -55,7 +55,6 @@ namespace FNA_game_engine
 
         public virtual void ChangeAnimation(string newAnimation)
         {
-
             currentAnimation = GetAnimation(newAnimation);
 
             if (currentAnimation == null)
@@ -84,20 +83,23 @@ namespace FNA_game_engine
 
             if (equipements.Count() > 0 && !syncingAnimation)
             {
-                // DOES NOT WORK BECAUSE IS RAN BEFORE EQUIPEMENT.LOAD GIVES EQUIPEMENTS THEIR ANIMATION
-                foreach (Equipement equipement in equipements)
-                {
-                    if (equipement.animationSet.animationList.Count > 0)
-                    {
-                        equipement.ChangeAnimation(equipement.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last().name.ToString());
-                        syncingAnimation = true;
-                        this.ChangeAnimation(this.animationSet.animationList.Where(animation => animation.name == equipement.currentAnimation.name).Last().name.ToString());
-                        syncingAnimation = false;
-                    }
-                }
-                //equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());
-
+                SyncEquipmentAnimation(newAnimation);
             }
+        }
+
+        public void SyncEquipmentAnimation(string newAnimation)
+        {
+            foreach (Equipement equipement in equipements)
+            {
+                if (equipement.animationSet.animationList.Count > 0 && equipement.name != "crossbow-spritesheet.png")
+                {
+                    equipement.ChangeAnimation(equipement.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last().name.ToString());
+                    syncingAnimation = true;
+                    this.ChangeAnimation(this.animationSet.animationList.Where(animation => animation.name == equipement.currentAnimation.name).Last().name.ToString());
+                    syncingAnimation = false;
+                }
+            }
+            //equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());
         }
 
         private Animation GetAnimation(string animation)
@@ -130,6 +132,14 @@ namespace FNA_game_engine
                 if (AnimationComplete())
                 {
                     currentAnimationFrame = 0;
+                    if (currentAnimation.name == "Fire Left" && this is Equipement)
+                    {
+                        ChangeAnimation("Idle Left");
+                    }
+                    else if (currentAnimation.name == "Fire Right" && this is Equipement)
+                    {
+                        ChangeAnimation("Idle Right");
+                    }
                 }
                 else
                 {

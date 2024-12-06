@@ -35,7 +35,7 @@ namespace FNA_game_engine
             position += direction * speed;
 
             CheckCollision(objects, map);
-
+            
             // Update deathtimer
             destroyTimer--;
             if (destroyTimer <= 0 && active)
@@ -43,6 +43,7 @@ namespace FNA_game_engine
                 Destroy();
             }
             base.Update(objects, map);
+
 
         }
 
