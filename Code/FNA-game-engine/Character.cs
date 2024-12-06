@@ -7,16 +7,24 @@ namespace FNA_game_engine
 {
     public class Character : AnimatedObject
     {
+
+        public const float DECEL = 0.5f;
+        public const float ACCEL = 1f;
+        public const float MAXSPEED = 8f;
+        public const float GRAVITY = 1f;
+        public const float JUMPVELOCITY = 22f;
+        public const float MAXFALLVELOCITY = 24f + 8f * GRAVITY;
+
         public Vector2 velocity;
         // customize feel of the movement
 
-        protected float decel = 0.5f; // lower number is, slower character slows down.
-        protected float accel = 1f; // lower number is, slower character takes off.
-        protected float maxSpeed = 8f;
+        public float decel; // lower number is, slower character slows down.
+        public float accel; // lower number is, slower character takes off.
+        public float maxSpeed;
 
-        public float gravity = 1f;
-        public float jumpVelocity = 22f; // how much jump.
-        public float maxFallVelocity = 32;
+        public float gravity;
+        public float jumpVelocity; // how much jump.
+        public float maxFallVelocity;
 
         protected bool jumping;
         // static = always available even if no Character loaded
@@ -26,6 +34,12 @@ namespace FNA_game_engine
         {
             velocity = Vector2.Zero;
             jumping = false;
+            decel = DECEL;
+            accel = ACCEL;
+            maxSpeed = MAXSPEED;
+            gravity = GRAVITY;
+            jumpVelocity = JUMPVELOCITY;
+            maxFallVelocity = MAXFALLVELOCITY;
             base.Initialize();
         }
 
@@ -162,7 +176,7 @@ namespace FNA_game_engine
                 return false;
             }
             // Able to jump
-            if (velocity.Y == 0 && OnGround(map) != Rectangle.Empty)
+            if (velocity.Y == 0 && (OnGround(map) != Rectangle.Empty || gravity == 0))
             {
                 velocity.Y -= jumpVelocity;
                 jumping = true;
