@@ -18,12 +18,14 @@ namespace FNA_game_engine
         // will need to change for object walkthough-able
         public bool projectileCollidable = true;
         public bool playerCollidable = true;
-        protected int boundingBoxWidth, boundingBoxHeight;
-        protected Vector2 boundingBoxOffset;
+        public int boundingBoxWidth, boundingBoxHeight;
+        public Vector2 boundingBoxOffset = new Vector2(0, 0);
         Texture2D boundingBoxImage;
         public Vector2 direction = new Vector2(1,0);
         // for dev
         const bool drawBoundingBoxes = true;
+
+        public string name = "GameObject";
 
         public Vector2 startPosition = new Vector2(-1, -1);
 

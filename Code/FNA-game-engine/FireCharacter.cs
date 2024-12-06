@@ -76,6 +76,7 @@ namespace FNA_game_engine
             projectiles.ToList().ForEach(p => p.Load(content));
             base.Load(content);
         }
+
         /*
         public override void Update(List<GameObject> objects, Map map)
         {

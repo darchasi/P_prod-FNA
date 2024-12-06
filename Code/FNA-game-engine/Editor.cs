@@ -38,7 +38,7 @@ namespace FNA_game_engine
             //IMPORTANT: Add the object types you want the editor to support here, then also add the constructor for object type in the addButton_Click function.
             //Also, make sure NumOfObjects is always the last item in this list so some other code below works properly.
 
-            Enemy, PickableItem, Equipement, NumOfObjects,// put every new object BEFORE NumOfObjects
+            Player, Enemy, PickableItem, Equipement, NumOfObjects,// put every new object BEFORE NumOfObjects
         };
 
         const string objectsNamespace = "FNA_game_engine."; //IMPORTANT: Type the namespace here that all of your classes will be in! Make sure you spell it exactly and put a . at the end!
@@ -782,7 +782,7 @@ namespace FNA_game_engine
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             //Only allow png files to be selected, and only one file can be picked (no multiselecting):
-            openFileDialog1.Filter = "PNG (.png)|*.png";
+            openFileDialog1.Filter = "PNG (.png)|*.png|JPG (.jpg)|*.jpg";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.Multiselect = false;
 
@@ -862,7 +862,7 @@ namespace FNA_game_engine
             game.map.decor.Clear();
 
             //Add one initial player object:
-            game.objects.Add(new Player(Vector2.Zero));
+            game.objects.Add(new Player("Player", Vector2.Zero));
 
             //Set default editor values:
             mapWidth.Value = game.map.mapWidth = 30;
@@ -1025,6 +1025,16 @@ namespace FNA_game_engine
         }
 
         private void Editor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void objectTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
