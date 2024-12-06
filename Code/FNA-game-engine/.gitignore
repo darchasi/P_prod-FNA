@@ -1,4 +1,3 @@
-.vs/
 obj/
 obj_core/
 *.pidb
@@ -6,3 +5,8 @@ obj_core/
 *.userprefs
 *.suo
 *.vs
+.vs/
+bin/Debug/FNA-game-engine.exe
+bin/Debug/FNA-game-engine.pdb
+bin/Debug/FNA-game-engine.exe.config
+bin/Debug/Content/*

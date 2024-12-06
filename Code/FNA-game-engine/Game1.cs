@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Audio;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace FNA_game_engine
 {
@@ -42,9 +43,9 @@ namespace FNA_game_engine
         {
 
 #if DEBUG
-            /*
+            
             editor = new Editor(this);
-            editor.Show();*/
+            editor.Show();
 #endif
             base.Initialize();
             Camera.Initialize();
@@ -56,7 +57,7 @@ namespace FNA_game_engine
             spriteBatch = new SpriteBatch(GraphicsDevice);
 #if DEBUG
 
-            //editor.LoadTextures(Content, map);
+            editor.LoadTextures(Content, map);
 #endif
             map.Load(Content);
             gameHUD.Load(Content);
@@ -69,7 +70,7 @@ namespace FNA_game_engine
                 songInstance = song.CreateInstance();
                 songInstance.Volume = 0.2f;
             }
-            LoadLevel("NewLevel.lvl");
+            LoadLevel("RunAndBuild.lvl");
         }
 
         protected override void Update(GameTime gameTime)
@@ -81,7 +82,7 @@ namespace FNA_game_engine
             UpdateMusic();
 
 #if DEBUG
-            //editor.Update(objects, map);
+            editor.Update(objects, map);
 #endif
             Camera.zoom = 1.4f;
             Camera.rotation += camrot;
@@ -99,7 +100,7 @@ namespace FNA_game_engine
             // Draw sprite(s)
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Camera.GetTransformMatrix());
 #if DEBUG
-            //editor.Draw(spriteBatch);
+            editor.Draw(spriteBatch);
 #endif
             DrawObjects();
             map.DrawWalls(spriteBatch);
@@ -118,6 +119,7 @@ namespace FNA_game_engine
         }
         public void LoadLevel(string fileName)
         {
+            
             Global.levelName = fileName;
 
             // Load level data
@@ -131,9 +133,9 @@ namespace FNA_game_engine
             // Add decor
             map.decor = levelData.decor;
 
-            objects.Add(new Player(new Vector2(1652, 2940)));
+            objects.Add(new Player("Player", new Vector2(1652, 2940)));
 
-            objects.Add(new Enemy(new Vector2(1392, 3002)));
+            objects.Add(new Enemy("Enemy1", new Vector2(1392, 3002)));
 
             //objects.Add(new Equipement(objects[0], "hat.png", null, 0.490f, 16, 2, 0));
 
@@ -141,13 +143,13 @@ namespace FNA_game_engine
             //objects.Add(objects[0].equipements.Last());
             //objects.Add(new Equipement(objects[0], "lantern", 0.510f, -78, -83, -34));
 
-            /*
-            map.walls.Add(new Wall(new Rectangle(16, 860, 2060, 60), true));
+            
+            //map.walls.Add(new Wall(new Rectangle(1602, 3140, 2060, 60), true));
 
-            map.walls.Add(new Wall(new Rectangle(456, 280, 146, 56), true));
+            //map.walls.Add(new Wall(new Rectangle(456, 280, 146, 56), true));
 
-            map.decor.Add(new Decor(Vector2.Zero, "background", 1f));
-            */
+            //map.decor.Add(new Decor(Vector2.Zero, "background", 1f));
+            
 
             map.LoadMap(Content);
 

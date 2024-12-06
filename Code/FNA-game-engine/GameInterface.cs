@@ -1,5 +1,4 @@
 ﻿using System;
-
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +24,7 @@ namespace FNA_game_engine
     {
         public Game1 game;
         public Character selectedChar;
+        public GameObject selectedGameObj;
 
 
         string fullPath = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString();
@@ -37,7 +37,10 @@ namespace FNA_game_engine
             this.FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
-            game.objects.Where(obj => obj is Character).ToList().ForEach(character => LstCharacter.Items.Add(character));
+            game.objects.Where(obj => obj is Character).ToList().ForEach(character => LstCharacter.Items.Add((Character)character));
+            selectedChar = (Character)LstCharacter.Items[0];
+            game.objects.ForEach(gameobj => LstGameObject.Items.Add((GameObject)gameobj));
+            selectedGameObj = (GameObject)LstCharacter.Items[0];
             TopPanel.MouseDown += PanelTitleBar_MouseDown;
             TopPanel.MouseMove += PanelTitleBar_MouseMove;
             TopPanel.MouseUp += PanelTitleBar_MouseUp;
@@ -142,7 +145,6 @@ namespace FNA_game_engine
         {
             if (TBGravityValueInput.Text.Last() != '.' && TBGravityValueInput.Text.Last() != '-')
             {
-                selectedChar = (Player)game.objects[0];
                 selectedChar.gravity = (float)Convert.ToDecimal(TBGravityValueInput.Text);
                 selectedChar.maxFallVelocity = 24f + 8f * selectedChar.gravity;
             }
@@ -150,6 +152,7 @@ namespace FNA_game_engine
 
         private void BtnSwitchGravity_Click(object sender, EventArgs e)
         {
+            /*
             if (Character.applyGravity)
             {
                 Character.applyGravity = false;
@@ -159,7 +162,9 @@ namespace FNA_game_engine
             {
                 Character.applyGravity = true;
                 BtnSwitchGravity.Text = "On";
-            }
+            }*/
+
+            selectedChar = (Character)LstCharacter.Items[LstCharacter.Items.Count - 1];
         }
 
         private void TBJumpVelocityInput_TextChanged(object sender, EventArgs e)
@@ -265,47 +270,181 @@ namespace FNA_game_engine
 
         }
 
+        private void TBHitBoxOffSetX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBHitBoxOffSetX_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.') && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+            // only allow one minus
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TBHitBoxOffSetX_Leave(object sender, EventArgs e)
+        {
+            if (TBHitBoxOffSetX.Text.Last() != '.' && TBHitBoxOffSetX.Text.Last() != '-')
+            {
+                selectedGameObj.boundingBoxOffset.X = Convert.ToInt16(TBHitBoxOffSetX.Text);
+            }
+        }
+
+        private void TBHitBoxOffSetY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBHitBoxOffSetY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
+            // only allow one minus
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TBHitBoxOffSetY_Leave(object sender, EventArgs e)
+        {
+            if (TBHitBoxOffSetY.Text.Last() != '-')
+            {
+                selectedGameObj.boundingBoxOffset.Y = Convert.ToInt16(TBHitBoxOffSetY.Text);
+            }
+        }
+
+        private void TBRotationInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.') && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+            // only allow one minus
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TBRotationInput_Leave(object sender, EventArgs e)
+        {
+            if (TBRotationInput.Text.Last() != '.' && TBDecelInput.Text.Last() != '-')
+            {
+                selectedGameObj.rotation = (float)Convert.ToDecimal(TBRotationInput.Text);
+            }
+        }
+
+        private void TBScaleInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.') && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+            // only allow one minus
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TBScaleInput_Leave(object sender, EventArgs e)
+        {
+            if (TBScaleInput.Text.Last() != '.' && TBDecelInput.Text.Last() != '-')
+            {
+                selectedGameObj.scale = (float)Convert.ToDecimal(TBScaleInput.Text);
+            }
+        }
+
+        private void TBLayerDepthInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.') && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+            // only allow one minus
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TBLayerDepthInput_Leave(object sender, EventArgs e)
+        {
+            if (TBLayerDepthInput.Text.Last() != '.' && TBDecelInput.Text.Last() != '-')
+            {
+                selectedGameObj.layerDepth = (float)Convert.ToDecimal(TBLayerDepthInput.Text);
+            }
+        }
+
+
         private void LblVisual_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        
+        private void LblRotationValue_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void LblScaleValue_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void TBScaleInput_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void LblLayerDepthValue_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void TBLayerDepthInput_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void TBRotationInput_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -315,20 +454,31 @@ namespace FNA_game_engine
 
         }
 
+
+        private void PanMaximise_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void LstCharacter_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedChar = (Character)LstCharacter.SelectedItem;
+        }
+
+        private void LstGameObject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedGameObj = (GameObject)LstGameObject.SelectedItem;
         }
     }
 
     // RoundButton class because Windows Forms does not have one by default
     public class RoundButton : Button
     {
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             GraphicsPath grPath = new GraphicsPath();
             grPath.AddEllipse(0, 0, ClientSize.Width, ClientSize.Height);
-            this.Region = new System.Drawing.Region(grPath);
+            this.Region = new Region(grPath);
             base.OnPaint(e);
         }
     }

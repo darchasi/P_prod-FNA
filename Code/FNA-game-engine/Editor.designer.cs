@@ -356,6 +356,7 @@
             this.objectTypes.Size = new System.Drawing.Size(275, 56);
             this.objectTypes.TabIndex = 15;
             this.objectTypes.Visible = false;
+            this.objectTypes.SelectedIndexChanged += new System.EventHandler(this.objectTypes_SelectedIndexChanged);
             // 
             // imagePathLabel
             // 
