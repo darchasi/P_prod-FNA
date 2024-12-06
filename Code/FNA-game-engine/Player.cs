@@ -28,8 +28,9 @@ namespace FNA_game_engine
 
         }
 
-        public Player(Vector2 inputPosition)
+        public Player(string inputName, Vector2 inputPosition)
         {
+            name = inputName;
             position = inputPosition;
         }
 

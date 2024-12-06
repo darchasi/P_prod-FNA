@@ -9,4 +9,8 @@ obj_core/
 bin/Debug/FNA-game-engine.exe
 bin/Debug/FNA-game-engine.pdb
 bin/Debug/FNA-game-engine.exe.config
+<<<<<<< HEAD
 bin/Debug/Content/*
+=======
+bin/Debug/Content/*
+>>>>>>> new-editor
