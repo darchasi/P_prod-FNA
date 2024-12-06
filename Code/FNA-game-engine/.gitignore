@@ -10,7 +10,11 @@ bin/Debug/FNA-game-engine.exe
 bin/Debug/FNA-game-engine.pdb
 bin/Debug/FNA-game-engine.exe.config
 <<<<<<< HEAD
+<<<<<<< HEAD
 bin/Debug/Content/*
+=======
+bin/Debug/Content/*
+>>>>>>> new-editor
 =======
 bin/Debug/Content/*
 >>>>>>> new-editor
