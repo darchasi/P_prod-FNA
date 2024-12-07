@@ -198,6 +198,7 @@ namespace FNA_game_engine
             {
                 if (objects[i] != this && objects[i].active && objects[i] != owner && objects[i].projectileCollidable && objects[i].CheckCollision(futureBoundingBox))
                 {
+                    objects[i].ProjectileResponse();
                     return true;
                 }
             }

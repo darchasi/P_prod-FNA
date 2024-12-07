@@ -13,7 +13,9 @@ namespace FNA_game_engine
         public const int PIXELHEIGHT = 360*2;
         public const int SCREENWIDTH = 1280;
         public const int SCREENHEIGHT = 720;
+
         public bool IsFullScreen = false; 
+        
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         public List<GameObject> objects = new List<GameObject>();
@@ -56,7 +58,7 @@ namespace FNA_game_engine
 #if DEBUG
 
             editor.LoadTextures(Content, map);
-#endif
+#endif 
             map.Load(Content);
             gameHUD.Load(Content);
             // Load song

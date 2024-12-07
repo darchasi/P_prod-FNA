@@ -636,6 +636,22 @@ namespace FNA_game_engine
         {
 
         }
+
+        private void BtnFullScreen_Click(object sender, EventArgs e)
+        {
+            if (BtnFullScreen.Text == "On")
+            {
+                game.IsFullScreen = false;
+                BtnFullScreen.Text = "Off";
+            }
+            else
+            {
+                game.IsFullScreen = true;
+                BtnFullScreen.Text = "On";
+            }
+
+            Resolution.SetResolution(Game1.SCREENWIDTH, Game1.SCREENHEIGHT, game.IsFullScreen);
+        }
     }
 
     // RoundButton class because Windows Forms does not have one by default
