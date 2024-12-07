@@ -84,6 +84,7 @@
     <Compile Include="Animations\Animation.cs" />
     <Compile Include="Animations\AnimationLoader.cs" />
     <Compile Include="Animations\AnimatedObject.cs" />
+    <Compile Include="GravityObject.cs" />
     <Compile Include="GameInterface.cs">
       <SubType>Form</SubType>
     </Compile>

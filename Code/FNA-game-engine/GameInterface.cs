@@ -573,6 +573,28 @@ namespace FNA_game_engine
             }
         }
 
+        private void TBArrowVelInput_Leave(object sender, EventArgs e)
+        {
+            if (TBArrowVelInput.Text.Last() != '.' && (float)(Convert.ToDecimal(TBArrowVelInput.Text)) > 0)
+            {
+                Projectile.baseXvelocity = (float)Convert.ToDecimal(TBArrowVelInput.Text);
+            }
+        }
+        private void TBArrowVelInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
 
 
         private void LstCharacter_SelectedIndexChanged(object sender, EventArgs e)
@@ -609,6 +631,10 @@ namespace FNA_game_engine
             }
 
             Resolution.SetResolution(Game1.SCREENWIDTH, Game1.SCREENHEIGHT, game.IsFullScreen);
+        }
+        private void TBArrowVelInput_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

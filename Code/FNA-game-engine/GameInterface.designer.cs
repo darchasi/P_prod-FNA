@@ -53,11 +53,8 @@
             this.LblMediathequeTitle = new System.Windows.Forms.Label();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.PanMaximise = new System.Windows.Forms.Panel();
-            this.BtnMaximise = new FNA_game_engine.RoundButton();
             this.PanReduce = new System.Windows.Forms.Panel();
-            this.BtnReduce = new FNA_game_engine.RoundButton();
             this.PanExit = new System.Windows.Forms.Panel();
-            this.BtnExit = new FNA_game_engine.RoundButton();
             this.LblCharSelect = new System.Windows.Forms.Label();
             this.LblGameObjSelect = new System.Windows.Forms.Label();
             this.LstGameObject = new System.Windows.Forms.ListBox();
@@ -77,9 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxIcon)).BeginInit();
             this.TitlePanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
-            this.PanMaximise.SuspendLayout();
-            this.PanReduce.SuspendLayout();
-            this.PanExit.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblPhysics
@@ -361,7 +355,6 @@
             // 
             // PanMaximise
             // 
-            this.PanMaximise.Controls.Add(this.BtnMaximise);
             this.PanMaximise.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanMaximise.Location = new System.Drawing.Point(829, 0);
             this.PanMaximise.Name = "PanMaximise";
@@ -369,85 +362,21 @@
             this.PanMaximise.TabIndex = 2;
             this.PanMaximise.Paint += new System.Windows.Forms.PaintEventHandler(this.PanMaximise_Paint);
             // 
-            // BtnMaximise
-            // 
-            this.BtnMaximise.BackColor = System.Drawing.Color.Transparent;
-            this.BtnMaximise.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnMaximise.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMaximise.FlatAppearance.BorderSize = 0;
-            this.BtnMaximise.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnMaximise.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.BtnMaximise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMaximise.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
-            this.BtnMaximise.Image = global::FNA_game_engine.Properties.Resources.MinimizeFinalBlue;
-            this.BtnMaximise.Location = new System.Drawing.Point(0, 0);
-            this.BtnMaximise.Name = "BtnMaximise";
-            this.BtnMaximise.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnMaximise.Size = new System.Drawing.Size(65, 52);
-            this.BtnMaximise.TabIndex = 21;
-            this.BtnMaximise.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.BtnMaximise.UseVisualStyleBackColor = false;
-            this.BtnMaximise.Click += new System.EventHandler(this.BtnMaximise_Click);
-            // 
             // PanReduce
             // 
-            this.PanReduce.Controls.Add(this.BtnReduce);
             this.PanReduce.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanReduce.Location = new System.Drawing.Point(894, 0);
             this.PanReduce.Name = "PanReduce";
             this.PanReduce.Size = new System.Drawing.Size(65, 52);
             this.PanReduce.TabIndex = 1;
             // 
-            // BtnReduce
-            // 
-            this.BtnReduce.BackColor = System.Drawing.Color.Transparent;
-            this.BtnReduce.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnReduce.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnReduce.FlatAppearance.BorderSize = 0;
-            this.BtnReduce.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnReduce.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.BtnReduce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnReduce.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
-            this.BtnReduce.Image = global::FNA_game_engine.Properties.Resources.MinimizeFinalBlue;
-            this.BtnReduce.Location = new System.Drawing.Point(0, 0);
-            this.BtnReduce.Name = "BtnReduce";
-            this.BtnReduce.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnReduce.Size = new System.Drawing.Size(65, 52);
-            this.BtnReduce.TabIndex = 17;
-            this.BtnReduce.Text = "Full screen";
-            this.BtnReduce.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.BtnReduce.UseVisualStyleBackColor = false;
-            this.BtnReduce.Click += new System.EventHandler(this.BtnReduce_Click);
-            // 
             // PanExit
             // 
-            this.PanExit.Controls.Add(this.BtnExit);
             this.PanExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanExit.Location = new System.Drawing.Point(959, 0);
             this.PanExit.Name = "PanExit";
             this.PanExit.Size = new System.Drawing.Size(65, 52);
             this.PanExit.TabIndex = 1;
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.AutoEllipsis = true;
-            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Sitka Heading", 15F, System.Drawing.FontStyle.Bold);
-            this.BtnExit.Image = global::FNA_game_engine.Properties.Resources.CloseFinalBlue;
-            this.BtnExit.Location = new System.Drawing.Point(0, 0);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnExit.Size = new System.Drawing.Size(65, 52);
-            this.BtnExit.TabIndex = 16;
-            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // LblCharSelect
             // 
@@ -676,9 +605,6 @@
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();
             this.TopPanel.ResumeLayout(false);
-            this.PanMaximise.ResumeLayout(false);
-            this.PanReduce.ResumeLayout(false);
-            this.PanExit.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -731,5 +657,8 @@
         private System.Windows.Forms.TextBox TBEnMaxRespawnInput;
         private System.Windows.Forms.Label lblFullScreen;
         private System.Windows.Forms.Button btnFullScreen;
+        private System.Windows.Forms.Label LblArrowSpecifics;
+        private System.Windows.Forms.Label LblArrowVelocity;
+        private System.Windows.Forms.TextBox TBArrowVelInput;
     }
 }
