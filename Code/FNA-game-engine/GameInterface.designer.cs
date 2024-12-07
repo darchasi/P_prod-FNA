@@ -72,6 +72,8 @@
             this.LblEnMinResapwn = new System.Windows.Forms.Label();
             this.TBEnMinRespawnInput = new System.Windows.Forms.TextBox();
             this.TBEnMaxRespawnInput = new System.Windows.Forms.TextBox();
+            this.lblFullScreen = new System.Windows.Forms.Label();
+            this.btnFullScreen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxIcon)).BeginInit();
             this.TitlePanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
@@ -412,6 +414,7 @@
             this.BtnReduce.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.BtnReduce.Size = new System.Drawing.Size(65, 52);
             this.BtnReduce.TabIndex = 17;
+            this.BtnReduce.Text = "Full screen";
             this.BtnReduce.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.BtnReduce.UseVisualStyleBackColor = false;
             this.BtnReduce.Click += new System.EventHandler(this.BtnReduce_Click);
@@ -508,6 +511,7 @@
             this.LblZoomValue.Size = new System.Drawing.Size(45, 19);
             this.LblZoomValue.TabIndex = 27;
             this.LblZoomValue.Text = "Zoom";
+            this.LblZoomValue.Click += new System.EventHandler(this.LblZoomValue_Click);
             // 
             // TBZoomInput
             // 
@@ -601,12 +605,33 @@
             this.TBEnMaxRespawnInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBEnMaxRespawnInput_KeyPress);
             this.TBEnMaxRespawnInput.LostFocus += new System.EventHandler(this.TBEnMaxRespawnInput_Leave);
             // 
+            // lblFullScreen
+            // 
+            this.lblFullScreen.AutoSize = true;
+            this.lblFullScreen.Location = new System.Drawing.Point(558, 262);
+            this.lblFullScreen.Name = "lblFullScreen";
+            this.lblFullScreen.Size = new System.Drawing.Size(60, 13);
+            this.lblFullScreen.TabIndex = 36;
+            this.lblFullScreen.Text = "Full Screen";
+            // 
+            // btnFullScreen
+            // 
+            this.btnFullScreen.Location = new System.Drawing.Point(624, 257);
+            this.btnFullScreen.Name = "btnFullScreen";
+            this.btnFullScreen.Size = new System.Drawing.Size(75, 23);
+            this.btnFullScreen.TabIndex = 37;
+            this.btnFullScreen.Text = "Off";
+            this.btnFullScreen.UseVisualStyleBackColor = true;
+            this.btnFullScreen.Click += new System.EventHandler(this.btnFullScreen_Click);
+            // 
             // GameInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1024, 576);
+            this.Controls.Add(this.btnFullScreen);
+            this.Controls.Add(this.lblFullScreen);
             this.Controls.Add(this.TBEnMaxRespawnInput);
             this.Controls.Add(this.TBEnMinRespawnInput);
             this.Controls.Add(this.LblEnMinResapwn);
@@ -704,5 +729,7 @@
         private System.Windows.Forms.Label LblEnMinResapwn;
         private System.Windows.Forms.TextBox TBEnMinRespawnInput;
         private System.Windows.Forms.TextBox TBEnMaxRespawnInput;
+        private System.Windows.Forms.Label lblFullScreen;
+        private System.Windows.Forms.Button btnFullScreen;
     }
 }
