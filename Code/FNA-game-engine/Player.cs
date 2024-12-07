@@ -8,7 +8,7 @@ namespace FNA_game_engine
 {
     public class Player : FireCharacter
     {
-        int timeAttack = 0;
+        public int timeAttack = 0;
         public static int score;
         int currentAnimState;
         enum animStates

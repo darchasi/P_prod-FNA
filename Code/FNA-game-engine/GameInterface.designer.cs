@@ -75,6 +75,8 @@
             this.LblArrowSpecifics = new System.Windows.Forms.Label();
             this.LblArrowVelocity = new System.Windows.Forms.Label();
             this.TBArrowVelInput = new System.Windows.Forms.TextBox();
+            this.LblFullScreen = new System.Windows.Forms.Label();
+            this.BtnFullScreen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxIcon)).BeginInit();
             this.TitlePanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
@@ -637,12 +639,35 @@
             this.TBArrowVelInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBArrowVelInput_KeyPress);
             this.TBArrowVelInput.LostFocus += new System.EventHandler(this.TBArrowVelInput_Leave);
             // 
+            // LblFullScreen
+            // 
+            this.LblFullScreen.AutoSize = true;
+            this.LblFullScreen.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFullScreen.Location = new System.Drawing.Point(746, 332);
+            this.LblFullScreen.Name = "LblFullScreen";
+            this.LblFullScreen.Size = new System.Drawing.Size(72, 19);
+            this.LblFullScreen.TabIndex = 39;
+            this.LblFullScreen.Text = "FullScreen";
+            // 
+            // BtnFullScreen
+            // 
+            this.BtnFullScreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.BtnFullScreen.Location = new System.Drawing.Point(944, 332);
+            this.BtnFullScreen.Name = "BtnFullScreen";
+            this.BtnFullScreen.Size = new System.Drawing.Size(47, 23);
+            this.BtnFullScreen.TabIndex = 40;
+            this.BtnFullScreen.Text = "Off";
+            this.BtnFullScreen.UseVisualStyleBackColor = false;
+            this.BtnFullScreen.Click += new System.EventHandler(this.BtnFullScreen_Click);
+            // 
             // GameInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1024, 576);
+            this.Controls.Add(this.BtnFullScreen);
+            this.Controls.Add(this.LblFullScreen);
             this.Controls.Add(this.TBArrowVelInput);
             this.Controls.Add(this.LblArrowVelocity);
             this.Controls.Add(this.LblArrowSpecifics);
@@ -746,5 +771,7 @@
         private System.Windows.Forms.Label LblArrowSpecifics;
         private System.Windows.Forms.Label LblArrowVelocity;
         private System.Windows.Forms.TextBox TBArrowVelInput;
+        private System.Windows.Forms.Label LblFullScreen;
+        private System.Windows.Forms.Button BtnFullScreen;
     }
 }
