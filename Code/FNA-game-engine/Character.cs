@@ -77,6 +77,11 @@ namespace FNA_game_engine
         {
             // Vérifier si le personnage est au sol
             bool isOnGround = OnGround(map) != Rectangle.Empty;
+            if (gravity < 0)
+            {
+
+                    velocity.Y += gravity;
+            }
 
             if (!isOnGround || jumping)
             {
@@ -84,9 +89,14 @@ namespace FNA_game_engine
             }
 
             // Limiter la vitesse de chute
-            if (velocity.Y > maxFallVelocity)
+            if (Math.Abs(velocity.Y) > maxFallVelocity)
             {
-                velocity.Y = maxFallVelocity;
+                if (velocity.Y < 0)
+                {
+                    velocity.Y = -maxFallVelocity;
+                }
+                else
+                    velocity.Y = maxFallVelocity;
             }
         }
 
@@ -95,7 +105,7 @@ namespace FNA_game_engine
             // Ajuster légèrement vers le bas pour détecter le sol
             Rectangle futureBoundingBox = new Rectangle(
                 (int)(position.X + boundingBoxOffset.X),
-                (int)(position.Y + boundingBoxOffset.Y + gravity), // +1 pour simuler un léger déplacement vers le bas
+                (int)(position.Y + boundingBoxOffset.Y + gravity), // + gravity pour simuler un léger déplacement vers le bas
                 boundingBoxWidth,
                 boundingBoxHeight
             );

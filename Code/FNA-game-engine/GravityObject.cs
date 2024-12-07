@@ -91,12 +91,16 @@ namespace FNA_game_engine
 
         public virtual void ApplyGravity(Map map)
         {
-
             velocity.Y += gravity;
-
+            
             // Limiter la vitesse de chute
-            if (velocity.Y > maxFallVelocity)
+            if (Math.Abs(velocity.Y) > maxFallVelocity)
             {
+                if (velocity.Y < 0)
+                {
+                    velocity.Y = -maxFallVelocity;
+                }
+                else
                 velocity.Y = maxFallVelocity;
             }
         }
