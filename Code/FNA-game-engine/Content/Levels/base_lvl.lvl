@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LevelData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Player>
+    <equipements>
+      <Equipement>
+        <equipements />
+        <position>
+          <X>2035</X>
+          <Y>2626</Y>
+        </position>
+        <drawColor>
+          <B>255</B>
+          <G>255</G>
+          <R>255</R>
+          <A>255</A>
+          <PackedValue>4294967295</PackedValue>
+        </drawColor>
+        <scale>1</scale>
+        <rotation>0</rotation>
+        <layerDepth>0.45</layerDepth>
+        <active>true</active>
+        <center>
+          <X>512</X>
+          <Y>384</Y>
+        </center>
+        <projectileCollidable>false</projectileCollidable>
+        <playerCollidable>false</playerCollidable>
+        <boundingBoxWidth>1024</boundingBoxWidth>
+        <boundingBoxHeight>768</boundingBoxHeight>
+        <boundingBoxOffset>
+          <X>0</X>
+          <Y>0</Y>
+        </boundingBoxOffset>
+        <direction>
+          <X>1</X>
+          <Y>0</Y>
+        </direction>
+        <name>crossbow-spritesheet.png</name>
+        <startPosition>
+          <X>2035</X>
+          <Y>2626</Y>
+        </startPosition>
+        <animationSet>
+          <width>64</width>
+          <height>64</height>
+          <gridX>14</gridX>
+          <gridY>1</gridY>
+          <animationList>
+            <Animation>
+              <name>Run Right</name>
+              <animationOrder>
+                <int>0</int>
+              </animationOrder>
+              <speed>60</speed>
+              <currentFrame>0</currentFrame>
+            </Animation>
+            <Animation>
+              <name>Run Left</name>
+              <animationOrder>
+                <int>0</int>
+              </animationOrder>
+              <speed>60</speed>
+              <currentFrame>0</currentFrame>
+            </Animation>
+            <Animation>
+              <name>Idle Right</name>
+              <animationOrder>
+                <int>0</int>
+              </animationOrder>
+              <speed>60</speed>
+              <currentFrame>0</currentFrame>
+            </Animation>
+            <Animation>
+              <name>Idle Left</name>
+              <animationOrder>
+                <int>0</int>
+              </animationOrder>
+              <speed>60</speed>
+              <currentFrame>0</currentFrame>
+            </Animation>
+            <Animation>
+              <name>Fire Right</name>
+              <animationOrder>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+                <int>3</int>
+                <int>4</int>
+                <int>5</int>
+              </animationOrder>
+              <speed>20</speed>
+              <currentFrame>0</currentFrame>
+            </Animation>
+            <Animation>
+              <name>Fire Left</name>
+              <animationOrder>
+                <int>0</int>
+                <int>1</int>
+                <int>2</int>
+        
