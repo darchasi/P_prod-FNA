@@ -10,7 +10,7 @@ namespace FNA_game_engine
     public class Projectile : GravityPbject
     {
         const float PROJDECEL = 1;
-        const int baseXvelocity = 2;
+        static public float baseXvelocity = 2;
         Character owner;
         int destroyTimer;
         const int maxTimer = 180; // bullet destroy timer in ticks (60ticks/sec)
