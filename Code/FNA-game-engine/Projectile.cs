@@ -9,14 +9,21 @@ namespace FNA_game_engine
 {
     public class Projectile : GravityPbject
     {
-        const float PROJDECEL = 1;
-        static public float baseXvelocity = 2;
+        const float PROJDECEL = 1f;
+        const float PROJACEL = 1f;
+        static public float baseXvelocity = 2f;
         Character owner;
         int destroyTimer;
         const int maxTimer = 180; // bullet destroy timer in ticks (60ticks/sec)
+        float fly = 1.1f;
 
         public Projectile()
         {
+            boundingBoxHeight = 10;
+            boundingBoxWidth = 10;
+            boundingBoxOffset.X = 10;
+            boundingBoxOffset.Y = -30;
+            maxFallVelocity = 20f;
             active = false;
             playerCollidable = false;
         }
@@ -37,6 +44,7 @@ namespace FNA_game_engine
             UpdateMovement(objects, map);
             // Update deathtimer
             destroyTimer--;
+            velocity.Y += gravity;
             if (destroyTimer <= 0 && active)
             {
                 Destroy();
@@ -48,10 +56,12 @@ namespace FNA_game_engine
 
         public void Fire(Character inputOwner, Vector2 inputPositon, Vector2 inputDirection)
         {
+            gravity = 1;
             owner = inputOwner;
             position = inputPositon;
             direction = inputDirection;
             decel = PROJDECEL;
+            accel = PROJACEL;
             if (direction.X > 0)
             {
                 velocity.X = baseXvelocity;
@@ -95,17 +105,15 @@ namespace FNA_game_engine
             }
 
             // Gérer les mouvements verticaux
-            if (velocity.Y != 0)
+            // Vérifier la collision verticale avant de déplacer
+            if (!CheckCollisions(map, objects, false)) // false = vérifier les collisions verticales
             {
-                // Vérifier la collision verticale avant de déplacer
-                if (!CheckCollisions(map, objects, false)) // false = vérifier les collisions verticales
-                {
-                    position.Y += velocity.Y; // Appliquer le mouvement si pas de collision
-                }
-                else
-                {
-                    Destroy();
-                }
+                position.Y += fly - gravity;//(gravity + (velocity.Y / 10) - (velocity.X / 2)); // Appliquer le mouvement si pas de collision
+
+            }
+            else
+            {
+                Destroy();
             }
 
             // Décélération pour les mouvements horizontaux
@@ -155,7 +163,7 @@ namespace FNA_game_engine
                 }
             }
             // Stop movement at Y contact
-            else if (applyGravity && !xAxis && velocity.Y != gravity)
+            else if (applyGravity)
             {
                 if (velocity.Y > 0)
                 {
