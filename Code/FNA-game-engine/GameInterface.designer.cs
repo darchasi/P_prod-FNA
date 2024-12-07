@@ -69,7 +69,6 @@
             this.LblEnMinResapwn = new System.Windows.Forms.Label();
             this.TBEnMinRespawnInput = new System.Windows.Forms.TextBox();
             this.TBEnMaxRespawnInput = new System.Windows.Forms.TextBox();
-            this.LblArrowSpecifics = new System.Windows.Forms.Label();
             this.LblArrowVelocity = new System.Windows.Forms.Label();
             this.TBArrowVelInput = new System.Windows.Forms.TextBox();
             this.LblFullScreen = new System.Windows.Forms.Label();
@@ -537,13 +536,6 @@
             this.TBEnMaxRespawnInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBEnMaxRespawnInput_KeyPress);
             this.TBEnMaxRespawnInput.LostFocus += new System.EventHandler(this.TBEnMaxRespawnInput_Leave);
             // 
-            // LblArrowSpecifics
-            // 
-            this.LblArrowSpecifics.Location = new System.Drawing.Point(0, 0);
-            this.LblArrowSpecifics.Name = "LblArrowSpecifics";
-            this.LblArrowSpecifics.Size = new System.Drawing.Size(100, 23);
-            this.LblArrowSpecifics.TabIndex = 43;
-            // 
             // LblArrowVelocity
             // 
             this.LblArrowVelocity.AutoSize = true;
@@ -598,7 +590,6 @@
             this.Controls.Add(this.LblFullScreen);
             this.Controls.Add(this.TBArrowVelInput);
             this.Controls.Add(this.LblArrowVelocity);
-            this.Controls.Add(this.LblArrowSpecifics);
             this.Controls.Add(this.TBEnMaxRespawnInput);
             this.Controls.Add(this.TBEnMinRespawnInput);
             this.Controls.Add(this.LblEnMinResapwn);
@@ -693,7 +684,6 @@
         private System.Windows.Forms.Label LblEnMinResapwn;
         private System.Windows.Forms.TextBox TBEnMinRespawnInput;
         private System.Windows.Forms.TextBox TBEnMaxRespawnInput;
-        private System.Windows.Forms.Label LblArrowSpecifics;
         private System.Windows.Forms.Label LblArrowVelocity;
         private System.Windows.Forms.TextBox TBArrowVelInput;
         private System.Windows.Forms.Label LblFullScreen;
