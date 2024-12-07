@@ -13,7 +13,8 @@ namespace FNA_game_engine
         public const int PIXELHEIGHT = 360*2;
         public const int SCREENWIDTH = 1280;
         public const int SCREENHEIGHT = 720;
-        public bool IsFullScreen = false;
+
+        public bool IsFullScreen = false; 
         
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -30,9 +31,8 @@ namespace FNA_game_engine
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
             // Set window size
-
+            
             Resolution.Init(ref graphics);
             Resolution.SetVirtualResolution(PIXELWIDTH, PIXELHEIGHT);
 

@@ -607,6 +607,31 @@ namespace FNA_game_engine
             selectedGameObj = (GameObject)LstGameObject.SelectedItem;
         }
 
+        private void LblZoomValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFullScreen_Click(object sender, EventArgs e)
+        {
+            if (btnFullScreen.Text == "On")
+            {
+                game.IsFullScreen= false;
+                btnFullScreen.Text = "Off";
+            }
+            else
+            {
+                game.IsFullScreen = true;
+                btnFullScreen.Text = "On";
+            }
+
+            Resolution.SetResolution(Game1.SCREENWIDTH, Game1.SCREENHEIGHT, game.IsFullScreen);
+        }
         private void TBArrowVelInput_TextChanged(object sender, EventArgs e)
         {
 
