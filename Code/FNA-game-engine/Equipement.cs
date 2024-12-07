@@ -8,7 +8,7 @@ namespace FNA_game_engine
 {
     public class Equipement : AnimatedObject
     {
-        public string name = "new costume";
+        public string newCostumeName = "new costume";
         public int offsetX = 0;
         public int offsetY = 0;
         public int turnOfsetX = 0;

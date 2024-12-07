@@ -57,40 +57,11 @@ namespace FNA_game_engine
             }
         }
 
-
-        /*
-        public void FireProjectile()
-        {
-            Vector2 projectileStartPosition = new Vector2(position.X + XOFFSET, position.Y + YOFFSET);
-
-            var projectile = projectiles.FirstOrDefault(p => !p.active);
-            if (projectile != null)
-            {
-                projectile.Fire(this, projectileStartPosition, direction);
-                hasFiredProjectile = true;
-            }
-        }
-        */
         public override void Load(ContentManager content)
         {
             projectiles.ToList().ForEach(p => p.Load(content));
             base.Load(content);
         }
-
-        /*
-        public override void Update(List<GameObject> objects, Map map)
-        {
-            if (currentAnimation != null && currentAnimation.name.Contains("Fire"))
-            {
-                if (currentAnimationFrame == 2 && !hasFiredProjectile)
-                {
-                    FireProjectile();
-                }
-            }
-
-            projectiles.ToList().ForEach(projectile => projectile.Update(objects, map));
-            base.Update(objects, map);
-        }*/
 
         public override void Update(List<GameObject> objects, Map map)
         {
