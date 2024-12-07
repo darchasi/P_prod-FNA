@@ -74,7 +74,7 @@ namespace FNA_game_engine
 
     public class Wall
     {
-        public Color defaultColor = Color.LightYellow;
+        public Color defaultColor = Color.DarkSlateGray;
         public Single defaultScale = 1f;
         public Single defaultRotation = 0f;
         public Single defaultLayerDepth = .7f;

@@ -155,6 +155,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // noneRadioButton
             // 
@@ -355,6 +356,7 @@
             this.objectTypes.Size = new System.Drawing.Size(275, 56);
             this.objectTypes.TabIndex = 15;
             this.objectTypes.Visible = false;
+            this.objectTypes.SelectedIndexChanged += new System.EventHandler(this.objectTypes_SelectedIndexChanged);
             // 
             // imagePathLabel
             // 

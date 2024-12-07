@@ -3,12 +3,13 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Audio;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace FNA_game_engine
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        public static float camrot = 0;
+        public static float camrot = 0f;
         public const int PIXELWIDTH = 640 *2;
         public const int PIXELHEIGHT = 360*2;
         public const int SCREENWIDTH = 1280;
@@ -21,6 +22,7 @@ namespace FNA_game_engine
 
         GameHUD gameHUD = new GameHUD();
         Editor editor;
+        GameInterface gameInterface;
         SoundEffect song;
         SoundEffectInstance songInstance;
 
@@ -39,7 +41,9 @@ namespace FNA_game_engine
 
         protected override void Initialize()
         {
+
 #if DEBUG
+            
             editor = new Editor(this);
             editor.Show();
 #endif
@@ -52,6 +56,7 @@ namespace FNA_game_engine
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 #if DEBUG
+
             editor.LoadTextures(Content, map);
 #endif
             map.Load(Content);
@@ -65,7 +70,8 @@ namespace FNA_game_engine
                 songInstance = song.CreateInstance();
                 songInstance.Volume = 0.2f;
             }
-            LoadLevel("NewLevel.lvl");
+            LoadLevel("Base.lvl");
+            Camera.zoom = 1.4f;
         }
 
         protected override void Update(GameTime gameTime)
@@ -75,12 +81,10 @@ namespace FNA_game_engine
             map.Update(objects);
             UpdateCamera();
             UpdateMusic();
-
+            Camera.rotation += camrot;
 #if DEBUG
             editor.Update(objects, map);
 #endif
-            Camera.zoom = 1.4f;
-            Camera.rotation += camrot;
 
             base.Update(gameTime);
         }
@@ -114,6 +118,7 @@ namespace FNA_game_engine
         }
         public void LoadLevel(string fileName)
         {
+            
             Global.levelName = fileName;
 
             // Load level data
@@ -127,9 +132,9 @@ namespace FNA_game_engine
             // Add decor
             map.decor = levelData.decor;
 
-            objects.Add(new Player(new Vector2(1652, 2940)));
+            objects.Add(new Player("Player", new Vector2(1652, 2940)));
 
-            objects.Add(new Enemy(new Vector2(1392, 3002)));
+            objects.Add(new Enemy("Enemy1", new Vector2(1392, 3002)));
 
             //objects.Add(new Equipement(objects[0], "hat.png", null, 0.490f, 16, 2, 0));
 
@@ -137,13 +142,13 @@ namespace FNA_game_engine
             //objects.Add(objects[0].equipements.Last());
             //objects.Add(new Equipement(objects[0], "lantern", 0.510f, -78, -83, -34));
 
-            /*
-            map.walls.Add(new Wall(new Rectangle(16, 860, 2060, 60), true));
+            
+            //map.walls.Add(new Wall(new Rectangle(1602, 3140, 2060, 60), true));
 
-            map.walls.Add(new Wall(new Rectangle(456, 280, 146, 56), true));
+            //map.walls.Add(new Wall(new Rectangle(456, 280, 146, 56), true));
 
-            map.decor.Add(new Decor(Vector2.Zero, "background", 1f));
-            */
+            //map.decor.Add(new Decor(Vector2.Zero, "background", 1f));
+            
 
             map.LoadMap(Content);
 
@@ -158,7 +163,8 @@ namespace FNA_game_engine
                     obj.Load(Content);
                 });
             }
-
+            gameInterface = new GameInterface(this);
+            gameInterface.Show();
         }
 
         public void UpdateObjects()
@@ -171,17 +177,6 @@ namespace FNA_game_engine
                     objects[i].equipements.ForEach(equipement => equipement.Update(objects, map));
                 }
             }
-            /*
-            objects.ForEach(obj =>
-            {
-                obj.Update(objects, map);
-                {
-                    if (obj.equipements.Count() > 0)
-                    {
-                        obj.equipements.ForEach(equipement => equipement.Update(objects, map));
-                    }
-                }
-            });*/
         }
 
         public void DrawObjects()

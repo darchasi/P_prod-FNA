@@ -68,7 +68,6 @@ namespace FNA_game_engine
             if (sourceObject != null)
             {
                 active = true;
-
             }
             else
             {
@@ -93,12 +92,29 @@ namespace FNA_game_engine
             }
 
             base.Update(objects, map);
+
+            // Vérifier si l'animation de tir est terminée
+            if (currentAnimation != null && currentAnimation.name.Contains("Fire") && currentAnimationFrame == currentAnimation.animationOrder.Count - 1)
+            {
+                    if (sourceObject is FireCharacter fireCharacter && !fireCharacter.hasFiredProjectile)
+                    {
+                        fireCharacter.FireProjectile(); // Lancer la flèche
+                        fireCharacter.hasFiredProjectile = true; // Marquer le tir comme effectué
+                    }
+
+                    // Revenir à l'animation idle une fois le tir effectué
+                    if (currentAnimation.name.Contains("Left"))
+                        ChangeAnimation("Idle Left");
+                    else
+                        ChangeAnimation("Idle Right");
+            }
+
             if (currentAnimation != null)
             {
                 UpdateAnimations();
             }
-
         }
+
 
         public Vector2 SetOffset(Vector2 sourcePos, bool turn)
         {

@@ -8,6 +8,7 @@ namespace FNA_game_engine
 {
     public class Player : FireCharacter
     {
+        int timeAttack = 0;
         public static int score;
         int currentAnimState;
         enum animStates
@@ -19,7 +20,7 @@ namespace FNA_game_engine
             IdleLightLeft,
             IdleLightRight,
             RunLightLeft,
-            RunLightRight
+            RunLightRight,
         }
 
         public Player() 
@@ -27,8 +28,9 @@ namespace FNA_game_engine
 
         }
 
-        public Player(Vector2 inputPosition)
+        public Player(string inputName, Vector2 inputPosition)
         {
+            name = inputName;
             position = inputPosition;
         }
 
@@ -61,6 +63,7 @@ namespace FNA_game_engine
         }
         public override void Update(List<GameObject> objects, Map map)
         {
+            timeAttack--;
             CheckInput(objects, map);
             base.Update(objects, map);
         }
@@ -119,11 +122,24 @@ namespace FNA_game_engine
 
         private void HandleFire()
         {
-            if (Input.KeyPressed(Keys.E))
+            bool hasCrossbow = equipements.Any(equip => equip.name == "crossbow-spritesheet.png");
+
+            if (hasCrossbow && Input.IsKeyDown(Keys.E))
             {
-                Fire();
+                var crossbow = equipements.FirstOrDefault(equip => equip.name == "crossbow-spritesheet.png");
+
+                if (crossbow != null && (crossbow.currentAnimation == null || !crossbow.currentAnimation.name.Contains("Fire")))
+                {
+                    if (direction.X < 0) 
+                        crossbow.ChangeAnimation("Fire Left");
+                    else
+                        crossbow.ChangeAnimation("Fire Right");
+                }
             }
         }
+
+
+
 
         protected override void UpdateAnimations()
         {
@@ -144,7 +160,7 @@ namespace FNA_game_engine
 
         private void HandleMovementAnimation()
         {
-            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() >= 0)
+            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() > 0)
             {
                 if (direction.X < 0 && AnimationIsNot("RunLightLeft"))
                 {
@@ -170,7 +186,7 @@ namespace FNA_game_engine
 
         private void HandleIdleAnimation()
         {
-            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() >= 0)
+            if (this.equipements.Count > 0 && this.equipements.Where(equip => equip.animationSet.animationList.Where(anim => anim.name == "Light").Count() > 0).Count() > 0)
             {
                 if (direction.X < 0 && AnimationIsNot("IdleLightLeft"))
                 {

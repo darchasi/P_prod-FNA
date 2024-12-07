@@ -55,15 +55,13 @@ namespace FNA_game_engine
 
         public virtual void ChangeAnimation(string newAnimation)
         {
-
-            currentAnimation = GetAnimation(newAnimation);
-
-            if (currentAnimation == null)
+            var newAnim = GetAnimation(newAnimation);
+            if (newAnim == null || currentAnimation == newAnim)
             {
                 return;
             }
 
-            // Start on the first frame
+            currentAnimation = newAnim;
 
             currentAnimationFrame = 0;
             animationTimer = currentAnimation.speed;
@@ -71,35 +69,70 @@ namespace FNA_game_engine
             CalculateFramePosition();
 
             // Check if this is an animation that we want to flip
-            //flipLeftFrames = (flipRightFrames && currentAnimation.name.Contains("Right")) || (flipLeftFrames && currentAnimation.name.Contains("Left"));
-            
-            if ((flipRightFrames && currentAnimation.name.Contains("Right")) || (flipLeftFrames && currentAnimation.name.Contains("Left")))
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
-            else
-            {
-                spriteEffects = SpriteEffects.None;
-            }
+            spriteEffects = DetermineSpriteEffects(newAnimation);
 
+            // Sync effects
             if (equipements.Count() > 0 && !syncingAnimation)
             {
-                // DOES NOT WORK BECAUSE IS RAN BEFORE EQUIPEMENT.LOAD GIVES EQUIPEMENTS THEIR ANIMATION
-                foreach (Equipement equipement in equipements)
-                {
-                    if (equipement.animationSet.animationList.Count > 0)
-                    {
-                        equipement.ChangeAnimation(equipement.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last().name.ToString());
-                        syncingAnimation = true;
-                        this.ChangeAnimation(this.animationSet.animationList.Where(animation => animation.name == equipement.currentAnimation.name).Last().name.ToString());
-                        syncingAnimation = false;
-                    }
-                }
-                //equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());
-
+                SyncEquipmentAnimation(newAnimation);
             }
         }
 
+        private SpriteEffects DetermineSpriteEffects(string animationName)
+        {
+            if ((flipRightFrames && animationName.Contains("Right")) ||
+                (flipLeftFrames && animationName.Contains("Left")))
+            {
+                return SpriteEffects.FlipHorizontally;
+            }
+            return SpriteEffects.None;
+        }
+
+
+        public void SyncEquipmentAnimation(string newAnimation)
+        {
+            syncingAnimation = true;
+
+            foreach (Equipement equipement in equipements)
+            {
+                if (equipement.animationSet?.animationList.Count > 0 && equipement.name != "crossbow-spritesheet.png")
+                {
+                    var matchingAnimation = GetMatchingAnimation(equipement, newAnimation);
+                    if (matchingAnimation != null && equipement.currentAnimation != matchingAnimation)
+                    {
+                        equipement.ChangeAnimation(matchingAnimation.name);
+                    }
+                }
+            }
+
+            syncingAnimation = false;
+        }
+
+        private Animation GetMatchingAnimation(Equipement equipement, string baseAnimationName)
+        {
+            // Match name
+            var exactMatch = equipement.animationSet.animationList
+                .FirstOrDefault(animation => animation.name == baseAnimationName);
+            if (exactMatch != null)
+                return exactMatch;
+
+
+            if (baseAnimationName.Contains("Run"))
+            {
+                return equipement.animationSet.animationList
+                    .FirstOrDefault(animation => animation.name.Contains("Run"));
+            }
+            if (baseAnimationName.Contains("Idle"))
+            {
+                return equipement.animationSet.animationList
+                    .FirstOrDefault(animation => animation.name.Contains("Idle"));
+            }
+
+            // return first animation
+            return equipement.animationSet.animationList.FirstOrDefault();
+        }
+
+        //equipements.Where(eqipement => eqipement.animationSet.animationList.Count() > 0).Last().ChangeAnimation(equipements.Select(equip => equip.animationSet.animationList.Where(animation => animation.name == currentAnimation.name).Last()).Last().name.ToString());
         private Animation GetAnimation(string animation)
         {
             string name = GetAnimationName(animation);
@@ -130,6 +163,14 @@ namespace FNA_game_engine
                 if (AnimationComplete())
                 {
                     currentAnimationFrame = 0;
+                    if (currentAnimation.name == "Fire Left" && this is Equipement)
+                    {
+                        ChangeAnimation("Idle Left");
+                    }
+                    else if (currentAnimation.name == "Fire Right" && this is Equipement)
+                    {
+                        ChangeAnimation("Idle Right");
+                    }
                 }
                 else
                 {
