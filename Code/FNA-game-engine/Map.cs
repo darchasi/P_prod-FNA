@@ -11,6 +11,9 @@ namespace FNA_game_engine
     {
         public List<Decor> decor = new List<Decor>();
         public List<Wall> walls = new List<Wall>();
+        public List<SpawnPoint> spawnPoints = new List<SpawnPoint>();
+
+
         Texture2D wallImage;
 
         public int mapWidth = 240; // 8k background image / 
@@ -38,14 +41,14 @@ namespace FNA_game_engine
         public Rectangle CheckCollision(Rectangle input)
         {
             // if it collides return the rectangle it collided with
-            var collision = walls.FirstOrDefault(wall =>wall != null && wall.wall.Intersects(input) && wall.active);
+            var collision = walls.FirstOrDefault(wall =>wall != null && wall.wall.Intersects(input) && wall.collidable);
             //otherwise returns an empty rectangle
             return collision?.wall ?? Rectangle.Empty;
         }
 
         public void DrawWalls(SpriteBatch spriteBatch)
         {
-            walls.Where(wall => wall != null && wall.active).ToList().ForEach(wall =>
+            walls.Where(wall => wall != null && wall.collidable).ToList().ForEach(wall =>
             {
                 spriteBatch.Draw(wallImage,
                     new Vector2(wall.wall.X, wall.wall.Y),
@@ -55,10 +58,19 @@ namespace FNA_game_engine
                     Vector2.Zero,
                     wall.defaultScale,
                     SpriteEffects.None, wall.defaultLayerDepth
+                    
                 );
-             });
-                
+            });
         }
+
+        public void DrawPoint(SpriteBatch sprite)
+        {
+            spawnPoints.Where(spawn => spawn != null).ToList().ForEach(wall =>
+            {
+                sprite.Draw(wallImage, new Vector2(spawn))
+            });
+        }
+
 
         // Get tile index from coordonates
         public Point GetTileIndex(Vector2 inputPosition)
@@ -79,17 +91,27 @@ namespace FNA_game_engine
         public Single defaultRotation = 0f;
         public Single defaultLayerDepth = .7f;
         public Rectangle wall;
-        public bool active;
+        public bool collidable;
 
         public Wall()
         {
 
         }
 
-        public Wall(Rectangle inputRectangle, bool isActive)
+        public Wall(Rectangle inputRectangle, bool isCollidable)
         {
             wall = inputRectangle;
-            active = isActive;
+            collidable = isCollidable;
+        }
+    }
+
+    public class SpawnPoint : Wall
+    {
+       
+        public SpawnPoint()
+        {
+            defaultColor = Color.Transparent;
+            collidable = false;
         }
     }
 
