@@ -11,3 +11,8 @@ bin/Debug/FNA-game-engine.pdb
 bin/Debug/FNA-game-engine.exe.config
 bin/Debug/Content/*
 bin/Debug/BackupTextures/*
+bin/Release/FNA-game-engine.exe
+bin/Release/FNA-game-engine.pdb
+bin/Release/FNA-game-engine.exe.config
+bin/Release/Content/*
+bin/Release/BackupTextures/*
